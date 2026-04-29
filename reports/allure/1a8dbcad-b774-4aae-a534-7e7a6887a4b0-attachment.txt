@@ -1,0 +1,21 @@
+[32mINFO    [0m utils.logger:logger.py:58 === AI-DRIVEN TEST EXECUTION START: test_accessibility_compliance ===
+[32mINFO    [0m utils.logger:logger.py:58 Using Framework Prompts: testcase-generation.md, playwright-generation.md
+[32mINFO    [0m utils.logger:logger.py:58 Environment: UAT
+[32mINFO    [0m utils.logger:logger.py:58 Browser: Chromium
+[32mINFO    [0m utils.logger:logger.py:58 Execution Start Time: 2026-04-28 22:05:41.677422
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Test Keyboard Navigation ---
+[32mINFO    [0m utils.logger:logger.py:58 Loading Aditya Birla UAT login page
+[32mINFO    [0m utils.logger:logger.py:58 Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[33mWARNING [0m utils.logger:logger.py:62 Username should be focused
+[33mWARNING [0m utils.logger:logger.py:62 Password should be focused
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Test Keyboard Navigation - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Test Focus Visibility ---
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Focus is visible
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Test Focus Visibility - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 === AI-DRIVEN TEST EXECUTION END: test_accessibility_compliance ===
+[32mINFO    [0m utils.logger:logger.py:58 Status: PASSED
+[32mINFO    [0m utils.logger:logger.py:58 Duration: 5.78 seconds
+[32mINFO    [0m utils.logger:logger.py:58 Test Details:
+[32mINFO    [0m utils.logger:logger.py:58   accessibility_tests: ['Keyboard navigation', 'Focus visibility']
+[32mINFO    [0m utils.logger:logger.py:58   compliance_checks: ['Tab order correct', 'Focus indicators present']
+[32mINFO    [0m utils.logger:logger.py:58 === TEST END: test_accessibility_compliance - PASSED ===

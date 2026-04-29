@@ -1,0 +1,24 @@
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Layout fix CSS injected to prevent viewport issues
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 STARTING TEST SUITE: Complete End-to-End Flow
+[32mINFO    [0m utils.logger:logger.py:58 Time: 13:00:49
+[32mINFO    [0m utils.logger:logger.py:58 ========================================
+
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Phase 1: Authentication ---
+[32mINFO    [0m utils.logger:logger.py:58 Loading Aditya Birla UAT login page
+[32mINFO    [0m utils.logger:logger.py:58 Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[32mINFO    [0m utils.logger:logger.py:58 Entering credentials for user: BR4641
+[32mINFO    [0m utils.logger:logger.py:58 Credentials entered successfully
+[32mINFO    [0m utils.logger:logger.py:58 Clicking login button
+[32mINFO    [0m utils.logger:logger.py:58 Login button clicked
+[32mINFO    [0m utils.logger:logger.py:58 Navigating via Top-Right Menu...
+[31mCRITICAL[0m utils.logger:logger.py:70 FATAL ERROR STOPPING EXECUTION: Locator.scroll_into_view_if_needed: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("nav.sticky.top-0.z-50").locator("button").filter(has_text="Menu").first
+
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 TEST SUITE ENDED: CRITICAL_FAILURE
+[32mINFO    [0m utils.logger:logger.py:58 Total Duration: 33.51s
+[32mINFO    [0m utils.logger:logger.py:58 ========================================

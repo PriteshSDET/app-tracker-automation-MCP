@@ -1,0 +1,32 @@
+/* --- FIXED LAYOUT STYLES --- */
+
+/* 1. Reset all box-sizing so padding doesn't expand elements beyond 100% */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Ensure the body takes up the full width of the narrow sidebar */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #d4d4d4; /* Match your dark theme text */
+    background-color: #1e1e1e; /* Match your background */
+}
+
+/* 3. Fix common DevTools specific alignment issues */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 4. Ensure main container fills available space without overflowing */
+.panel-container {
+    width: 100%;
+    max-width: 100vw; /* Force viewport width limit */
+    padding: 10px;     /* Consistent internal spacing */
+    overflow-wrap: break-word; /* Long selectors wrap instead of pushing content */
+}

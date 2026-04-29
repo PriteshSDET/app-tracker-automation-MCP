@@ -1,0 +1,168 @@
+{
+  "version": "1.0.0",
+  "name": "App Tracker Automation Bifrost",
+  "description": "Bifrost configuration for App Tracker Automation Framework",
+  "server": {
+    "host": "localhost",
+    "port": 8080,
+    "max_connections": 10,
+    "timeout": 30000
+  },
+  "test_execution": {
+    "default_browser": "chromium",
+    "default_environment": "uat",
+    "default_headed": false,
+    "default_timeout": 30000,
+    "parallel_execution": true,
+    "max_workers": 4,
+    "retry_failed_tests": true,
+    "max_retries": 2
+  },
+  "reporting": {
+    "generate_html": true,
+    "generate_json": true,
+    "generate_junit": true,
+    "generate_allure": true,
+    "screenshot_on_failure": true,
+    "video_recording": false,
+    "trace_collection": true,
+    "report_retention_days": 30
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file_logging": true,
+    "console_logging": true,
+    "log_rotation": true,
+    "max_log_size": "10MB",
+    "backup_count": 5
+  },
+  "integrations": {
+    "github": {
+      "enabled": true,
+      "create_issues_on_failure": true,
+      "update_pull_requests": true,
+      "comment_on_results": true
+    },
+    "slack": {
+      "enabled": false,
+      "webhook_url": "",
+      "channel": "#test-results",
+      "notify_on_failure": true,
+      "notify_on_success": false
+    },
+    "email": {
+      "enabled": false,
+      "smtp_server": "",
+      "smtp_port": 587,
+      "username": "",
+      "password": "",
+      "recipients": []
+    }
+  },
+  "environments": {
+    "uat": {
+      "base_url": "https://leapuat.adityabirlasunlifeinsurance.com/uat",
+      "credentials": {
+        "username": "BR4641",
+        "password": "q7LD4$J!d7"
+      },
+      "timeout": 30000,
+      "retry_attempts": 3,
+      "wait_timeout": 10000
+    },
+    "staging": {
+      "base_url": "https://leapstaging.adityabirlasunlifeinsurance.com/staging",
+      "credentials": {
+        "username": "STAGING_USER",
+        "password": "STAGING_PASS"
+      },
+      "timeout": 25000,
+      "retry_attempts": 2,
+      "wait_timeout": 8000
+    },
+    "production": {
+      "base_url": "https://leap.adityabirlasunlifeinsurance.com",
+      "credentials": {
+        "username": "PROD_USER",
+        "password": "PROD_PASS"
+      },
+      "timeout": 20000,
+      "retry_attempts": 1,
+      "wait_timeout": 5000
+    }
+  },
+  "browsers": {
+    "chromium": {
+      "executable_path": "",
+      "headless": false,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "ignore_https_errors": true,
+      "accept_downloads": true,
+      "launch_args": ["--start-maximized", "--start-fullscreen"]
+    },
+    "firefox": {
+      "executable_path": "",
+      "headless": false,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "launch_args": ["--start-maximized"]
+    },
+    "webkit": {
+      "executable_path": "",
+      "headless": false,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15",
+      "launch_args": ["--start-maximized"]
+    }
+  },
+  "test_data": {
+    "default_format": "json",
+    "data_directory": "./data",
+    "excel_support": true,
+    "csv_support": true,
+    "json_support": true,
+    "yaml_support": true
+  },
+  "locators": {
+    "strategy": "css",
+    "fallback_strategies": ["xpath", "text", "id"],
+    "timeout": 10000,
+    "retry_attempts": 3,
+    "auto_healing": true,
+    "healing_threshold": 0.8
+  },
+  "assertions": {
+    "soft_assertions": true,
+    "continue_on_failure": true,
+    "screenshot_on_assertion_failure": true,
+    "detailed_error_messages": true
+  },
+  "performance": {
+    "enable_performance_monitoring": false,
+    "capture_network_requests": false,
+    "capture_console_logs": true,
+    "capture_timing_metrics": false,
+    "performance_thresholds": {
+      "page_load_time": 5000,
+      "element_visibility_time": 3000,
+      "action_response_time": 1000
+    }
+  },
+  "security": {
+    "mask_credentials_in_logs": true,
+    "encrypt_sensitive_data": false,
+    "secure_storage": false,
+    "audit_logging": false
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "name": "app-tracker-automation-mcp",
+  "version": "1.0.0",
+  "description": "MCP configuration for App Tracker Automation with Bifrost, Playwright, and GitHub integration",
+  "author": "AI Automation Team",
+  "license": "MIT",
+  "mcpServers": {
+    "bifrost": {
+      "command": "python",
+      "args": ["-m", "bifrost.server"],
+      "env": {
+        "BIFROST_CONFIG_PATH": "./config/bifrost.json",
+        "BIFROST_LOG_LEVEL": "INFO"
+      }
+    },
+    "playwright": {
+      "command": "python",
+      "args": ["-m", "playwright.server"],
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "./browsers",
+        "PLAYWRIGHT_HEADLESS": "false",
+        "PLAYWRIGHT_TIMEOUT": "30000"
+      },
+    "github": {
+  "command": "python",
+  "args": ["-m", "github.server"],
+  "env": {
+    "GITHUB_TOKEN": "Ghp_ZnsjFkgpVPcF7JYIUHuINE2MMCKEru1TAZnk",
+    "GITHUB_REPO": "PriteshSDET/app-tracker-automation-MCP",
+    "GITHUB_BRANCH": "main"
+  }
+}
+  },
+  "tools": {
+    "bifrost": {
+      "test_execution": {
+        "description": "Execute AI-generated tests using Bifrost framework",
+        "parameters": {
+          "test_file": {
+            "type": "string",
+            "description": "Path to test file to execute"
+          },
+          "environment": {
+            "type": "string",
+            "enum": ["uat", "staging", "production"],
+            "default": "uat"
+          },
+          "browser": {
+            "type": "string",
+            "enum": ["chromium", "firefox", "webkit"],
+            "default": "chromium"
+          },
+          "headed": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "test_generation": {
+        "description": "Generate tests from specifications using AI prompts",
+        "parameters": {
+          "spec_file": {
+            "type": "string",
+            "description": "Path to test specification file"
+          },
+          "output_dir": {
+            "type": "string",
+            "description": "Output directory for generated tests"
+          }
+        }
+      },
+      "report_analysis": {
+        "description": "Analyze test execution reports and provide insights",
+        "parameters": {
+          "report_path": {
+            "type": "string",
+            "description": "Path to test report file"
+          },
+          "analysis_type": {
+            "type": "string",
+            "enum": ["summary", "detailed", "trends"],
+            "default": "summary"
+          }
+        }
+      }
+    },
+    "playwright": {
+      "browser_automation": {
+        "description": "Perform browser automation tasks with Playwright",
+        "parameters": {
+          "url": {
+            "type": "string",
+            "description": "Target URL to navigate to"
+          },
+          "actions": {
+            "type": "array",
+            "description": "List of browser actions to perform",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["click", "type", "wait", "navigate", "screenshot"]
+                },
+                "selector": {
+                  "type": "string",
+                  "description": "CSS selector for element"
+                },
+                "value": {
+                  "type": "string",
+                  "description": "Value to type or action value"
+                },
+                "timeout": {
+                  "type": "number",
+                  "default": 5000
+                }
+              }
+            }
+          }
+        }
+      },
+      "element_interaction": {
+        "description": "Interact with specific web elements",
+        "parameters": {
+          "selector": {
+            "type": "string",
+            "description": "CSS selector for target element"
+          },
+          "action": {
+            "type": "string",
+            "enum": ["click", "double_click", "right_click", "hover", "type", "clear", "select"]
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for type or select actions"
+          }
+        }
+      },
+      "page_screenshot": {
+        "description": "Capture screenshots of web pages",
+        "parameters": {
+          "path": {
+            "type": "string",
+            "description": "Path to save screenshot"
+          },
+          "full_page": {
+            "type": "boolean",
+            "default": true
+          },
+          "quality": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 100,
+            "default": 80
+          }
+        }
+      }
+    },
+    "github": {
+      "repository_operations": {
+        "description": "Perform GitHub repository operations",
+        "parameters": {
+          "operation": {
+            "type": "string",
+            "enum": ["create_issue", "update_issue", "create_pull_request", "merge_pull_request", "get_commits", "get_branches"]
+          },
+          "title": {
+            "type": "string",
+            "description": "Title for issue or PR"
+          },
+          "body": {
+            "type": "string",
+            "description": "Body/description for issue or PR"
+          },
+          "labels": {
+            "type": "array",
+            "description": "Labels for issue or PR",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "file_operations": {
+        "description": "Perform file operations in GitHub repository",
+        "parameters": {
+          "operation": {
+            "type": "string",
+            "enum": ["create", "update", "delete", "get_content"]
+          },
+          "path": {
+            "type": "string",
+            "description": "File path in repository"
+          },
+          "content": {
+            "type": "string",
+            "description": "File content for create/update operations"
+          },
+          "branch": {
+            "type": "string",
+            "description": "Target branch (default: main)"
+          }
+        }
+      },
+      "ci_cd_integration": {
+        "description": "Integrate with GitHub Actions CI/CD",
+        "parameters": {
+          "action": {
+            "type": "string",
+            "enum": ["trigger_workflow", "get_workflow_status", "cancel_workflow", "rerun_workflow"]
+          },
+          "workflow_id": {
+            "type": "string",
+            "description": "GitHub Actions workflow ID"
+          },
+          "inputs": {
+            "type": "object",
+            "description": "Workflow inputs"
+          }
+        }
+      }
+    }
+  },
+  "resources": {
+    "test_reports": {
+      "description": "Access to test execution reports and logs",
+      "uri_pattern": "file://./reports/{report_type}/{filename}"
+    },
+    "test_data": {
+      "description": "Access to test data and specifications",
+      "uri_pattern": "file://./tests/{test_type}/{filename}"
+    },
+    "configurations": {
+      "description": "Access to framework configurations",
+      "uri_pattern": "file://./config/{config_type}/{filename}"
+    },
+    "screenshots": {
+      "description": "Access to test execution screenshots",
+      "uri_pattern": "file://./screenshots/{status}/{filename}"
+    },
+    "logs": {
+      "description": "Access to execution logs",
+      "uri_pattern": "file://./logs/{log_type}/{filename}"
+    }
+  },
+  "prompts": {
+    "test_generation": {
+      "description": "AI prompt for generating test cases",
+      "path": "./prompts/testcase-generation.md"
+    },
+    "playwright_generation": {
+      "description": "AI prompt for generating Playwright code",
+      "path": "./prompts/playwright-generation.md"
+    },
+    "master": {
+      "description": "Master framework prompt",
+      "path": "./prompts/master.md"
+    }
+  },
+  "workflows": {
+    "complete_test_execution": {
+      "description": "Execute complete test flow from specification to results",
+      "steps": [
+        "load_test_specification",
+        "generate_test_code",
+        "execute_browser_automation",
+        "capture_screenshots",
+        "generate_reports",
+        "analyze_results",
+        "create_github_issue_if_failed"
+      ]
+    },
+    "ci_cd_pipeline": {
+      "description": "CI/CD pipeline for automated testing",
+      "steps": [
+        "checkout_code",
+        "setup_environment",
+        "install_dependencies",
+        "execute_tests",
+        "upload_artifacts",
+        "create_summary_report",
+        "notify_results"
+      ]
+    },
+    "test_maintenance": {
+      "description": "Automated test maintenance and healing",
+      "steps": [
+        "analyze_test_failures",
+        "identify_ui_changes",
+        "update_locators",
+        "heal_tests",
+        "validate_healed_tests",
+        "commit_changes"
+      ]
+    }
+  },
+  "environment": {
+    "uat": {
+      "base_url": "https://leapuat.adityabirlasunlifeinsurance.com/uat",
+      "credentials": {
+        "username": "BR4641",
+        "password": "q7LD4$J!d7"
+      },
+      "timeout": 30000,
+      "retry_attempts": 3
+    },
+    "staging": {
+      "base_url": "https://leapstaging.adityabirlasunlifeinsurance.com/staging",
+      "credentials": {
+        "username": "STAGING_USER",
+        "password": "STAGING_PASS"
+      },
+      "timeout": 25000,
+      "retry_attempts": 2
+    },
+    "production": {
+      "base_url": "https://leap.adityabirlasunlifeinsurance.com",
+      "credentials": {
+        "username": "PROD_USER",
+        "password": "PROD_PASS"
+      },
+      "timeout": 20000,
+      "retry_attempts": 1
+    }
+  },
+  "settings": {
+    "default_browser": "chromium",
+    "default_environment": "uat",
+    "default_timeout": 30000,
+    "screenshot_on_failure": true,
+    "video_recording": false,
+    "trace_collection": true,
+    "parallel_execution": true,
+    "max_parallel_workers": 4,
+    "report_formats": ["html", "json", "junit", "allure"],
+    "log_level": "INFO",
+    "auto_healing": true,
+    "github_integration": true,
+    "notifications": {
+      "email": false,
+      "slack": false,
+      "github_issues": true
+    }
+  }
+}
+}

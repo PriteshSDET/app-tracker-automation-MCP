@@ -1,0 +1,17 @@
+2026-04-28 22:26:12 - utils.logger - INFO - === AI-DRIVEN TEST EXECUTION START: test_invalid_login_popup_usr12 ===
+2026-04-28 22:26:12 - utils.logger - INFO - Using Framework Prompts: testcase-generation.md, playwright-generation.md
+2026-04-28 22:26:12 - utils.logger - INFO - Environment: UAT
+2026-04-28 22:26:12 - utils.logger - INFO - Browser: Chromium
+2026-04-28 22:26:12 - utils.logger - INFO - Execution Start Time: 2026-04-28 22:26:12.204356
+2026-04-28 22:26:12 - utils.logger - INFO - Loading Aditya Birla UAT login page
+2026-04-28 22:26:12 - utils.logger - INFO - Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+2026-04-28 22:26:17 - utils.logger - INFO - Entering credentials for user: usr12
+2026-04-28 22:26:17 - utils.logger - INFO - Credentials entered successfully
+2026-04-28 22:26:17 - utils.logger - INFO - Clicking login button
+2026-04-28 22:26:17 - utils.logger - INFO - Login button clicked
+2026-04-28 22:26:17 - utils.logger - ERROR - Popup validation failed for usr12: LocatorAssertions.to_be_visible() got an unexpected keyword argument 'message'
+2026-04-28 22:26:17 - utils.logger - INFO - === AI-DRIVEN TEST EXECUTION END: test_invalid_login_popup_usr12 ===
+2026-04-28 22:26:17 - utils.logger - INFO - Status: FAILED
+2026-04-28 22:26:17 - utils.logger - INFO - Duration: 5.44 seconds
+2026-04-28 22:26:17 - utils.logger - INFO - Test Details:
+2026-04-28 22:26:17 - utils.logger - INFO -   error: LocatorAssertions.to_be_visible() got an unexpected keyword argument 'message'

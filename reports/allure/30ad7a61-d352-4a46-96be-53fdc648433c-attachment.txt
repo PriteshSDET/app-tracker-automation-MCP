@@ -1,0 +1,17 @@
+2026-04-28 22:38:19 - utils.logger - INFO - 
+=== TEST EXECUTION START: test_invalid_login_popup_usr12 ===
+2026-04-28 22:38:19 - utils.logger - INFO - Execution Start Time: 2026-04-28 22:38:19.362824
+2026-04-28 22:38:19 - utils.logger - INFO - Loading Aditya Birla UAT login page
+2026-04-28 22:38:19 - utils.logger - INFO - Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+2026-04-28 22:38:49 - utils.logger - ERROR - CRITICAL UI FAILURE STOPPED EXECUTION: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login", waiting until "load"
+
+2026-04-28 22:38:49 - utils.logger - INFO - === TEST EXECUTION END: test_invalid_login_popup_usr12 ===
+2026-04-28 22:38:49 - utils.logger - INFO - Final Status Logged: FATAL_CRASH
+2026-04-28 22:38:49 - utils.logger - INFO - Duration: 30.38 seconds
+2026-04-28 22:38:49 - utils.logger - INFO - Test Details:
+2026-04-28 22:38:49 - utils.logger - INFO -   error: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login", waiting until "load"
+

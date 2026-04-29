@@ -1,0 +1,43 @@
+2026-04-29 12:29:06 - utils.logger - INFO - Setting browser viewport to 1920x1080...
+2026-04-29 12:29:06 - utils.logger - INFO - 
+========================================
+2026-04-29 12:29:06 - utils.logger - INFO - STARTING TEST SUITE: Complete End-to-End Flow
+2026-04-29 12:29:06 - utils.logger - INFO - Time: 12:29:06
+2026-04-29 12:29:06 - utils.logger - INFO - ========================================
+
+2026-04-29 12:29:06 - utils.logger - INFO - --- STEP START: Phase 1: Authentication ---
+2026-04-29 12:29:06 - utils.logger - INFO - Loading Aditya Birla UAT login page
+2026-04-29 12:29:06 - utils.logger - INFO - Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+2026-04-29 12:29:09 - utils.logger - INFO - Entering credentials for user: BR4641
+2026-04-29 12:29:09 - utils.logger - INFO - Entering credentials for user: BR4641
+2026-04-29 12:29:09 - utils.logger - INFO - Credentials entered successfully
+2026-04-29 12:29:09 - utils.logger - INFO - Clicking login button
+2026-04-29 12:29:09 - utils.logger - INFO - Login button clicked
+2026-04-29 12:29:09 - utils.logger - INFO - Waiting for redirect to Dashboard...
+2026-04-29 12:29:09 - utils.logger - INFO - [PASS] Redirect successful.
+2026-04-29 12:29:09 - utils.logger - INFO - --- STEP END: Phase 1 - COMPLETED ---
+2026-04-29 12:29:09 - utils.logger - INFO - Navigating via Top-Right Menu...
+2026-04-29 12:29:09 - utils.logger - INFO - Found MENU button using selector: button[aria-label*='menu' i]
+2026-04-29 12:29:28 - utils.logger - INFO - Dropdown visible using selector: [role='menu']
+2026-04-29 12:29:28 - utils.logger - INFO - Locating 'Application Tracker' in menu...
+2026-04-29 12:29:28 - utils.logger - INFO - Found Application Tracker using selector: [role='menuitem']:has-text('Application Tracker')
+2026-04-29 12:29:39 - utils.logger - WARNING - URL wait timeout, checking current URL
+2026-04-29 12:29:39 - utils.logger - INFO - Current URL: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/dashboard
+2026-04-29 12:29:54 - utils.logger - ERROR - URL did not contain 'app-tracker' within 15000ms: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001F0562D5DD0>" until 'load'
+============================================================
+2026-04-29 12:29:54 - utils.logger - ERROR - Tracker page load timeout: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001F0562D5DD0>" until 'load'
+============================================================
+2026-04-29 12:29:54 - utils.logger - CRITICAL - FATAL ERROR STOPPING EXECUTION: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001F0562D5DD0>" until 'load'
+============================================================
+2026-04-29 12:29:54 - utils.logger - INFO - 
+========================================
+2026-04-29 12:29:54 - utils.logger - INFO - TEST SUITE ENDED: CRITICAL_FAILURE
+2026-04-29 12:29:54 - utils.logger - INFO - Total Duration: 47.71s
+2026-04-29 12:29:54 - utils.logger - INFO - ========================================
+

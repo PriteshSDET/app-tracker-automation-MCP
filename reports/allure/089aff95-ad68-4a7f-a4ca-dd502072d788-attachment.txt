@@ -1,0 +1,28 @@
+[32mINFO    [0m utils.logger:logger.py:58 Setting browser viewport to 1920x1080...
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 STARTING TEST SUITE: Complete End-to-End Flow
+[32mINFO    [0m utils.logger:logger.py:58 Time: 12:15:30
+[32mINFO    [0m utils.logger:logger.py:58 ========================================
+
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Phase 1: Authentication ---
+[32mINFO    [0m utils.logger:logger.py:58 Loading Aditya Birla UAT login page
+[32mINFO    [0m utils.logger:logger.py:58 Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[32mINFO    [0m utils.logger:logger.py:58 Entering credentials for user: BR4641
+[32mINFO    [0m utils.logger:logger.py:58 Entering credentials for user: BR4641
+[32mINFO    [0m utils.logger:logger.py:58 Credentials entered successfully
+[32mINFO    [0m utils.logger:logger.py:58 Clicking login button
+[32mINFO    [0m utils.logger:logger.py:58 Login button clicked
+[32mINFO    [0m utils.logger:logger.py:58 Waiting for redirect to Dashboard...
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] Redirect successful.
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Phase 1 - COMPLETED ---
+[32mINFO    [0m utils.logger:logger.py:58 Navigating via Top-Right Menu...
+[31mCRITICAL[0m utils.logger:logger.py:70 FATAL ERROR STOPPING EXECUTION: Locator.wait_for: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator("div.header-right div.dropdown-trigger, [class*='menu-btn']").first to be visible
+
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 TEST SUITE ENDED: CRITICAL_FAILURE
+[32mINFO    [0m utils.logger:logger.py:58 Total Duration: 19.34s
+[32mINFO    [0m utils.logger:logger.py:58 ========================================

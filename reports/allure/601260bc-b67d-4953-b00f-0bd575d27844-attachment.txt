@@ -1,0 +1,5 @@
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 STARTING TEST SUITE: Complete End-to-End Flow
+[32mINFO    [0m utils.logger:logger.py:58 Time: 11:48:42
+[32mINFO    [0m utils.logger:logger.py:58 ========================================

@@ -1,0 +1,66 @@
+{
+  "roles": {
+    "admin": {
+      "name": "Administrator",
+      "permissions": [
+        "user_management",
+        "policy_management",
+        "claim_management",
+        "system_configuration",
+        "report_access",
+        "audit_logs"
+      ],
+      "access_level": "full"
+    },
+    "agent": {
+      "name": "Insurance Agent",
+      "permissions": [
+        "policy_creation",
+        "policy_modification",
+        "claim_processing",
+        "customer_management",
+        "basic_reports"
+      ],
+      "access_level": "high"
+    },
+    "underwriter": {
+      "name": "Underwriter",
+      "permissions": [
+        "policy_review",
+        "risk_assessment",
+        "policy_approval",
+        "claim_review",
+        "compliance_reports"
+      ],
+      "access_level": "medium"
+    },
+    "claims_adjuster": {
+      "name": "Claims Adjuster",
+      "permissions": [
+        "claim_processing",
+        "claim_investigation",
+        "settlement_approval",
+        "customer_communication"
+      ],
+      "access_level": "medium"
+    },
+    "customer": {
+      "name": "Customer",
+      "permissions": [
+        "view_own_policies",
+        "submit_claims",
+        "view_claim_status",
+        "update_profile"
+      ],
+      "access_level": "limited"
+    }
+  },
+  "default_role": "customer",
+  "role_hierarchy": [
+    "customer",
+    "claims_adjuster",
+    "underwriter",
+    "agent",
+    "admin"
+  ]
+}

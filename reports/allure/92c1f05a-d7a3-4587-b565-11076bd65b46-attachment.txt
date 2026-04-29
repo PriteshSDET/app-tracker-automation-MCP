@@ -1,0 +1,23 @@
+[32mINFO    [0m utils.logger:logger.py:58 === AI-DRIVEN TEST EXECUTION START: test_login_negative_scenarios ===
+[32mINFO    [0m utils.logger:logger.py:58 Using Framework Prompts: testcase-generation.md, playwright-generation.md
+[32mINFO    [0m utils.logger:logger.py:58 Environment: UAT
+[32mINFO    [0m utils.logger:logger.py:58 Browser: Chromium
+[32mINFO    [0m utils.logger:logger.py:58 Execution Start Time: 2026-04-28 22:05:33.184925
+[32mINFO    [0m utils.logger:logger.py:58 Loading Aditya Birla UAT login page
+[32mINFO    [0m utils.logger:logger.py:58 Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Test Invalid Credentials ---
+[32mINFO    [0m utils.logger:logger.py:58 Entering credentials for user: invalid_user@test.com
+[32mINFO    [0m utils.logger:logger.py:58 Credentials entered successfully
+[32mINFO    [0m utils.logger:logger.py:58 Clicking login button
+[32mINFO    [0m utils.logger:logger.py:58 Login button clicked
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Remained on login page as expected
+[33mWARNING [0m utils.logger:logger.py:62 Error message should be displayed
+[33mWARNING [0m utils.logger:logger.py:62 Focus should reset to username field
+[31m[1mERROR   [0m utils.logger:logger.py:66 Negative test failed: 'errors_validated'
+[32mINFO    [0m utils.logger:logger.py:58 === AI-DRIVEN TEST EXECUTION END: test_login_negative_scenarios ===
+[32mINFO    [0m utils.logger:logger.py:58 Status: FAILED
+[32mINFO    [0m utils.logger:logger.py:58 Duration: 8.20 seconds
+[32mINFO    [0m utils.logger:logger.py:58 Test Details:
+[32mINFO    [0m utils.logger:logger.py:58   negative_tests: ['Invalid credentials']
+[32mINFO    [0m utils.logger:logger.py:58   errors_encountered: ["'errors_validated'"]
+[32mINFO    [0m utils.logger:logger.py:58 === TEST END: test_login_negative_scenarios - FAILED ===

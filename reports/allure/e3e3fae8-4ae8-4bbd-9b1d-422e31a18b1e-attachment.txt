@@ -1,0 +1,715 @@
+2026-04-28 23:15:33 - utils.logger - INFO - 
+=== TEST EXECUTION START: test_login_tracker_complete_flow ===
+2026-04-28 23:15:33 - utils.logger - INFO - Execution Start Time: 2026-04-28 23:15:33.057828
+2026-04-28 23:15:33 - utils.logger - INFO - --- STEP START: Navigate to UAT Login Page ---
+2026-04-28 23:15:33 - utils.logger - INFO - Loading Aditya Birla UAT login page
+2026-04-28 23:15:33 - utils.logger - INFO - Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+2026-04-28 23:15:49 - utils.logger - INFO - ✓ Login page loaded successfully.
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 44: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\tests\smoke\execute_login_tracker_test.py", line 88, in test_login_tracker_complete_flow
+    self.logger.info("✓ Login page loaded successfully.")
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\utils\logger.py", line 58, in info
+    self.logger.info(message)
+Message: '✓ Login page loaded successfully.'
+Arguments: ()
+2026-04-28 23:15:49 - utils.logger - WARNING - ! UAT badge missing.
+2026-04-28 23:15:49 - utils.logger - INFO - --- STEP END: Navigate to UAT Login Page - COMPLETED ---
+2026-04-28 23:15:49 - utils.logger - INFO - --- STEP START: Enter Credentials and Login ---
+2026-04-28 23:15:49 - utils.logger - INFO - Entering credentials for user: BR4641
+2026-04-28 23:15:49 - utils.logger - INFO - Credentials entered successfully
+2026-04-28 23:15:49 - utils.logger - INFO - Clicking login button
+2026-04-28 23:15:49 - utils.logger - INFO - Login button clicked
+2026-04-28 23:15:49 - utils.logger - INFO - --- STEP END: Enter Credentials and Login - COMPLETED ---
+2026-04-28 23:15:49 - utils.logger - INFO - --- STEP START: Verify Dashboard Redirect ---
+2026-04-28 23:15:49 - utils.logger - INFO - Current URL: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+2026-04-28 23:15:49 - utils.logger - INFO - Still on login page, waiting for redirect...
+2026-04-28 23:15:54 - utils.logger - ERROR - Dashboard load timeout: 'Waits' object has no attribute 'wait_for_timeout'
+2026-04-28 23:15:54 - utils.logger - WARNING - Dashboard load issue - continuing test execution
+2026-04-28 23:15:54 - utils.logger - INFO - ✓ Dashboard dynamically loaded.
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 44: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\tests\smoke\execute_login_tracker_test.py", line 111, in test_login_tracker_complete_flow
+    self.logger.info("✓ Dashboard dynamically loaded.")
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\utils\logger.py", line 58, in info
+    self.logger.info(message)
+Message: '✓ Dashboard dynamically loaded.'
+Arguments: ()
+2026-04-28 23:15:54 - utils.logger - INFO - ✓ Redirected to dashboard. URL: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/dashboard
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 44: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\tests\smoke\execute_login_tracker_test.py", line 118, in test_login_tracker_complete_flow
+    self.logger.info(f"✓ Redirected to dashboard. URL: {page.url}")
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\utils\logger.py", line 58, in info
+    self.logger.info(message)
+Message: '✓ Redirected to dashboard. URL: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/dashboard'
+Arguments: ()
+2026-04-28 23:15:54 - utils.logger - ERROR - ✗ Dashboard UI elements not found.
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2717' in position 45: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\tests\smoke\execute_login_tracker_test.py", line 126, in test_login_tracker_complete_flow
+    self.logger.error("✗ Dashboard UI elements not found.")
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\utils\logger.py", line 66, in error
+    self.logger.error(message)
+Message: '✗ Dashboard UI elements not found.'
+Arguments: ()
+2026-04-28 23:15:54 - utils.logger - INFO - --- STEP END: Verify Dashboard Redirect - COMPLETED ---
+2026-04-28 23:15:54 - utils.logger - INFO - --- STEP START: Navigate to Application Tracker ---
+2026-04-28 23:15:57 - utils.logger - INFO - ✓ Clicked Tracker Menu.
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 44: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\tests\smoke\execute_login_tracker_test.py", line 144, in test_login_tracker_complete_flow
+    self.logger.info("✓ Clicked Tracker Menu.")
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\utils\logger.py", line 58, in info
+    self.logger.info(message)
+Message: '✓ Clicked Tracker Menu.'
+Arguments: ()
+2026-04-28 23:15:57 - utils.logger - INFO - --- STEP END: Navigate to Application Tracker - COMPLETED ---
+2026-04-28 23:15:57 - utils.logger - INFO - --- STEP START: Validate Tracker Data ---
+2026-04-28 23:16:12 - utils.logger - ERROR - URL did not contain 'app-tracker' within 15000ms: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x0000023D121D54E0>" until 'load'
+============================================================
+2026-04-28 23:16:12 - utils.logger - ERROR - Tracker page load timeout: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x0000023D121D54E0>" until 'load'
+============================================================
+2026-04-28 23:16:12 - utils.logger - ERROR - ✗ App Tracker page did not load in time.
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\tests\smoke\execute_login_tracker_test.py", line 154, in test_login_tracker_complete_flow
+    tracker_page.wait_for_tracker_load()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\pages\aditya_birla_tracker_page.py", line 120, in wait_for_tracker_load
+    self.waits.wait_for_url_contains("app-tracker", timeout)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\utils\waits.py", line 91, in wait_for_url_contains
+    self.page.wait_for_url(lambda url: substring in url, timeout=timeout)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 9197, in wait_for_url
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for_url(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            url=self._wrap_handler(url), waitUntil=wait_until, timeout=timeout
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+    )
+    ^
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\playwright\_impl\_page.py", line 580, in wait_for_url
+    return await self._main_frame.wait_for_url(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 263, in wait_for_url
+    async with self.expect_navigation(
+               ~~~~~~~~~~~~~~~~~~~~~~^
+        url=url, waitUntil=waitUntil, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\playwright\_impl\_event_context_manager.py", line 33, in __aexit__
+    await self._future
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 239, in continuation
+    event = await waiter.result()
+            ^^^^^^^^^^^^^^^^^^^^^
+playwright._impl._errors.TimeoutError: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x0000023D121D54E0>" until 'load'
+============================================================
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2717' in position 45: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\tests\smoke\execute_login_tracker_test.py", line 157, in test_login_tracker_complete_flow
+    self.logger.error("✗ App Tracker page did not load in time.")
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\utils\logger.py", line 66, in error
+    self.logger.error(message)
+Message: '✗ App Tracker page did not load in time.'
+Arguments: ()
+2026-04-28 23:16:12 - utils.logger - ERROR - ✗ Did not land on App Tracker page.
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2717' in position 45: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\tests\smoke\execute_login_tracker_test.py", line 163, in test_login_tracker_complete_flow
+    self.logger.error("✗ Did not land on App Tracker page.")
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\utils\logger.py", line 66, in error
+    self.logger.error(message)
+Message: '✗ Did not land on App Tracker page.'
+Arguments: ()
+2026-04-28 23:16:12 - utils.logger - INFO - ✓ Tracker table rendered. Rows found: 1
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\INVEN40415\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 44: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Scripts\pytest.exe\__main__.py", line 5, in <module>
+    sys.exit(console_main())
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 223, in console_main
+    code = main()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\config\__init__.py", line 199, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 365, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 318, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 372, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\main.py", line 396, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 137, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 244, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+    result: TResult | None = func()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\.venv\Lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\tests\smoke\execute_login_tracker_test.py", line 169, in test_login_tracker_complete_flow
+    self.logger.info(f"✓ Tracker table rendered. Rows found: {rows_count}")
+  File "C:\Users\INVEN40415\Saved Games\App-tracker-automation-MCP\app-tracker-automation\utils\logger.py", line 58, in info
+    self.logger.info(message)
+Message: '✓ Tracker table rendered. Rows found: 1'
+Arguments: ()
+2026-04-28 23:16:12 - utils.logger - INFO - --- STEP END: Validate Tracker Data - COMPLETED ---
+2026-04-28 23:16:12 - utils.logger - INFO - === TEST EXECUTION END: test_login_tracker_complete_flow ===
+2026-04-28 23:16:12 - utils.logger - INFO - Final Status Logged: PASSED_WITH_ERRORS
+2026-04-28 23:16:12 - utils.logger - INFO - Duration: 39.71 seconds
+2026-04-28 23:16:12 - utils.logger - INFO - Test Details:
+2026-04-28 23:16:12 - utils.logger - INFO -   errors_found: 3

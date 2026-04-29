@@ -1,0 +1,70 @@
+[32mINFO    [0m utils.logger:logger.py:58 === AI-DRIVEN TEST EXECUTION START: test_login_tracker_complete_flow ===
+[32mINFO    [0m utils.logger:logger.py:58 Using Framework Prompts: testcase-generation.md, playwright-generation.md
+[32mINFO    [0m utils.logger:logger.py:58 Environment: UAT
+[32mINFO    [0m utils.logger:logger.py:58 Browser: Chromium
+[32mINFO    [0m utils.logger:logger.py:58 Execution Start Time: 2026-04-28 22:04:47.094282
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Navigate to UAT Login Page ---
+[32mINFO    [0m utils.logger:logger.py:58 Loading Aditya Birla UAT login page
+[32mINFO    [0m utils.logger:logger.py:58 Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Login page displayed
+[33mWARNING [0m utils.logger:logger.py:62 UAT badge not visible
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Branding visible
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Navigate to UAT Login Page - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Enter Valid Credentials ---
+[32mINFO    [0m utils.logger:logger.py:58 Entering credentials for user: BR4641
+[32mINFO    [0m utils.logger:logger.py:58 Credentials entered successfully
+[33mWARNING [0m utils.logger:logger.py:62 Focus not on input fields
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Enter Valid Credentials - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Click Login Button ---
+[32mINFO    [0m utils.logger:logger.py:58 Clicking login button
+[32mINFO    [0m utils.logger:logger.py:58 Login button clicked
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Click Login Button - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Verify Dashboard Redirect ---
+[32mINFO    [0m utils.logger:logger.py:58 Current URL: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[32mINFO    [0m utils.logger:logger.py:58 Still on login page, waiting for redirect...
+[31m[1mERROR   [0m utils.logger:logger.py:66 Dashboard load timeout: 'Waits' object has no attribute 'wait_for_timeout'
+[33mWARNING [0m utils.logger:logger.py:62 Dashboard load issue - continuing test execution
+[33mWARNING [0m utils.logger:logger.py:62 Dashboard not displayed
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Redirected to dashboard
+[33mWARNING [0m utils.logger:logger.py:62 UAT badge not visible on dashboard
+[33mWARNING [0m utils.logger:logger.py:62 Application list title not found
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Verify Dashboard Redirect - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Hover and Click Menu Button (Top Right) ---
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Menu button is visible
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Hovered over menu button
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Clicked menu button
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Dropdown menu opened
+[33mWARNING [0m utils.logger:logger.py:62 Expected more menu items, found 0
+[32mINFO    [0m utils.logger:logger.py:58 Total menu elements found: 40
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Hover and Click Menu Button (Top Right) - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Click Application Tracker from Dropdown ---
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Application Tracker menu item found using selector: li:has-text('Application Tracker')
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Clicked on Application Tracker menu item
+[33mWARNING [0m utils.logger:logger.py:62 URL wait timeout: Page.wait_for_function: Timeout 15000ms exceeded.
+[32mINFO    [0m utils.logger:logger.py:58 Current URL after click: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/dashboard
+[33mWARNING [0m utils.logger:logger.py:62 URL does not contain 'app-tracker': https://leapuat.adityabirlasunlifeinsurance.com/uat/#/dashboard
+[33mWARNING [0m utils.logger:logger.py:62 'App Tracker' header not clearly visible
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Click Application Tracker from Dropdown - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Verify Application Tracker Navigation ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Verify Application Tracker Navigation - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Verify Application Tracker Page ---
+[31m[1mERROR   [0m utils.logger:logger.py:66 URL did not contain 'app-tracker' within 15000ms: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001A485ED3480>" until 'load'
+============================================================
+[31m[1mERROR   [0m utils.logger:logger.py:66 Tracker page load timeout: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001A485ED3480>" until 'load'
+============================================================
+[31m[1mERROR   [0m utils.logger:logger.py:66 Test failed: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001A485ED3480>" until 'load'
+============================================================
+[32mINFO    [0m utils.logger:logger.py:58 === AI-DRIVEN TEST EXECUTION END: test_login_tracker_complete_flow ===
+[32mINFO    [0m utils.logger:logger.py:58 Status: FAILED
+[32mINFO    [0m utils.logger:logger.py:58 Duration: 43.34 seconds
+[32mINFO    [0m utils.logger:logger.py:58 Test Details:
+[32mINFO    [0m utils.logger:logger.py:58   steps_executed: ['Navigate to login page', 'Enter credentials', 'Click login button', 'Verify dashboard redirect', 'Hover and click menu button', 'Click Application Tracker from dropdown', 'Navigate to application tracker']
+[32mINFO    [0m utils.logger:logger.py:58   validations_performed: ['Login page elements verified', 'Credentials entered successfully', 'Dashboard elements verified', 'Dropdown menu opened with all options visible', 'Navigated to app-tracker, URL updated to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/dashboard']
+[32mINFO    [0m utils.logger:logger.py:58   errors_encountered: ['Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001A485ED3480>" until \'load\'\n============================================================']
+[32mINFO    [0m utils.logger:logger.py:58 === TEST END: test_login_tracker_complete_flow - FAILED ===

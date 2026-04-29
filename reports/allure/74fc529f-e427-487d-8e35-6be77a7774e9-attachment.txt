@@ -1,0 +1,42 @@
+[32mINFO    [0m utils.logger:logger.py:58 Setting browser viewport to 1920x1080...
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 STARTING TEST SUITE: Complete End-to-End Flow
+[32mINFO    [0m utils.logger:logger.py:58 Time: 12:29:06
+[32mINFO    [0m utils.logger:logger.py:58 ========================================
+
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Phase 1: Authentication ---
+[32mINFO    [0m utils.logger:logger.py:58 Loading Aditya Birla UAT login page
+[32mINFO    [0m utils.logger:logger.py:58 Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[32mINFO    [0m utils.logger:logger.py:58 Entering credentials for user: BR4641
+[32mINFO    [0m utils.logger:logger.py:58 Entering credentials for user: BR4641
+[32mINFO    [0m utils.logger:logger.py:58 Credentials entered successfully
+[32mINFO    [0m utils.logger:logger.py:58 Clicking login button
+[32mINFO    [0m utils.logger:logger.py:58 Login button clicked
+[32mINFO    [0m utils.logger:logger.py:58 Waiting for redirect to Dashboard...
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] Redirect successful.
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Phase 1 - COMPLETED ---
+[32mINFO    [0m utils.logger:logger.py:58 Navigating via Top-Right Menu...
+[32mINFO    [0m utils.logger:logger.py:58 Found MENU button using selector: button[aria-label*='menu' i]
+[32mINFO    [0m utils.logger:logger.py:58 Dropdown visible using selector: [role='menu']
+[32mINFO    [0m utils.logger:logger.py:58 Locating 'Application Tracker' in menu...
+[32mINFO    [0m utils.logger:logger.py:58 Found Application Tracker using selector: [role='menuitem']:has-text('Application Tracker')
+[33mWARNING [0m utils.logger:logger.py:62 URL wait timeout, checking current URL
+[32mINFO    [0m utils.logger:logger.py:58 Current URL: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/dashboard
+[31m[1mERROR   [0m utils.logger:logger.py:66 URL did not contain 'app-tracker' within 15000ms: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001F0562D5DD0>" until 'load'
+============================================================
+[31m[1mERROR   [0m utils.logger:logger.py:66 Tracker page load timeout: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001F0562D5DD0>" until 'load'
+============================================================
+[31mCRITICAL[0m utils.logger:logger.py:70 FATAL ERROR STOPPING EXECUTION: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001F0562D5DD0>" until 'load'
+============================================================
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 TEST SUITE ENDED: CRITICAL_FAILURE
+[32mINFO    [0m utils.logger:logger.py:58 Total Duration: 47.71s
+[32mINFO    [0m utils.logger:logger.py:58 ========================================
