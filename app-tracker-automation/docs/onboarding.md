@@ -28,8 +28,8 @@ Welcome to the App Tracker Automation Framework! This guide will help you get up
 
 ### 1. Clone Repository
 ```bash
-git clone <repository-url>
-cd app-tracker-automation
+git clone https://github.com/PriteshSDET/app-tracker-automation-MCP.git
+cd app-tracker-automation-MCP
 ```
 
 ### 2. Create Virtual Environment
@@ -45,7 +45,7 @@ source venv/bin/activate
 
 ### 3. Install Dependencies
 ```bash
-pip install -r requirements.txt
+pip install -r app-tracker-automation/requirements.txt
 ```
 
 ### 4. Install Playwright Browsers
@@ -55,11 +55,14 @@ playwright install
 
 ### 5. Configure Environment
 ```bash
-# Copy environment template
-cp .env.example .env
-
-# Edit .env with your configuration
+# The .env file is located at app-tracker-automation/.env
+# Edit with your credentials:
+ADITYA_BIRLA_USER=your_username
+ADITYA_BIRLA_PASS=your_password
+BASE_URL=https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
 ```
+
+**Note**: The framework uses a multi-path .env loading strategy that automatically finds the .env file from multiple locations, ensuring flexibility across different execution contexts.
 
 ## IDE Setup
 
@@ -144,7 +147,8 @@ class TestFirstTest:
 
 ### 2. Run Test
 ```bash
-pytest tests/sanity/test_first_test.py -v
+# Set PYTHONPATH and run test
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest "app-tracker-automation\tests\smoke\execute_login_tracker_test.py" -v
 ```
 
 ### 3. View Results

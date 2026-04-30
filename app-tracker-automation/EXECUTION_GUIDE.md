@@ -24,28 +24,31 @@ This guide provides step-by-step instructions for executing the AI-generated tes
 ### Prerequisites
 1. **Install Dependencies**:
    ```bash
-   pip install -r requirements.txt
+   pip install -r app-tracker-automation/requirements.txt
    playwright install
    ```
 
 2. **Environment Setup**:
    - Ensure UAT environment is accessible
-   - Verify credentials: `BR4641` / `q7LD4$J!d7`
+   - Configure credentials in `app-tracker-automation/.env`:
+     ```bash
+     ADITYA_BIRLA_USER=your_username
+     ADITYA_BIRLA_PASS=your_password
+     ```
    - Check network connectivity
+
+**Note**: The framework uses a multi-path .env loading strategy to ensure credentials are loaded correctly across different execution contexts.
 
 ### Option 1: Quick Execution
 ```bash
-# Navigate to framework directory
-cd app-tracker-automation
-
-# Run the test runner script
-python run_login_test.py
+# Set PYTHONPATH and run the test
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest "app-tracker-automation\tests\smoke\execute_login_tracker_test.py" --headed
 ```
 
 ### Option 2: Pytest Execution
 ```bash
-# Run specific test with comprehensive reporting
-pytest tests/smoke/execute_login_tracker_test.py -v \
+# Set PYTHONPATH and run specific test with comprehensive reporting
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest "app-tracker-automation\tests\smoke\execute_login_tracker_test.py" -v \
   --html=reports/html/login_test_report.html \
   --alluredir=reports/allure \
   --junitxml=reports/junit/login_test_results.xml \
@@ -56,14 +59,11 @@ pytest tests/smoke/execute_login_tracker_test.py -v \
 
 ### Option 3: Individual Test Execution
 ```bash
-# Run main test
-pytest tests/smoke/execute_login_tracker_test.py::TestLoginTrackerNavigation::test_login_tracker_complete_flow -v
+# Set PYTHONPATH and run main test
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest "app-tracker-automation\tests\smoke\execute_login_tracker_test.py::TestUnifiedAppTrackerFlow::test_complete_flow_and_validation" -v
 
-# Run negative tests
-pytest tests/smoke/execute_login_tracker_test.py::TestLoginTrackerNavigation::test_login_negative_scenarios -v
-
-# Run accessibility tests
-pytest tests/smoke/execute_login_tracker_test.py::TestLoginTrackerNavigation::test_accessibility_compliance -v
+# Run with headed mode for debugging
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest "app-tracker-automation\tests\smoke\execute_login_tracker_test.py::TestUnifiedAppTrackerFlow::test_complete_flow_and_validation" -v --headed
 ```
 
 ## Test Coverage
@@ -75,8 +75,8 @@ pytest tests/smoke/execute_login_tracker_test.py::TestLoginTrackerNavigation::te
    - Verify form elements
 
 2. **Enter Credentials**
-   - Username: `BR4641`
-   - Password: `q7LD4$J!d7`
+   - Username: Loaded from `ADITYA_BIRLA_USER` in .env
+   - Password: Loaded from `ADITYA_BIRLA_PASS` in .env
    - Validate input focus and masking
 
 3. **Login Authentication**
@@ -220,14 +220,14 @@ The test was generated using the framework's AI prompts:
 
 ### Debug Mode
 ```bash
-# Run with visible browser for debugging
-pytest tests/smoke/execute_login_tracker_test.py --headed=true --slowmo=1000
+# Set PYTHONPATH and run with visible browser for debugging
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest "app-tracker-automation\tests\smoke\execute_login_tracker_test.py" --headed=true --slowmo=1000
 
 # Run with Playwright Inspector
-pytest tests/smoke/execute_login_tracker_test.py --debug
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest "app-tracker-automation\tests\smoke\execute_login_tracker_test.py" --debug
 
 # Run with tracing
-pytest tests/smoke/execute_login_tracker_test.py --tracing=on
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest "app-tracker-automation\tests\smoke\execute_login_tracker_test.py" --tracing=on
 ```
 
 ## Next Steps

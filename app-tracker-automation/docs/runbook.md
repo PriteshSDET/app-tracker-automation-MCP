@@ -8,45 +8,43 @@ This runbook provides step-by-step instructions for running tests in different s
 
 ### Run All Tests
 ```bash
-pytest
+# Set PYTHONPATH and run all tests
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest
 ```
 
 ### Run Specific Test Categories
 ```bash
 # Sanity tests (critical path)
-pytest -m sanity
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest -m sanity
 
 # Smoke tests (core features)
-pytest -m smoke
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest -m smoke
 
 # Regression tests (full suite)
-pytest -m regression
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest -m regression
 
 # API tests
-pytest -m api
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest -m api
 ```
 
 ## Environment Setup
 
 ### Local Development
 ```bash
-# Set environment
-export ENVIRONMENT=dev
-
-# Run with local config
-pytest --env=dev
+# Set PYTHONPATH and environment
+$env:PYTHONPATH = ".\app-tracker-automation"; $env:ENVIRONMENT="dev"; pytest --env=dev
 ```
 
 ### CI/CD Pipeline
 ```bash
-# Run with headless browser
-pytest --headed=false
+# Set PYTHONPATH and run with headless browser
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest --headed=false
 
 # Generate reports
-pytest --html=reports/html/report.html --alluredir=reports/allure
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest --html=reports/html/report.html --alluredir=reports/allure
 
 # Run on specific browser
-pytest --browser=chromium
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest --browser=chromium
 ```
 
 ## Test Categories

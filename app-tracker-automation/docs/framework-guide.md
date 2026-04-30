@@ -64,9 +64,18 @@ tests/
 ## Configuration
 
 ### Environment Setup
-- `.env`: Environment variables
+- `.env`: Environment variables (located at `app-tracker-automation/.env`)
 - `data/env.json`: Environment configurations
 - `utils/config.py`: Configuration management
+
+**Environment Variables**:
+```bash
+ADITYA_BIRLA_USER=your_username
+ADITYA_BIRLA_PASS=your_password
+BASE_URL=https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+```
+
+**Note**: The framework uses a multi-path .env loading strategy to ensure credentials are loaded correctly across different execution contexts.
 
 ### Test Data
 - `data/users.xlsx`: User credentials
@@ -77,27 +86,27 @@ tests/
 
 ### Prerequisites
 ```bash
-pip install -r requirements.txt
+pip install -r app-tracker-automation/requirements.txt
 playwright install
 ```
 
 ### Test Execution
 ```bash
-# Run all tests
-pytest
+# Set PYTHONPATH and run all tests
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest
 
 # Run specific test categories
-pytest -m sanity
-pytest -m smoke
-pytest -m regression
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest -m sanity
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest -m smoke
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest -m regression
 
 # Run with specific browser
-pytest --browser=chromium
-pytest --browser=firefox
-pytest --browser=webkit
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest --browser=chromium
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest --browser=firefox
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest --browser=webkit
 
 # Generate reports
-pytest --html=reports/html/report.html --alluredir=reports/allure
+$env:PYTHONPATH = ".\app-tracker-automation"; pytest --html=reports/html/report.html --alluredir=reports/allure
 ```
 
 ## Reporting
