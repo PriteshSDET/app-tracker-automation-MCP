@@ -5,6 +5,8 @@ Priority: HIGH
 Environment: UAT
 """
 
+import os
+from dotenv import load_dotenv
 import pytest
 from playwright.sync_api import Page, expect
 from pages.login_page import LoginPage
@@ -16,6 +18,9 @@ from utils.config import Config
 from utils.logger import Logger
 from utils.assertions import Assertions
 from utils.waits import Waits
+
+# Load environment variables from .env file
+load_dotenv(dotenv_path="app-tracker-automation/.env")
 
 
 class TestLoginTrackerNavigation:
@@ -42,9 +47,9 @@ class TestLoginTrackerNavigation:
         login_flow = LoginFlow(page)
         tracker_flow = TrackerFlow(page)
         
-        # Test data
-        username = "BR4641"
-        password = "q7LD4$J!d7"
+        # Test data from .env
+        username = os.getenv("ADITYA_BIRLA_USER")
+        password = os.getenv("ADITYA_BIRLA_PASS")
         
         try:
             # Step 1: Navigate to login page

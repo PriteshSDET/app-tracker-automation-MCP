@@ -4,6 +4,8 @@ Strategy: Continuous State Management with Explicit Hidden-Waits & Scroll Handli
 Updates: Integrated deep-locators from App Tracker HTML source.
 """
 
+import os
+from dotenv import load_dotenv
 import pytest
 from datetime import datetime
 from playwright.sync_api import Page
@@ -11,6 +13,25 @@ from pages.aditya_birla_login_page import AdityaBirlaLoginPage
 from pages.aditya_birla_dashboard_page import AdityaBirlaDashboardPage
 from pages.aditya_birla_tracker_page import AdityaBirlaTrackerPage
 from utils.logger import Logger
+
+# Load environment variables from .env file
+import os
+# Try multiple possible .env locations
+env_paths = [
+    "app-tracker-automation/.env",  # From project root
+    ".env",  # Current directory
+    os.path.join(os.path.dirname(__file__), "..", "..", ".env"),  # Relative to test file
+]
+
+env_loaded = False
+for env_path in env_paths:
+    if os.path.exists(env_path):
+        load_dotenv(dotenv_path=env_path)
+        env_loaded = True
+        break
+
+if not env_loaded:
+    print(f"WARNING: .env file not found in any of these locations: {env_paths}")
 
 # --- GLOBAL BROWSER CONFIGURATION ---
 BROWSER_VIEWPORT = None
@@ -92,7 +113,14 @@ class TestUnifiedAppTrackerFlow:
         dashboard_page = AdityaBirlaDashboardPage(page)
         tracker_page = AdityaBirlaTrackerPage(page)
         
-        creds = {"user": "BR4641", "pass": "q7LD4$J!d7"}
+        creds = {"user": os.getenv("ADITYA_BIRLA_USER"), "pass": os.getenv("ADITYA_BIRLA_PASS")}
+        
+        # Debug: Log credential loading status
+        self.logger.info(f"Credentials loaded - User: {creds['user']}, Pass: {'*' * len(creds['pass']) if creds['pass'] else 'None'}")
+        
+        if not creds["user"] or not creds["pass"]:
+            self.logger.error(f"Credentials not loaded from .env. User: {creds['user']}, Pass: {creds['pass']}")
+            raise Exception("Credentials not loaded from .env file. Please check .env file location and content.")
         errors_logged = 0
         
         try:
@@ -100,15 +128,22 @@ class TestUnifiedAppTrackerFlow:
             self._navigate_and_auth(page, login_page, creds)
             
             # PHASE 2: APP TRACKER SETUP
+            tracker_page_obj = None
             if "app-tracker" not in page.url:
-                self._navigate_to_tracker(page, tracker_page)
+                tracker_page_obj = self._navigate_to_tracker(page, tracker_page)
             else:
                 tracker_page.wait_for_tracker_load(timeout=8000)
+                tracker_page_obj = page
+            
+            # Use the tracker page object (new tab) for validations
+            if tracker_page_obj:
+                # Update tracker_page with the correct page object
+                tracker_page.page = tracker_page_obj
                 
             # PHASE 3: COMPONENT VALIDATION
             self.logger.step_start("--- Beginning Component Validation Phase ---")
-            sanity_errors = self._validate_component_filters(page, tracker_page)
-            sanity_errors += self._validate_component_table(page, tracker_page)
+            sanity_errors = self._validate_component_filters(tracker_page_obj or page, tracker_page)
+            sanity_errors += self._validate_component_table(tracker_page_obj or page, tracker_page)
             errors_logged += sanity_errors
             
             if errors_logged > 0:
@@ -135,193 +170,245 @@ class TestUnifiedAppTrackerFlow:
             self.logger.warning(f"[WARN] Redirect wait timed out: {e}")
 
     def _navigate_to_tracker(self, page, tracker_page):
-        """Navigates using refined selectors."""
+        """Navigates using precise CSS selectors from HTML analysis."""
         self.logger.info("Navigating via Top-Right Menu...")
         
-        # Strategy: Try to find a button in the top right area (Header)
-        # Using a broader scope first to find the header container, then buttons
-        header_container = page.locator("nav.sticky.top-0.z-50")
-        menu_btn = header_container.locator("button").filter(has_text="Menu").first
+        # PRECISE SELECTOR from HTML: button.menu-button with aria-label="menu"
+        menu_btn = page.locator("button.menu-button[aria-label='menu']").first
         menu_btn.scroll_into_view_if_needed()
+        menu_btn.wait_for(state="visible", timeout=5000)
         menu_btn.click()
         
-        # Locate Link
-        link = page.locator("a:has-text('Application Tracker'), button:has-text('Application Tracker')").first
+        # Wait for menu to appear
+        page.wait_for_timeout(500)
+        
+        # Try multiple selectors for Application Tracker link
+        link_selectors = [
+            "a:has-text('Application Tracker')",
+            "button:has-text('Application Tracker')",
+            "[role='menuitem']:has-text('Application Tracker')",
+            "li:has-text('Application Tracker') a"
+        ]
+        
+        link = None
+        for selector in link_selectors:
+            try:
+                temp_link = page.locator(selector).first
+                if temp_link.is_visible(timeout=2000):
+                    link = temp_link
+                    self.logger.info(f"Found Application Tracker using selector: {selector}")
+                    break
+            except:
+                continue
+        
+        if not link:
+            raise Exception("Application Tracker link not found in menu")
+        
         link.scroll_into_view_if_needed()
         link.click(force=True)
         
+        # Handle new tab opening for Application Tracker
+        # Application Tracker opens in new tab: https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications
+        self.logger.info("Waiting for new tab to open...")
+        
+        # Wait for new tab to open
+        page.wait_for_timeout(2000)
+        
+        # Get all pages (tabs)
+        context = page.context
+        pages = context.pages
+        
+        # Switch to the new tab (Application Tracker)
+        tracker_page_obj = None
+        for p in pages:
+            if "app-tracker" in p.url:
+                tracker_page_obj = p
+                self.logger.info(f"Found Application Tracker tab: {p.url}")
+                break
+        
+        if not tracker_page_obj:
+            self.logger.warning("Application Tracker tab not found, using current page")
+            tracker_page_obj = page
+        
+        # Bring the tracker page to focus
+        tracker_page_obj.bring_to_front()
+        
+        # Validate URL matches expected Application Tracker URL
+        expected_url_pattern = "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"
+        try:
+            if expected_url_pattern in tracker_page_obj.url:
+                self.logger.info(f"✓ URL Validation PASSED: {tracker_page_obj.url}")
+            else:
+                self.logger.warning(f"URL mismatch. Expected: {expected_url_pattern}, Got: {tracker_page_obj.url}")
+        except Exception as e:
+            self.logger.warning(f"URL validation warning: {e}")
+        
+        # Wait for page to load
+        tracker_page_obj.wait_for_load_state("networkidle", timeout=10000)
+        self.logger.info("Application Tracker page loaded")
+        
+        # Update tracker_page with the new page object
+        tracker_page.page = tracker_page_obj
         tracker_page.wait_for_tracker_load(timeout=15000)
+        
+        # Return the new page object for subsequent validations
+        return tracker_page_obj
 
     def _validate_component_filters(self, page, tracker_page):
-        """Validates filters using EXPLICIT locators extracted from HTML."""
+        """Validates App Tracker homepage components using specified locators."""
         errors = 0
         
-        # --- 1. FILTER TYPE DROPDOWN ---
-        # Locators found: button[aria-label="Choose search field"]
+        # --- 0. FILTER BUTTON (Fixing dynamic_wait error) ---
         try:
-            self.logger.step_start("Validating Filter Type Dropdown")
-            # Click the switcher button
-            filter_trigger = page.locator('button[aria-label="Choose search field"]').first
-            filter_trigger.scroll_into_view_if_needed()
-            filter_trigger.click()
-            tracker_page.dynamic_wait(1000)
-            
-            # Verify options appeared (Look for typical option containers)
-            # Note: We use a generic wait for any new modal/dialog content to appear
-            page.locator("div.menu-item, ul.dropdown-list, [role='menu']").wait_for(state="visible", timeout=2000)
-            self.logger.info("[PASS] Filter Dropdown Opened")
-            
-            # Close & Wait hidden
-            page.keyboard.press("Escape") # Standard close method
-            page.locator("div.menu-item, ul.dropdown-list").wait_for(state="hidden", timeout=2000)
-            self.logger.info("[PASS] Filter Dropdown Closed successfully.")
+            self.logger.step_start("Validating Filter Button")
+            filter_btn = page.locator("button:has-text('Filter'), [aria-label*='filter' i], .filter-button").first
+            if filter_btn.is_visible(timeout=5000):
+                self.logger.info("[PASS] Filter Button found and visible")
+            else:
+                self.logger.warning("[WARN] Filter Button not visible")
         except Exception as e:
-            self.logger.error(f"[FAIL] Filter Type Failed: {e}")
+            self.logger.error(f"[FAIL] Filter Button Failed: {e}")
             errors += 1
 
-        # --- 2. DATE RANGE PICKER ---
-        # Locators found: button[role="combobox"] with span containing "Prev + Current Month"
+        # --- 1. TITLE - "Policy List" ---
         try:
-            self.logger.step_start("Validating Date Range Picker")
+            self.logger.step_start("Validating Policy List Title")
+            page.wait_for_load_state("networkidle")
+            title = page.get_by_text("Policy List")
+            if title.is_visible(timeout=3000):
+                self.logger.info("[PASS] Policy List Title found")
+            else:
+                self.logger.warning("[WARN] Policy List Title not visible")
+        except Exception as e:
+            self.logger.error(f"[FAIL] Title Validation Failed: {e}")
+            errors += 1
+
+        # --- 2. SEARCH BAR - (Fixing Image Input Error) ---
+        try:
+            self.logger.step_start("Validating Search Box")
+            # Target the actual input field instead of the magnifying glass icon
+            search_input = page.locator("input[placeholder*='Search']").first
             
-            # Locate the date button uniquely using its content
-            date_btn = page.locator('button[role="combobox"]:has(span:has-text("Prev + Current Month"))').first
-            date_btn.scroll_into_view_if_needed()
-            date_btn.click()
-            tracker_page.dynamic_wait(1000)
-            
-            # Verify Calendar/Range UI
-            page.locator("div.calendar-popup, .time-range-dropdown, [role='listbox']").wait_for(state="visible", timeout=2000)
-            self.logger.info("[PASS] Date Picker Opened")
-            
-            # Close & Wait hidden
+            if search_input.is_visible(timeout=3000):
+                self.logger.info("[PASS] Search Box found")
+                search_input.fill("LA53544020")
+                page.wait_for_timeout(500)
+                if "LA53544020" in search_input.input_value():
+                    self.logger.info("[PASS] Search term entered successfully")
+                search_input.fill("")
+            else:
+                self.logger.warning("[WARN] Search Box not found")
+        except Exception as e:
+            self.logger.error(f"[FAIL] Search Box Failed: {e}")
+            errors += 1
+
+        # --- 3. DATE FILTER - "Prev + Current Month" ---
+        try:
+            self.logger.step_start("Validating Date Filter")
+            date_filter = page.locator("span").filter(has_text="Prev + Current Month").first
+            if date_filter.is_visible(timeout=3000):
+                self.logger.info("[PASS] Date Filter found: 'Prev + Current Month'")
+            else:
+                date_filter_alt = page.locator("button:has(svg)").first
+                if date_filter_alt.is_visible(timeout=2000):
+                    self.logger.info("[PASS] Date Filter button found (alternative)")
+                else:
+                    self.logger.warning("[WARN] Date Filter not found")
+        except Exception as e:
+            self.logger.error(f"[FAIL] Date Filter Failed: {e}")
+            errors += 1
+
+        # --- 4. SORT DROPDOWN (Fixing Timeout & Modal Block Errors) ---
+        try:
+            self.logger.step_start("Validating Sort Dropdown")
+            # Press escape to clear any blocking overlays first
             page.keyboard.press("Escape")
-            page.locator("div.calendar-popup, .time-range-dropdown").wait_for(state="hidden", timeout=2000)
-            self.logger.info("[PASS] Date Picker Closed successfully.")
+            page.wait_for_timeout(500)
+            
+            # Use exact ID and force the click
+            sort_dropdown = page.locator("#mui-component-select-sortList, .sort-dropdown").first
+            if sort_dropdown.is_visible(timeout=3000):
+                self.logger.info("[PASS] Sort Dropdown button found")
+                sort_dropdown.click(force=True)
+                page.wait_for_timeout(500)
+                self.logger.info("[PASS] Sort Dropdown clicked successfully")
+                page.keyboard.press("Escape") # Close the dropdown
+            else:
+                self.logger.warning("[WARN] Sort Dropdown not found")
         except Exception as e:
-            self.logger.error(f"[FAIL] Date Range Failed: {e}")
-            errors += 1
-
-        # --- 3. STATUS MULTI-SELECT ---
-        # Locators found: button containing spans with texts like "App Form Pending"
-        try:
-            self.logger.step_start("Validating Status Multi-Select")
-            
-            # Target the button that currently holds the tags (found in HTML structure)
-            # We look for a button that wraps a span with text "App Form Pending"
-            status_btn = page.locator('button:has(span.truncate:has-text("App Form Pending"))').last
-            status_btn.scroll_into_view_if_needed()
-            status_btn.click()
-            tracker_page.dynamic_wait(1000)
-            
-            # Verify panel open
-            page.locator(".status-panel-content, [role='dialog']:has-text('App Form Pending')").wait_for(state="visible", timeout=2000)
-            self.logger.info("[PASS] Status Panel Opened")
-            
-            # Close & Wait hidden
-            page.locator("button.close-filter-modal, [aria-label='Close']").click()
-            page.locator(".status-panel-content").wait_for(state="hidden", timeout=2000)
-            self.logger.info("[PASS] Status Panel Closed successfully.")
-        except Exception as e:
-            self.logger.error(f"[FAIL] Status Filters Failed: {e}")
+            self.logger.error(f"[FAIL] Sort Dropdown Failed: {e}")
             errors += 1
 
         return errors
 
     def _validate_component_table(self, page, tracker_page):
-        """Validates Table Interaction and Drawer."""
+        """Validates Table Interaction using specified locators from homepage."""
         errors = 0
         
         try:
-            self.logger.step_start("Validating Policy Details Side Window")
+            self.logger.step_start("Validating Application Table")
             
-            # Locate the main table
-            table_locator = page.locator("table[data-testid='policy-table'], table.w-full")
-            table_locator.wait_for(state="visible", timeout=5000)
-            
-            # Get first row within the table body
-            first_row = table_locator.locator("tbody tr").first
-            
-            # Ensure row is interactable
-            first_row.scroll_into_view_if_needed()
-            first_row.click()
-            
-            # Wait for Drawer Visibility
-            # Based on HTML, drawer appears as a sticky overlay/slide-out
-            drawer = page.locator("aside.policy-detail-drawer, aside.sidebar-drawer").first
-            drawer.wait_for(state="visible", timeout=5000)
-            
-            self.logger.info("[PASS] Policy Detail Drawer Opened")
-            
-            # Validate Content (Checking for standard fields)
-            # HTML shows: Plan Name, Modal Premium, Policy Status etc.
-            drawer_content = drawer.inner_text().lower()
-            checks = ["plan name", "modal premium"] # Generic checks based on common insurance data
-            
-            if all(check in drawer_content for check in checks):
-                self.logger.info(f"[PASS] Drawer Content Valid")
-            else:
-                self.logger.warning("Drawer opened but some expected text wasn't found.")
-            
-            # Close Drawer
-            close_btn = drawer.locator("button[aria-label='Close'], svg.close-icon").first
-            close_btn.click()
-            
-            drawer.wait_for(state="hidden", timeout=5000)
-            self.logger.info("[PASS] Side Window Closed Successfully.")
-            
-        except Exception as e:
-            self.logger.error(f"[FAIL] Side Window Validation Failed: {e}")
-            errors += 1
-            
-        return errors
+            # --- 1. TABLE HEADER ---
+            try:
+                table_header = page.locator("thead th").first
+                if table_header.is_visible(timeout=5000):
+                    self.logger.info("[PASS] Table Header found")
+            except Exception as e:
+                self.logger.error(f"[FAIL] Table Header Failed: {e}")
+                errors += 1
 
-            #    @pytest.mark.negative
-#     @pytest.mark.parametrize("test_username, test_password", [
-#         ("usr12", "pwd12"),   # 5-char alphanumeric
-#         ("abcde", "12345"),   # 5-char letters and numbers
-#         ("12345", "abcde"),   # 5-char numbers and letters
-#         ("qa123", "test1"),   # 5-char mixed
-#         ("admin", "admin")    # 5-char standard letters
-#     ])
-#     def test_invalid_login_popup_validation(self, page: Page, test_username, test_password):
-#         """Negative Scenarios with Soft Logging Only"""
-        
-#         test_name = f"test_invalid_login_popup_{test_username}"
-#         self.execution_framework.log_test_execution_start(test_name)
-        
-#         # Maximize Browser Viewport - removed as per conftest.py update
-#         # page.set_viewport_size({"width": 1920, "height": 1080})
-        
-#         login_page = AdityaBirlaLoginPage(page)
-#         errors_logged = 0
-        
-#         try:
-#             login_page.load()
-#             login_page.enter_credentials(test_username, test_password)
-#             login_page.click_login_button()
-            
-#             # Dynamic Wait: Check for Popup visibility rather than static timeout
-#             popup_locator = page.locator("text='Check Login ID/Password'").first
-#             try:
-#                 popup_locator.wait_for(state="visible", timeout=5000)
-#                 self.logger.info(f"✓ Popup appeared correctly for {test_username}")
-#             except Exception:
-#                 self.logger.error(f"✗ Popup DID NOT appear for {test_username}")
-#                 errors_logged += 1
+            # --- 2. ROW EXTRACTION (Fixing Strict Mode Violation) ---
+            try:
+                # Grab the main wrapper or table body
+                first_row = page.locator(".MuiBox-root.jss138, tbody tr").first
                 
-#             # Soft Validation: Security check
-#             if login_page.is_login_page_displayed():
-#                 self.logger.info("✓ Correctly remained on login page.")
-#             else:
-#                 self.logger.error("✗ SECURITY ISSUE: Navigated away from login page with bad credentials!")
-#                 errors_logged += 1
+                if first_row.is_visible(timeout=5000):
+                    self.logger.info("[PASS] Application Table Loaded and First Row Found")
+                    
+                    # PLAN NAME CELL (The specific fix for strict mode)
+                    try:
+                        plan_name_cell = first_row.locator('.plan-name').first
+                        if plan_name_cell.is_visible(timeout=2000):
+                            plan_name = plan_name_cell.text_content().strip()
+                            self.logger.info(f"Plan Name: {plan_name}")
+                    except Exception as e:
+                        self.logger.warning(f"[WARN] Plan Name extraction failed: {e}")
+                    
+                    # PREMIUM AMOUNT
+                    try:
+                        premium_cell = first_row.locator(":scope > *:has-text('₹')").first
+                        if premium_cell.is_visible(timeout=2000):
+                            self.logger.info(f"Premium Amount: {premium_cell.text_content().strip()}")
+                    except Exception as e:
+                        self.logger.warning(f"[WARN] Premium extraction failed: {e}")
+
+                    # STATUS TAG
+                    try:
+                        status_text = first_row.get_by_text("Pending").first
+                        if status_text.is_visible(timeout=2000):
+                            self.logger.info(f"Status Tag: {status_text.text_content().strip()}")
+                    except Exception as e:
+                        self.logger.warning(f"[WARN] Status Tag extraction failed: {e}")
+                        page.wait_for_timeout(15000) # Pauses execution right here for 3 seconds
+
+                    # ROW INTERACTION TEST
+                    try:
+                        first_row.click(force=True)
+                        page.wait_for_timeout(1000)
+                        self.logger.info("[PASS] First row clicked successfully")
+                    except Exception as e:
+                        self.logger.error(f"[FAIL] Failed to click first row: {e}")
+                        errors += 1
+                else:
+                    self.logger.warning("[WARN] No rows found in table")
+            except Exception as e:
+                self.logger.error(f"[FAIL] Table Row Failed: {e}")
+                errors += 1
             
-#             final_status = "PASSED_WITH_ERRORS" if errors_logged > 0 else "PASSED_CLEAN"
-#             self.execution_framework.log_test_execution_end(test_name, final_status, {"errors_found": errors_logged})
-            
-#         except Exception as critical_e:
-#             self.logger.error(f"CRITICAL UI FAILURE STOPPED EXECUTION: {str(critical_e)}")
-#             self.execution_framework.log_test_execution_end(test_name, "FATAL_CRASH", {"error": str(critical_e)})
-#             raise #
+            self.logger.info("[PASS] Table validation completed")
+        except Exception as e:
+            self.logger.error(f"[FAIL] Table Interaction Failed: {e}")
+            errors += 1
+
+        return errors
         

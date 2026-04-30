@@ -6,6 +6,10 @@ Simplified version for execution
 import pytest
 import os
 from datetime import datetime
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv(dotenv_path="app-tracker-automation/.env")
 
 
 def test_login_tracker_basic():
@@ -48,15 +52,15 @@ def test_login_tracker_basic():
     from pages.aditya_birla_dashboard_page import AdityaBirlaDashboardPage
     from pages.aditya_birla_tracker_page import AdityaBirlaTrackerPage
     
-    # Validate test data
+    # Validate test data from .env
     test_data = {
-        "username": "BR4641",
-        "password": "q7LD4$J!d7",
+        "username": os.getenv("ADITYA_BIRLA_USER"),
+        "password": os.getenv("ADITYA_BIRLA_PASS"),
         "login_url": "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login"
     }
     
-    assert test_data["username"] == "BR4641", "Test username incorrect"
-    assert test_data["password"] == "q7LD4$J!d7", "Test password incorrect"
+    assert test_data["username"] is not None, "Test username not loaded from .env"
+    assert test_data["password"] is not None, "Test password not loaded from .env"
     assert "leapuat.adityabirlasunlifeinsurance.com" in test_data["login_url"], "Login URL incorrect"
     
     # Test execution timestamp
