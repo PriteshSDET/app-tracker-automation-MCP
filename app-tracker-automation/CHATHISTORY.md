@@ -63,14 +63,8 @@
 ### ✅ 9. Components Directory (Reusable UI Components)
 - `components/base_component.py` - Base component class
 - `components/dropdown.py` - Select/dropdown interactions
-- `components/multiselect.py` - Multi-selection components
-- `components/paginator.py` - Pagination controls
 - `components/table.py` - Data table operations
 - `components/searchbox.py` - Search functionality
-- `components/datepicker.py` - Date selection components
-- `components/modal.py` - Modal dialog handling
-- `components/tabs.py` - Tab navigation
-- `components/toast.py` - Notification handling
 
 ### ✅ 10. Flows Directory (Business Logic)
 - `flows/login_flow.py` - Complete authentication workflow

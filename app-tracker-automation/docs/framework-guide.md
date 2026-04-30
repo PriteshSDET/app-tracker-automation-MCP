@@ -11,7 +11,7 @@ The App Tracker Automation Framework is a component-driven automation framework 
 The framework follows a component-driven architecture with clear separation of concerns:
 
 - **Pages/**: Page Object Model classes representing application pages
-- **Components/**: Reusable UI components (dropdowns, tables, modals, etc.)
+- **Components/**: Reusable UI components (dropdowns, tables, search boxes)
 - **Flows/**: Business logic flows that orchestrate page interactions
 - **Locators/**: Centralized element locators for maintainability
 - **Utils/**: Utility functions and helper classes
@@ -31,12 +31,8 @@ The framework follows a component-driven architecture with clear separation of c
 #### UI Components
 - `Dropdown`: Select/dropdown interactions
 - `Table`: Data table operations
-- `Modal`: Modal dialog handling
 - `SearchBox`: Search functionality
-- `DatePicker`: Date selection
-- `Paginator`: Pagination controls
-- `Tabs`: Tab navigation
-- `Toast`: Notification handling
+- `BaseComponent`: Common functionality for all UI components
 
 #### Business Flows
 - `LoginFlow`: Complete authentication workflow

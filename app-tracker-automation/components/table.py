@@ -1,5 +1,6 @@
 """
 Table component for handling data tables.
+Updated with CSS selectors from App Tracker HTML analysis.
 """
 
 from playwright.sync_api import Page
@@ -68,3 +69,46 @@ class Table(BaseComponent):
         """Check if specific row is selected"""
         row = self.element.locator(f"tbody tr:nth-child({row_index + 1})")
         return "selected" in row.get_attribute("class")
+
+
+# App Tracker Specific Table Selectors
+class AppTrackerTable(Table):
+    """App Tracker specific table with Material-UI selectors"""
+    
+    # Application List Container (from HTML)
+    APPLICATION_LIST_CONTAINER = ".MuiBox-root.jss137.application-listing-container"
+    
+    # Application Row Container (from HTML)
+    APPLICATION_ROW = ".MuiBox-root.jss138"
+    
+    # Application Number (from HTML)
+    APPLICATION_NO = ".application-no-val"
+    
+    # User Name (from HTML)
+    USER_NAME = ".uname-val"
+    
+    # Plan Name (from HTML)
+    PLAN_NAME = ".plan-name"
+    
+    def __init__(self, page: Page):
+        super().__init__(page, self.APPLICATION_LIST_CONTAINER)
+    
+    def get_application_number(self, row_index: int = 0) -> str:
+        """Get application number from specific row"""
+        row = self.page.locator(self.APPLICATION_ROW).nth(row_index)
+        return row.locator(self.APPLICATION_NO).text_content()
+    
+    def get_user_name(self, row_index: int = 0) -> str:
+        """Get user name from specific row"""
+        row = self.page.locator(self.APPLICATION_ROW).nth(row_index)
+        return row.locator(self.USER_NAME).text_content()
+    
+    def get_plan_name(self, row_index: int = 0) -> str:
+        """Get plan name from specific row"""
+        row = self.page.locator(self.APPLICATION_ROW).nth(row_index)
+        return row.locator(self.PLAN_NAME).text_content()
+    
+    def click_application_row(self, row_index: int = 0):
+        """Click on specific application row"""
+        row = self.page.locator(self.APPLICATION_ROW).nth(row_index)
+        row.click()

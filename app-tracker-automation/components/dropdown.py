@@ -1,5 +1,6 @@
 """
 Dropdown component for handling select/dropdown elements.
+Updated with CSS selectors from App Tracker HTML analysis.
 """
 
 from playwright.sync_api import Page
@@ -7,7 +8,7 @@ from components.base_component import BaseComponent
 
 
 class Dropdown(BaseComponent):
-    """Dropdown component class"""
+    """Dropdown component class with App Tracker specific selectors"""
     
     def __init__(self, page: Page, locator: str):
         super().__init__(page, locator)
@@ -43,3 +44,33 @@ class Dropdown(BaseComponent):
     def clear_selection(self):
         """Clear selected options"""
         self.element.select_option([])
+
+
+# App Tracker Specific Dropdown Selectors
+class AppTrackerDropdown(Dropdown):
+    """App Tracker specific dropdown with Material-UI selectors"""
+    
+    # Filter Button Selector (from HTML)
+    FILTER_BUTTON = "button.filterButton.MuiButton-textSizeSmall"
+    
+    # Sort Dropdown Selector (from HTML)
+    SORT_DROPDOWN = "#mui-component-select-sortList"
+    
+    # Sort Options Container
+    SORT_OPTIONS = "ul.MuiList-root[role='listbox']"
+    
+    def __init__(self, page: Page):
+        super().__init__(page, self.FILTER_BUTTON)
+    
+    def click_filter_button(self):
+        """Click the filter button to open filter dropdown"""
+        self.page.locator(self.FILTER_BUTTON).first.click()
+    
+    def click_sort_dropdown(self):
+        """Click the sort dropdown to open options"""
+        self.page.locator(self.SORT_DROPDOWN).first.click()
+    
+    def select_sort_option(self, option_text: str):
+        """Select a sort option by text"""
+        option_locator = f"{self.SORT_OPTIONS} li:has-text('{option_text}')"
+        self.page.locator(option_locator).first.click()

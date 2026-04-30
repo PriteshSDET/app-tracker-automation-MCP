@@ -1,5 +1,6 @@
 """
 Searchbox component for handling search functionality.
+Updated with CSS selectors from App Tracker HTML analysis.
 """
 
 from playwright.sync_api import Page
@@ -53,3 +54,21 @@ class SearchBox(BaseComponent):
         suggestions = suggestions_locator.all()
         if index < len(suggestions):
             suggestions[index].click()
+
+
+# App Tracker Specific Search Box Selectors
+class AppTrackerSearchBox(SearchBox):
+    """App Tracker specific search box with Material-UI selectors"""
+    
+    # Search Input Selector (from HTML)
+    SEARCH_INPUT = "input.navbar-search"
+    
+    # Search Container
+    SEARCH_CONTAINER = ".MuiBox-root.jss58"
+    
+    def __init__(self, page: Page):
+        super().__init__(page, self.SEARCH_INPUT)
+    
+    def enter_search_term(self, term: str):
+        """Enter search term in App Tracker search box"""
+        self.page.locator(self.SEARCH_INPUT).first.fill(term)
