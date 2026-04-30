@@ -8,8 +8,22 @@ import os
 from datetime import datetime
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv(dotenv_path="app-tracker-automation/.env")
+# Load environment variables from .env file using multi-path strategy
+env_paths = [
+    "app-tracker-automation/.env",  # From project root
+    ".env",  # Current directory
+    os.path.join(os.path.dirname(__file__), "..", "..", ".env"),  # Relative to test file
+]
+
+env_loaded = False
+for env_path in env_paths:
+    if os.path.exists(env_path):
+        load_dotenv(dotenv_path=env_path)
+        env_loaded = True
+        break
+
+if not env_loaded:
+    print(f"WARNING: .env file not found in any of these locations: {env_paths}")
 
 
 def test_login_tracker_basic():
@@ -56,12 +70,16 @@ def test_login_tracker_basic():
     test_data = {
         "username": os.getenv("ADITYA_BIRLA_USER"),
         "password": os.getenv("ADITYA_BIRLA_PASS"),
-        "login_url": "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login"
+        "login_url": os.getenv("BASE_URL", "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login"),
+        "app_tracker_url": os.getenv("APP_TRACKER_URL", "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"),
+        "environment": os.getenv("ENVIRONMENT", "UAT")
     }
     
     assert test_data["username"] is not None, "Test username not loaded from .env"
     assert test_data["password"] is not None, "Test password not loaded from .env"
     assert "leapuat.adityabirlasunlifeinsurance.com" in test_data["login_url"], "Login URL incorrect"
+    assert "app-tracker" in test_data["app_tracker_url"], "App Tracker URL incorrect"
+    assert test_data["environment"] is not None, "Environment not loaded from .env"
     
     # Test execution timestamp
     execution_time = datetime.now()
@@ -76,7 +94,9 @@ def test_login_tracker_basic():
         "files_checked": len(required_files),
         "locators_validated": True,
         "page_objects_validated": True,
-        "test_data_validated": True
+        "test_data_validated": True,
+        "env_loaded": env_loaded,
+        "environment": test_data["environment"]
     }
     
     # Save execution log
@@ -138,7 +158,8 @@ def test_execution_readiness():
         "pytest.ini",
         "conftest.py",
         "requirements.txt",
-        ".env"
+        ".env",
+        "data/env.json"
     ]
     
     for config_file in config_files:
