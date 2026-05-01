@@ -471,5 +471,116 @@ BROWSER_LAUNCH_ARGS = ['--start-maximized']  # Full screen mode
 
 ---
 
+## Debugging Strategies (Learned from Aditya Birla Project)
+
+### Systematic Debugging Approach
+**5-Phase Debugging Workflow:**
+1. **Reproduction** - Confirm failure consistency, enable debugging mode, capture evidence
+2. **Isolation** - Binary search test steps, run individual methods, check page state
+3. **Analysis** - Analyze error message, check element in DOM, check network activity
+4. **Fix Application** - Apply appropriate fix, verify fix
+5. **Documentation** - Document issue, update knowledge base, update best practices
+
+### Common Debugging Scenarios
+
+**Scenario 1: Element Not Found**
+- Check if element exists in DOM
+- Check selector is correct
+- Check if element is in iframe
+- Check if element is dynamic
+- Fix: Use fallback selectors, wait for element, handle iframe
+
+**Scenario 2: Element Not Interactable**
+- Check if element is visible
+- Check if element is enabled
+- Check if element is behind overlay
+- Check if element is scrolled out of view
+- Fix: Wait for visible/enabled, scroll into view, wait for overlay
+
+**Scenario 3: Strict Mode Violation**
+- Check how many elements match selector
+- Identify which element should be targeted
+- Fix: Use .first, more specific selector, nth, filter
+
+**Scenario 4: Intermittent Failures**
+- Check for race conditions
+- Check for timing issues
+- Check for network variability
+- Fix: Add network idle wait, add retry logic, clean up test data
+
+**Scenario 5: Page Navigation Issues**
+- Check if URL is correct
+- Check if network is accessible
+- Check if server is running
+- Fix: Verify URL, wait for navigation, handle authentication, ignore SSL errors
+
+### Debugging Metrics
+- **Time to Reproduce:** How long to confirm failure
+- **Time to Isolate:** How long to find failing step
+- **Time to Fix:** How long to apply fix
+- **Time to Verify:** How long to confirm fix works
+- **Recurrence Rate:** How often same issue occurs
+
+**Goal Metrics:**
+- Average Debug Time: < 15 minutes
+- Recurrence Rate: < 5%
+- First-Time Fix Rate: > 80%
+
+---
+
+## Pre-Flight Best Practices (Learned from Aditya Birla Project)
+
+### Daily Pre-Flight Checklist
+**Environment Check:**
+- Application is running and accessible
+- Test data is available and valid
+- Network is stable
+- Services are up
+
+**Test-Specific Pre-Flight:**
+- Understand user story completely
+- Analyze application (CSS framework, JS framework)
+- Classify components (critical, important, optional)
+- Plan test structure
+
+**Technical Pre-Flight:**
+- Python dependencies installed
+- Playwright browsers installed
+- Environment variables loaded
+- Code quality checks passed
+
+### Common Pre-Flight Issues and Fixes
+**Issue 1: Application Not Running**
+- Check: `curl -I https://uat.example.com`
+- Fix: Start server, check firewall, verify URL, check VPN
+
+**Issue 2: Credentials Invalid**
+- Check: Verify .env file
+- Fix: Update credentials, check account active, verify password
+
+**Issue 3: Dependencies Missing**
+- Check: `pip list | grep playwright`
+- Fix: `pip install -r requirements.txt`, `playwright install`
+
+**Issue 4: Browser Not Installed**
+- Check: `playwright install --dry-run`
+- Fix: `playwright install chromium firefox webkit`
+
+**Issue 5: Timeouts Too Short**
+- Check: Verify .env timeout values
+- Fix: Increase timeout for UAT (15s), use network idle waits
+
+**Issue 6: Selectors Wrong**
+- Check: Use Playwright Inspector
+- Fix: Verify selector, use fallback selectors, use stable selectors
+
+### Pre-Flight Metrics
+- **Pre-Flight Time:** < 5 minutes
+- **Issues Found Rate:** > 20% (catching issues is good)
+- **Test Success Rate:** > 95% after pre-flight
+- **Debugging Time Reduction:** > 50%
+
+---
+
 *Last Updated: May 1, 2026*
 *Project: Aditya Birla App Tracker Automation*
