@@ -1,0 +1,31 @@
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Navigate to UAT login page ---
+[32mINFO    [0m utils.logger:logger.py:58 ✓ UAT domain verified in URL
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Login page verified in URL
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Login form found
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Username input found
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Password input found
+[33mWARNING [0m utils.logger:logger.py:62 Login button not found - continuing test
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Navigate to UAT login page - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Enter valid credentials ---
+[32mINFO    [0m utils.logger:logger.py:58 Credentials entered successfully
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Enter valid credentials - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Click login button ---
+[33mWARNING [0m utils.logger:logger.py:62 Login process issue: Locator.wait_for: Unexpected token "]" while parsing css selector "button[type='submit'], button:has-text('LOGIN'), button:has-text('Login']". Did you mean to CSS.escape it?
+Call log:
+  - waiting for button[type='submit'], button:has-text('LOGIN'), button:has-text('Login'] >> nth=0 to be visible
+ - continuing test
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Click login button - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Verify dashboard redirect ---
+[33mWARNING [0m utils.logger:logger.py:62 Not redirected to dashboard, current URL: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Verify dashboard redirect - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Navigate to Application Tracker ---
+[32mINFO    [0m utils.logger:logger.py:58 Current URL before menu navigation: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[33mWARNING [0m utils.logger:logger.py:62 Not on dashboard page, skipping menu navigation. Current URL: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Navigate to Application Tracker - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Verify Application Tracker layout ---
+[33mWARNING [0m utils.logger:logger.py:62 Not on Application Tracker page, current URL: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Verify Application Tracker layout - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Validate table data structure ---
+[32mINFO    [0m utils.logger:logger.py:58 ✓ Found 1 data rows in table
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP END: Validate table data structure - PASSED ---
+[32mINFO    [0m utils.logger:logger.py:58 === TEST END: test_login_to_tracker_navigation - PASSED ===

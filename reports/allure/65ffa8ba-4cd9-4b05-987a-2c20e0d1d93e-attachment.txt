@@ -1,0 +1,3 @@
+2026-04-30 23:46:52 - utils.logger - ERROR - Assertion failed: Element <Locator frame=<Frame name= url='https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login'> selector=".error, .alert, [class*='error'], [class*='invalid'] >> nth=0"> should be visible
+2026-04-30 23:46:52 - utils.logger - INFO - === TEST END: test_invalid_credentials - FAILED ===
+2026-04-30 23:46:52 - utils.logger - ERROR - Invalid credentials test failed: Element <Locator frame=<Frame name= url='https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login'> selector=".error, .alert, [class*='error'], [class*='invalid'] >> nth=0"> should be visible

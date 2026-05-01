@@ -23,6 +23,12 @@ class AdityaBirlaLoginPage(BasePage):
         self.logger.info("Loading Aditya Birla UAT login page")
         self.navigate_to(self.locators.login_page["url"])
         self.waits.wait_for_page_load()
+        
+        # Wait for network to settle after page load
+        self.page.wait_for_load_state("networkidle", timeout=10000)
+        
+        # Wait for any loading overlays to disappear
+        self._wait_for_loading_overlay_to_disappear()
     
     def is_login_page_displayed(self) -> bool:
         """Check if login page is displayed"""
@@ -51,17 +57,33 @@ class AdityaBirlaLoginPage(BasePage):
             # Find and fill username
             username_input = self.page.locator(self.locators.login_page["username_input"]).first
             self.waits.wait_for_element_visible(self.locators.login_page["username_input"])
+            
+            # Wait for element to be fully actionable
+            username_input.wait_for(state="attached", timeout=5000)
+            username_input.wait_for(state="visible", timeout=5000)
+            
             username_input.fill(username)
+            
+            # Wait for network to settle after username input
+            self.page.wait_for_load_state("networkidle", timeout=3000)
             
             # Find and fill password
             password_input = self.page.locator(self.locators.login_page["password_input"]).first
             self.waits.wait_for_element_visible(self.locators.login_page["password_input"])
+            
+            # Wait for element to be fully actionable
+            password_input.wait_for(state="attached", timeout=5000)
+            password_input.wait_for(state="visible", timeout=5000)
+            
             password_input.fill(password)
             
             # Verify password masking
             password_type = password_input.get_attribute("type")
             if password_type != "password":
                 self.logger.warning("Password field is not properly masked")
+            
+            # Wait for network to settle after password input
+            self.page.wait_for_load_state("networkidle", timeout=3000)
             
             self.logger.info("Credentials entered successfully")
             
@@ -76,6 +98,14 @@ class AdityaBirlaLoginPage(BasePage):
             
             login_button = self.page.locator(self.locators.login_page["login_button"]).first
             self.waits.wait_for_element_enabled(self.locators.login_page["login_button"])
+            
+            # Wait for element to be fully actionable
+            login_button.wait_for(state="attached", timeout=5000)
+            login_button.wait_for(state="visible", timeout=5000)
+            
+            # Wait for any loading overlays to disappear
+            self._wait_for_loading_overlay_to_disappear()
+            
             login_button.click()
             
             self.logger.info("Login button clicked")
@@ -193,6 +223,33 @@ class AdityaBirlaLoginPage(BasePage):
     def get_page_title(self) -> str:
         """Get page title"""
         return self.page.title()
+    
+    def _wait_for_loading_overlay_to_disappear(self, timeout=5000):
+        """Wait for loading spinners, progress bars, or blocking overlays to disappear"""
+        try:
+            # Common loading overlay selectors
+            loading_selectors = [
+                ".loading-overlay",
+                ".spinner",
+                ".progress-bar",
+                "[class*='loading']",
+                "[class*='spinner']",
+                "[class*='overlay']",
+                ".MuiCircularProgress-root",
+                ".MuiBackdrop-root"
+            ]
+            
+            for selector in loading_selectors:
+                try:
+                    loading_element = self.page.locator(selector).first
+                    if loading_element.is_visible(timeout=1000):
+                        self.logger.info(f"Waiting for loading element to disappear: {selector}")
+                        loading_element.wait_for(state="hidden", timeout=timeout)
+                        self.logger.info(f"Loading element disappeared: {selector}")
+                except:
+                    continue
+        except Exception as e:
+            self.logger.warning(f"Error waiting for loading overlay: {e}")
     
     def take_screenshot(self, name: str = "login_page"):
         """Take screenshot of login page"""

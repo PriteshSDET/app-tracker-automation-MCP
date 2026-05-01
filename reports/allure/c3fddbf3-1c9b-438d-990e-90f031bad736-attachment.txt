@@ -1,0 +1,3 @@
+2026-04-30 23:46:58 - utils.logger - ERROR - Assertion failed: Element <Locator frame=<Frame name= url='https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login'> selector="input[type='text'], input[name='username'] >> nth=0"> should have focus
+2026-04-30 23:46:58 - utils.logger - INFO - === TEST END: test_keyboard_navigation - FAILED ===
+2026-04-30 23:46:58 - utils.logger - ERROR - Keyboard navigation test failed: Element <Locator frame=<Frame name= url='https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login'> selector="input[type='text'], input[name='username'] >> nth=0"> should have focus
