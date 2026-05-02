@@ -1,4 +1,4 @@
-"""
+﻿"""
 Login page locators
 """
 
@@ -30,3 +30,4 @@ class LoginLocators:
     # Loading states
     loading_spinner = ".loading-spinner"
     success_message = ".success-message"
+

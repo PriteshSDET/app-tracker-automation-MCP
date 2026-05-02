@@ -1,4 +1,4 @@
-"""
+﻿"""
 Logger utility for test execution logging
 """
 
@@ -125,3 +125,4 @@ class TestLogger:
         """Log test step"""
         self.logger.step_start(step_name)
         self.logger.step_end(step_name, status)
+

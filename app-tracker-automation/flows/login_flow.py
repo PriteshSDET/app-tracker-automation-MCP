@@ -1,4 +1,4 @@
-"""
+﻿"""
 Login Flow - Business logic for user authentication
 """
 
@@ -102,3 +102,4 @@ class LoginFlow:
             return self.dashboard_page.is_dashboard_displayed()
         except Exception:
             return False
+

@@ -1,4 +1,4 @@
-"""
+﻿"""
 Aditya Birla Sun Life Insurance Login Page
 Enhanced login page for UAT environment
 """
@@ -257,3 +257,4 @@ class AdityaBirlaLoginPage(BasePage):
         filename = f"{name}_{timestamp}.png"
         self.page.screenshot(path=f"screenshots/{filename}", full_page=True)
         self.logger.info(f"Screenshot saved: {filename}")
+

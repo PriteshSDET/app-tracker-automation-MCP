@@ -1,4 +1,4 @@
-"""
+﻿"""
 Aditya Birla Sun Life Insurance Application Tracker Page
 Enhanced tracker page for UAT environment
 """
@@ -121,7 +121,7 @@ class AdityaBirlaTrackerPage(BasePage):
             current_url = self.page.url
             
             if expected_url in current_url:
-                self.logger.info(f"✓ URL Validation PASSED: {current_url}")
+                self.logger.info(f"[OK] URL Validation PASSED: {current_url}")
             else:
                 self.logger.warning(f"URL mismatch. Expected: {expected_url}, Got: {current_url}")
             
@@ -129,7 +129,7 @@ class AdityaBirlaTrackerPage(BasePage):
             try:
                 title = self.page.title()
                 if "App Tracker" in title:
-                    self.logger.info(f"✓ Page Title Validation PASSED: {title}")
+                    self.logger.info(f"[OK] Page Title Validation PASSED: {title}")
                 else:
                     self.logger.warning(f"Page title mismatch. Expected 'App Tracker', Got: {title}")
             except Exception as e:
@@ -302,3 +302,4 @@ class AdityaBirlaTrackerPage(BasePage):
         except Exception as e:
             self.logger.error(f"Failed to get page info: {str(e)}")
             return {}
+

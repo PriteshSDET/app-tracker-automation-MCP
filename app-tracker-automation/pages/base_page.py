@@ -1,4 +1,4 @@
-"""
+﻿"""
 Base Page class for Page Object Model pattern.
 Provides common functionality for all page objects.
 """
@@ -44,3 +44,4 @@ class BasePage:
     def fill_text(self, locator: str, text: str):
         """Fill text in input field"""
         self.page.locator(locator).fill(text)
+

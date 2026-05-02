@@ -1,4 +1,4 @@
-"""
+﻿"""
 Excel reader utility for reading test data from Excel files
 """
 
@@ -224,3 +224,4 @@ class TestDataLoader:
             return test_data[scenario]
         
         raise ValueError(f"No test data found for scenario: {scenario}")
+

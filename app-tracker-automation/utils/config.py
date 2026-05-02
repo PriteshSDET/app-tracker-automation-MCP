@@ -1,4 +1,4 @@
-"""
+﻿"""
 Configuration management utility - Fixed for Logging Attributes
 """
 

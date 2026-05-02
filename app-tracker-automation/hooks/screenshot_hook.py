@@ -1,4 +1,4 @@
-"""
+﻿"""
 Screenshot hook for capturing screenshots during test execution
 """
 
@@ -103,3 +103,4 @@ def page_with_screenshots(page):
     # Take final screenshot if test failed
     if hasattr(page, "_test_failed") and page._test_failed:
         screenshot_hook.take_failure_screenshot(page, "final")
+

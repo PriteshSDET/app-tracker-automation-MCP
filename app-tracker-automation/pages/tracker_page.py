@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tracker Page Object Model
 Handles application tracking functionality for the insurance portal
 """
@@ -48,3 +48,4 @@ class TrackerPage(BasePage):
         """Get total number of applications"""
         text = self.page.locator(self.locators.total_count).text_content()
         return int(text) if text else 0
+

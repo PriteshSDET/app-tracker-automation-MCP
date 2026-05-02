@@ -1,4 +1,4 @@
-"""
+﻿"""
 Base Component class for reusable UI components.
 Provides common functionality for all component objects.
 """
@@ -53,3 +53,4 @@ class BaseComponent:
     def scroll_into_view(self):
         """Scroll component into view"""
         self.element.scroll_into_view_if_needed()
+

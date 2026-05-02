@@ -1,4 +1,4 @@
-"""
+﻿"""
 Aditya Birla Sun Life Insurance Dashboard Page
 Enhanced dashboard page for UAT environment
 """
@@ -160,7 +160,7 @@ class AdityaBirlaDashboardPage(BasePage):
             try:
                 menu_button = self.page.locator("button:has-text('Menu'), [class*='menu'], .dropdown-toggle").first
                 if menu_button.is_visible():
-                    self.logger.info("✓ Menu button found - dashboard loaded")
+                    self.logger.info("[OK] Menu button found - dashboard loaded")
                 else:
                     self.logger.info("Menu button not visible, but continuing...")
             except:
@@ -201,3 +201,4 @@ class AdityaBirlaDashboardPage(BasePage):
         filename = f"{name}_{timestamp}.png"
         self.page.screenshot(path=f"screenshots/{filename}", full_page=True)
         self.logger.info(f"Screenshot saved: {filename}")
+

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 MCP Server for App Tracker Automation
 Integrates Bifrost, Playwright, and GitHub functionality
@@ -330,3 +330,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+

@@ -1,4 +1,4 @@
-"""
+﻿"""
 Failure hook for handling test failures and error reporting
 """
 
@@ -166,3 +166,4 @@ def page_with_failure_handling(page):
     if hasattr(page, "_test_failed") and page._test_failed:
         error = getattr(page, "_last_error", Exception("Unknown error"))
         failure_hook.capture_failure_details(page, page._test_name, error)
+

@@ -1,4 +1,4 @@
-"""
+﻿"""
 Smoke Test: End-to-End Authentication to Application Tracker
 Test ID: TC_LOGIN_TRACKER_001
 Priority: HIGH
@@ -75,7 +75,7 @@ class TestLoginTrackerNavigation:
             
             try:
                 page.wait_for_url("**/uat/#/dashboard", timeout=15000)
-                logger.info("✓ Successfully redirected to dashboard")
+                logger.info("[OK] Successfully redirected to dashboard")
             except Exception as e:
                 logger.warning(f"Dashboard redirect warning: {e}")
             
@@ -89,7 +89,7 @@ class TestLoginTrackerNavigation:
             menu_btn.scroll_into_view_if_needed()
             menu_btn.wait_for(state="visible", timeout=5000)
             menu_btn.click()
-            logger.info("✓ MENU button clicked")
+            logger.info("[OK] MENU button clicked")
             
             # Wait for menu to appear
             page.wait_for_timeout(500)
@@ -118,7 +118,7 @@ class TestLoginTrackerNavigation:
             
             link.scroll_into_view_if_needed()
             link.click(force=True)
-            logger.info("✓ Application Tracker link clicked")
+            logger.info("[OK] Application Tracker link clicked")
             
             # Handle new tab opening for Application Tracker
             page.wait_for_timeout(2000)
@@ -146,7 +146,7 @@ class TestLoginTrackerNavigation:
             expected_url_pattern = "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"
             try:
                 if expected_url_pattern in tracker_page_obj.url:
-                    logger.info(f"✓ URL Validation PASSED: {tracker_page_obj.url}")
+                    logger.info(f"[OK] URL Validation PASSED: {tracker_page_obj.url}")
                 else:
                     logger.warning(f"URL mismatch. Expected: {expected_url_pattern}, Got: {tracker_page_obj.url}")
             except Exception as e:
@@ -169,21 +169,21 @@ class TestLoginTrackerNavigation:
             try:
                 title = tracker_page_obj.locator("h1, .title, [class*='header']").first
                 if title.is_visible(timeout=3000):
-                    logger.info("✓ Tracker title visible")
+                    logger.info("[OK] Tracker title visible")
             except:
                 logger.warning("Tracker title not visible")
             
             try:
                 search_box = tracker_page_obj.locator("input[type='text'], input[placeholder*='Search']").first
                 if search_box.is_visible(timeout=3000):
-                    logger.info("✓ Search box visible")
+                    logger.info("[OK] Search box visible")
             except:
                 logger.warning("Search box not visible")
             
             try:
                 table = tracker_page_obj.locator("table, [class*='table'], [class*='grid']").first
                 if table.is_visible(timeout=3000):
-                    logger.info("✓ Table visible")
+                    logger.info("[OK] Table visible")
             except:
                 logger.warning("Table not visible")
             
@@ -199,3 +199,4 @@ class TestLoginTrackerNavigation:
             page.screenshot(path="screenshots/failed/test_login_tracker_failure.png", full_page=True)
             raise
     
+

@@ -1,4 +1,4 @@
-"""
+﻿"""
 Aditya Birla Sun Life Insurance Portal Locators
 UAT Environment Specific Locators
 """
@@ -91,3 +91,4 @@ class AdityaBirlaLocators:
         "lazy_loaded": "[data-lazy], [class*='lazy']",
         "conditional_elements": "[class*='conditional'], [data-conditional]"
     }
+

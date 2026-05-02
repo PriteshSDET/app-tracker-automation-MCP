@@ -1,4 +1,4 @@
-"""
+﻿"""
 Authentication fixture for user authentication management
 """
 
@@ -72,3 +72,4 @@ def test_permissions():
         "delete": False,
         "admin": False
     }
+

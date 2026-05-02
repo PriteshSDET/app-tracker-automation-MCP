@@ -385,8 +385,18 @@ The Aditya Birla project demonstrated the importance of:
 - Framework pattern recognition
 - Continuous learning and documentation
 
+## Key Learnings Update: Headless Execution & Multi-Domain Tabs (May 2026)
+1. **Headless Popup Blockers**: Chromium's headless mode natively blocks `.click()` actions that attempt to open `target="_blank"` tabs if they aren't tied to a trusted event, or if the `<a>` tag lacks an `href` (common in React/MUI `onClick` handlers).
+   * **Solution**: Implement a 3-tier fallback strategy: 
+     1. Playwright `.click()` wrapped in `expect_page()`.
+     2. Javascript `.evaluate("el => el.click()")`.
+     3. Explicit bypass: `page.evaluate("window.open('KNOWN_URL', '_blank')")`.
+2. **Multi-Domain Context Loss**: If a new tab opens on a different domain (e.g., `leapuat...` vs `onboarding-uat...`), failing to capture the `expect_page()` context results in the script running assertions against the wrong domain. Fallbacks must guarantee the tab opens and is captured.
+3. **Implicit Timeout Traps**: Generic fallback locators (like `*:has-text('of')`) and `element.text_content()` on stale elements will cause 30-second implicit timeout hangs. 
+   * **Solution**: Use strict `re.compile` patterns and wrap extractions in `wait_for(state="attached", timeout=2000)` to fail-fast.
+
 These learnings have been captured in the skills database and prompt files to improve future project analysis and test generation.
 
 ---
 
-*Last Updated: May 1, 2026*
+*Last Updated: May 2, 2026*

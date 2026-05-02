@@ -1,4 +1,4 @@
-"""
+﻿"""
 Constants used throughout the framework
 """
 
@@ -118,3 +118,4 @@ ENVIRONMENTS = {
     "STAGING": "staging",
     "PRODUCTION": "production"
 }
+

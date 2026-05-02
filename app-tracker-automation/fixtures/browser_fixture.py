@@ -1,4 +1,4 @@
-"""
+﻿"""
 Browser fixture for Playwright browser management
 """
 
@@ -75,3 +75,4 @@ def tablet_page(browser: Browser):
     yield page
     page.close()
     context.close()
+

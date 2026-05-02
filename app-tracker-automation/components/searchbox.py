@@ -1,4 +1,4 @@
-"""
+﻿"""
 Searchbox component for handling search functionality.
 Updated with CSS selectors from App Tracker HTML analysis.
 Enhanced with robust synchronization for UAT environment.
@@ -180,3 +180,4 @@ class AppTrackerSearchBox(SearchBox):
         
         # Wait for network to settle after input
         self.page.wait_for_load_state("networkidle", timeout=5000)
+

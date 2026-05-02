@@ -1,4 +1,4 @@
-"""
+﻿"""
 Assertion utilities for test validations
 """
 
@@ -185,3 +185,4 @@ class Assertions:
             error_msg = message or "Page should be fully loaded"
             self.logger.error(f"Assertion failed: {error_msg}")
             raise AssertionError(error_msg) from e
+

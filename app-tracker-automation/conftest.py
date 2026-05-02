@@ -1,4 +1,4 @@
-import pytest
+﻿import pytest
 import os
 import subprocess
 from playwright.sync_api import Page, BrowserContext, Browser, sync_playwright
@@ -56,7 +56,7 @@ def pytest_sessionfinish(session, exitstatus):
                 subprocess.Popen(["open", html_report_path])
             else:
                 subprocess.Popen(["xdg-open", html_report_path])
-            print("✓ HTML Report opened.")
+            print("[OK] HTML Report opened.")
         except Exception as e:
             print(f"Could not open HTML report: {e}")
 

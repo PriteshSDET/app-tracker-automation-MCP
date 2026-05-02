@@ -1,4 +1,4 @@
-"""
+﻿"""
 API client base class for HTTP requests
 """
 
@@ -172,3 +172,4 @@ class RESTClient(APIClient):
     def list_resources(self, params: Dict[str, Any] = None, endpoint: str = "") -> requests.Response:
         """List all resources with optional parameters"""
         return self.get(endpoint, params=params)
+

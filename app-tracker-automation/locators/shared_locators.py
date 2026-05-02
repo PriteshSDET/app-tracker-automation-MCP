@@ -1,4 +1,4 @@
-"""
+﻿"""
 Shared locators used across multiple pages
 """
 
@@ -71,3 +71,4 @@ class SharedLocators:
     # Breadcrumbs
     breadcrumbs = ".breadcrumbs"
     breadcrumb_item = ".breadcrumb-item"
+

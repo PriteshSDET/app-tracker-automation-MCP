@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tracker Flow - Business logic for application tracking
 """
 
@@ -154,3 +154,4 @@ class TrackerFlow:
         except Exception as e:
             self.logger.error(f"Failed to get applications summary: {str(e)}")
             return {"total_applications": 0, "timestamp": None}
+

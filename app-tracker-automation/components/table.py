@@ -1,4 +1,4 @@
-"""
+﻿"""
 Table component for handling data tables.
 Updated with CSS selectors from App Tracker HTML analysis.
 """
@@ -112,3 +112,4 @@ class AppTrackerTable(Table):
         """Click on specific application row"""
         row = self.page.locator(self.APPLICATION_ROW).nth(row_index)
         row.click()
+

@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tracker page locators
 """
 
@@ -43,3 +43,4 @@ class TrackerLocators:
     # Details modal
     details_modal = ".details-modal"
     modal_close = ".modal-close"
+

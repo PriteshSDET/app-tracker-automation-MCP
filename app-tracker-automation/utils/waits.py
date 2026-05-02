@@ -1,4 +1,4 @@
-"""
+﻿"""
 Wait utilities for handling element waits and timeouts
 """
 
@@ -158,3 +158,4 @@ class Waits:
             time.sleep(0.5)
         
         raise TimeoutError(f"Element {locator} did not have class {class_name} within {timeout}ms")
+

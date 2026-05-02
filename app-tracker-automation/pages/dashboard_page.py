@@ -1,4 +1,4 @@
-"""
+﻿"""
 Dashboard Page Object Model
 Handles dashboard functionality for the insurance portal
 """
@@ -48,3 +48,4 @@ class DashboardPage(BasePage):
         """Get number of pending claims"""
         text = self.page.locator(self.locators.pending_claims_count).text_content()
         return int(text) if text else 0
+

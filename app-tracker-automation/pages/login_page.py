@@ -1,4 +1,4 @@
-"""
+﻿"""
 Login Page Object Model
 Handles login functionality for the insurance portal
 """
@@ -47,3 +47,4 @@ class LoginPage(BasePage):
     def is_login_successful(self) -> bool:
         """Check if login was successful"""
         return not self.is_element_visible(self.locators.login_form)
+

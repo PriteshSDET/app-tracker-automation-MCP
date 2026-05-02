@@ -1,4 +1,4 @@
-"""
+﻿"""
 Authentication API client for handling user authentication
 """
 
@@ -253,3 +253,4 @@ class AuthAPI(APIClient):
             error_msg = f"Failed to update user profile with status {response.status_code}"
             self.logger.error(error_msg)
             raise requests.HTTPError(error_msg)
+
