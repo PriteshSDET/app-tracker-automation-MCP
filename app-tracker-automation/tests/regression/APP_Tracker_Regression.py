@@ -2201,3 +2201,34 @@ class TestUnifiedAppTrackerFlow:
             errors += 1
         return errors
 
+    @pytest.mark.demo_bug
+    def test_demo_simulated_bug(self, page: Page):
+        """
+        Isolated demo test to show stakeholders how the framework reports bugs.
+        This test intentionally fails an assertion.
+        """
+        self.logger = Logger()
+        framework = UnifiedAutomationFramework()
+        framework.log_start("Demo Simulated Bug Flow")
+        
+        try:
+            self.logger.info("Navigating to Aditya Birla UAT login page...")
+            page.goto("https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login", timeout=30000)
+            
+            self.logger.info("Performing basic UI interaction...")
+            # Simulate a basic interaction
+            page.wait_for_load_state("networkidle", timeout=10000)
+            
+            self.logger.info("Validating UI component...")
+            # Intentional failure
+            assert False, "BUG FOUND: Expected element text did not match actual UI text."
+            
+        except AssertionError as e:
+            self.logger.error(f"[FAIL] Assertion Error: {e}")
+            framework.log_end("Demo Simulated Bug Flow", "FAILED")
+            raise  # Re-raise to let pytest mark the test as failed
+        except Exception as e:
+            self.logger.error(f"[FAIL] Unexpected error: {e}")
+            framework.log_end("Demo Simulated Bug Flow", "ERROR")
+            raise
+
