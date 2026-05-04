@@ -1515,3 +1515,16 @@ This session finalized the stabilization of both `execute_login_tracker_test.py`
  -   * * E x e c u t i o n   F l o w   R e s t r u c t u r i n g * * :   R e o r d e r e d   A P P _ T r a c k e r _ R e g r e s s i o n . p y   e x e c u t i o n   t o   r u n   t h e   r o b u s t   O O P   C o m p o n e n t   U t i l i t y   R e g r e s s i o n   ( P h a s e   3 )   * b e f o r e *   t h e   L e g a c y   C o m p o n e n t   V a l i d a t i o n   ( P h a s e   4 ) .   T h i s   g u a r a n t e e s   t h a t   t h e   c o m p o n e n t   v a l i d a t i o n s   r u n   o n   a   p r i s t i n e   t a b l e   s t a t e   b e f o r e   l e g a c y   s e a r c h   t e s t s   m u t a t e   i t . 
  -   * * U n i c o d e   E r r o r   R e s o l u t i o n * * :   S a n i t i z e d   I n d i a n   R u p e e   ( ¹ / \ u 2 0 b 9 )   a n d   A r r o w   ( ’!)   s y m b o l s   d u r i n g   P l a y w r i g h t   t e x t   e x t r a c t i o n   t o   p r e v e n t   U n i c o d e E n c o d e E r r o r   i n   s t a n d a r d   W i n d o w s   c p 1 2 5 2   t e r m i n a l   e n v i r o n m e n t s .  
  
+## Session: May 04, 2026 - Stabilizing Component-Driven Regression
+
+### Overview
+Completely overhauled the App Tracker execution flow and component interactability. We successfully stripped out legacy validations in favor of robust, self-cleaning object-oriented components. Addressed Playwright strict mode crashes, optimized UI wait states to eliminate massive 30-second delays, and resolved Unicode terminal crashing.
+
+### Key Accomplishments
+1. **Parallel Tab Fixes:** Stripped out chained click strategies that were causing double-tabs. Shifted to a standard `link.click(force=True)` inside a 3-attempt retry loop to ensure absolute tab opening stability.
+2. **Playwright Strict Mode / States:** Removed all invalid `wait_for(state="enabled")` arguments scattered across components (Drawer, Filter Chips, Top Navigation), replacing them with standard visibility checks and `click(force=True)` to safely bypass React/Radix overlays.
+3. **Dropdown Trigger Optimization:** Found that the Dropdown was not triggering properly because the invisible combobox wasn't reactive. Rewired `TRIGGER_SELECTORS` to actively click visible filter chips (like 'Pending') to force the dropdown open, mirroring actual user behavior.
+4. **Selector Delay Optimization (30s Drop):** Replaced an array-based sequential `try/except` locator search (which cascaded into 30 seconds of timeouts) with a native Playwright comma-separated OR string, granting instant detection.
+5. **Interactive Component Testing:** 
+   - Added checking/unchecking logic to the dropdown to ensure filters are properly applied and then cleaned up to prevent subsequent test failures.
+   - Added toggle tests for the Dark/Light Mode Theme button and the User Profile Menu.
