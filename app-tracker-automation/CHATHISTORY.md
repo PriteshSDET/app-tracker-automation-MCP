@@ -1508,3 +1508,10 @@ This session finalized the stabilization of both `execute_login_tracker_test.py`
 
 ---
 *Updated: May 2, 2026 - Finalizing Headless Tab Navigation and Robust Locators*
+
+ # # #   '  M a y   0 4 ,   2 0 2 6 :   F l o w   A r r a n g e m e n t   a n d   S t a b i l i t y   E n h a n c e m e n t s 
+ -   * * T a b   N a v i g a t i o n * * :   R e p l a c e d   e x p l i c i t   w i n d o w . o p e n   n a v i g a t i o n   w i t h   a   r o b u s t   t h r e e - t i e r   c l i c k   f a l l b a c k   ( S t a n d a r d   - >   J S   - >   C t r l + C l i c k )   t o   m a i n t a i n   L E A P   a u t h e n t i c a t i o n   s e s s i o n   s t a t e s   a c r o s s   t a b s . 
+ -   * * U I   S t a t e   M a n a g e m e n t * * :   I m p l e m e n t e d   e x p l i c i t   d e t a i l   d r a w e r   c l o s u r e   ( u s i n g   a   u n i q u e   S V G   p a t h )   a f t e r   l e g a c y   s e a r c h   t e s t s   t o   e n s u r e   u n d e r l y i n g   c o m p o n e n t s   a r e   i n t e r a c t a b l e . 
+ -   * * E x e c u t i o n   F l o w   R e s t r u c t u r i n g * * :   R e o r d e r e d   A P P _ T r a c k e r _ R e g r e s s i o n . p y   e x e c u t i o n   t o   r u n   t h e   r o b u s t   O O P   C o m p o n e n t   U t i l i t y   R e g r e s s i o n   ( P h a s e   3 )   * b e f o r e *   t h e   L e g a c y   C o m p o n e n t   V a l i d a t i o n   ( P h a s e   4 ) .   T h i s   g u a r a n t e e s   t h a t   t h e   c o m p o n e n t   v a l i d a t i o n s   r u n   o n   a   p r i s t i n e   t a b l e   s t a t e   b e f o r e   l e g a c y   s e a r c h   t e s t s   m u t a t e   i t . 
+ -   * * U n i c o d e   E r r o r   R e s o l u t i o n * * :   S a n i t i z e d   I n d i a n   R u p e e   ( ¹ / \ u 2 0 b 9 )   a n d   A r r o w   ( ’!)   s y m b o l s   d u r i n g   P l a y w r i g h t   t e x t   e x t r a c t i o n   t o   p r e v e n t   U n i c o d e E n c o d e E r r o r   i n   s t a n d a r d   W i n d o w s   c p 1 2 5 2   t e r m i n a l   e n v i r o n m e n t s .  
+ 

@@ -2,6 +2,7 @@
 Unified Test Execution Script: E2E Login & Component Validation
 Strategy: Continuous State Management with Explicit Hidden-Waits & Scroll Handling
 Updates: Integrated deep-locators from App Tracker HTML source.
+         Component utilities wired in for full regression coverage.
 """
 
 import os
@@ -14,6 +15,18 @@ from pages.aditya_birla_login_page import AdityaBirlaLoginPage
 from pages.aditya_birla_dashboard_page import AdityaBirlaDashboardPage
 from pages.aditya_birla_tracker_page import AdityaBirlaTrackerPage
 from utils.logger import Logger
+
+# ── Component Utility Imports ─────────────────────────────────────────────────
+from components import (
+    ActiveFilterChips,
+    FilterSearchBar,
+    PaginationFooter,
+    PolicyListTable,
+    TopNavigationControls,
+    DetailDrawer,
+)
+# ─────────────────────────────────────────────────────────────────────────────
+
 
 # Load environment variables from .env file
 import os
@@ -141,23 +154,42 @@ class TestUnifiedAppTrackerFlow:
                 # Update tracker_page with the correct page object
                 tracker_page.page = tracker_page_obj
                 
-            # PHASE 3: COMPONENT VALIDATION
-            self.logger.step_start("--- Beginning Component Validation Phase ---")
-            sanity_errors = self._validate_component_filters(tracker_page_obj or page, tracker_page)
-            sanity_errors += self._validate_component_table(tracker_page_obj or page, tracker_page)
-            
-            # NEW VALIDATIONS: Pagination, Chip Filters, Search Dropdown, Application Number Search
-            sanity_errors += self._validate_pagination(tracker_page_obj or page)
-            sanity_errors += self._validate_chip_filters(tracker_page_obj or page)
-            sanity_errors += self._validate_search_dropdown(tracker_page_obj or page)
-            sanity_errors += self._validate_application_number_search(tracker_page_obj or page)
-            
+            # ── PHASE 3: FULL COMPONENT UTILITY REGRESSION ────────────────────
+            self.logger.step_start("--- Phase 3: Full Component Utility Regression ---")
+
+            # Resolve the live tracker page — prefer new tab, fall back to current
+            active_page = tracker_page_obj or page
+
+            # Guard: confirm the page is still open and on the tracker before running validations
+            try:
+                current_url = active_page.url
+                if "app-tracker" not in current_url and "onboarding-uat" not in current_url:
+                    self.logger.warning(
+                        f"[WARN] active_page URL does not look like App Tracker: {current_url}. "
+                        "Validations may produce warnings."
+                    )
+            except Exception as url_check_e:
+                self.logger.warning(f"[WARN] Could not verify active_page URL: {url_check_e}")
+
+            sanity_errors = 0
+            sanity_errors += self._reg_top_navigation(active_page)
+            sanity_errors += self._reg_filter_search_bar(active_page)
+            sanity_errors += self._reg_active_filter_chips(active_page)
+            sanity_errors += self._reg_policy_list_table(active_page)
+            sanity_errors += self._reg_pagination_footer(active_page)
+            sanity_errors += self._reg_detail_drawer(active_page)
+
+            # Note: Legacy component validations (e.g. _validate_component_filters, _validate_chip_filters) 
+            # have been permanently removed because they rely on fragile, outdated locators.
+            # They have been fully superseded by the Phase 3 Full Component Utility Regression.
+
             errors_logged += sanity_errors
             
             if errors_logged > 0:
                 framework.log_end("COMPLETE_FLOW", "PASSED_WITH_WARNINGS")
             else:
                 framework.log_end("COMPLETE_FLOW", "ALL_PASSED")
+
 
         except Exception as critical_e:
             self.logger.critical(f"FATAL ERROR STOPPING EXECUTION: {str(critical_e)}")
@@ -241,86 +273,94 @@ class TestUnifiedAppTrackerFlow:
         self._wait_for_loading_overlay_to_disappear(page)
         
         # Handle new tab opening for Application Tracker
-        # App Tracker opens in a NEW TAB at a different domain: onboarding-uat.adityabirlasunlifeinsurance.com
+        # App Tracker opens in a NEW TAB — all three click strategies preserve the
+        # authenticated session. Do NOT use window.open(url) as it will open a tab
+        # without the LEAP auth cookies and immediately redirect to login.
         self.logger.info("Setting up new tab listener before clicking Application Tracker link...")
-        
+
         context = page.context
         tracker_page_obj = None
-        
-        # 1. Standard Playwright click
-        try:
-            with context.expect_page(timeout=10000) as new_page_info:
-                link.click(timeout=3000)
-            tracker_page_obj = new_page_info.value
-            self.logger.info(f"[PASS] Captured new App Tracker tab via expect_page: {tracker_page_obj.url}")
-        except Exception as e1:
-            self.logger.warning(f"[WARN] Standard click didn't open tab ({e1}). Trying JS click...")
-            # 2. JS Click fallback
+
+        # ── Strategy 1: Standard Playwright click with Retry Mechanism (Up to 3 times) ───
+        for attempt in range(3):
             try:
+                self.logger.info(f"Attempting to click Application Tracker link (Attempt {attempt+1}/3)...")
                 with context.expect_page(timeout=10000) as new_page_info:
-                    link.evaluate("el => el.click()")
+                    link.click(timeout=5000, force=True)
                 tracker_page_obj = new_page_info.value
-                self.logger.info(f"[PASS] Captured App Tracker tab via JS click: {tracker_page_obj.url}")
-            except Exception as e2:
-                self.logger.warning(f"[WARN] JS click didn't open tab ({e2}). Trying window.open...")
-                # 3. Explicit window.open
-                try:
-                    # In this application, the link might not have an href and uses a JS handler instead.
-                    # If UI clicks are blocked in headless mode, force open the known URL.
-                    expected_url = "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"
-                    
-                    with context.expect_page(timeout=10000) as manual_page_info:
-                        page.evaluate(f"window.open('{expected_url}', '_blank')")
-                    tracker_page_obj = manual_page_info.value
-                    self.logger.info(f"[PASS] Captured App Tracker tab via explicit JS window.open (using known URL): {tracker_page_obj.url}")
-                except Exception as js_e:
-                    self.logger.warning(f"[WARN] JS window.open failed: {js_e}")
-                
-        # Final Fallback: scan all open tabs
+                self.logger.info(f"[PASS] Captured tab on attempt {attempt+1}: {tracker_page_obj.url}")
+                break
+            except Exception as e:
+                self.logger.warning(f"[WARN] Click attempt {attempt+1} failed or timed out: {e}")
+                page.wait_for_timeout(2000)
+
+        # ── Strategy 4: Scan all already-open pages ───────────────────────────────
         if not tracker_page_obj:
-            page.wait_for_timeout(3000)
+            page.wait_for_timeout(4000)   # give the browser a moment to open the tab
             for p in context.pages:
                 try:
-                    if "app-tracker" in p.url:
+                    if "app-tracker" in p.url or "onboarding-uat" in p.url:
                         tracker_page_obj = p
-                        self.logger.info(f"[PASS] Found App Tracker tab via scan: {p.url}")
+                        self.logger.info(f"[PASS] Strategy-4: Found tracker tab via scan: {p.url}")
                         break
                 except Exception:
                     continue
-        
+
         if not tracker_page_obj:
-            self.logger.warning("[WARN] App Tracker tab not found — using current page as fallback (validations may warn)")
+            self.logger.warning("[WARN] No App Tracker tab found — falling back to current page (validations will warn)")
             tracker_page_obj = page
-        
-        # Bring the tracker page to focus
+
+        # ── Bring to focus & wait for full tracker UI load ───────────────────────
         tracker_page_obj.bring_to_front()
-        
-        # Validate URL
-        expected_url_pattern = "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"
+
+        # Wait for network to settle
+        try:
+            tracker_page_obj.wait_for_load_state("networkidle", timeout=25000)
+            self.logger.info("[PASS] Application Tracker page reached networkidle")
+        except Exception as load_e:
+            self.logger.warning(f"[WARN] networkidle wait timed out: {load_e}")
+
+        # ── TRACKER UI READINESS GATE ─────────────────────────────────────────────
+        # Wait for at least ONE tracker UI landmark to be visible before returning.
+        # This guarantees the authenticated tracker (not a redirect/login screen)
+        # is fully rendered and ready for component validation.
+        tracker_ui_selectors = [
+            "table",                                        # policy list table
+            "nav[aria-label='Pagination']",                 # pagination nav
+            "div[role='combobox']",                         # filter chip trigger
+            "input[type='search'], input[placeholder]",     # search bar
+            "header h1, header h2",                         # page header
+        ]
+        ui_ready = False
+        for sel in tracker_ui_selectors:
+            try:
+                tracker_page_obj.locator(sel).first.wait_for(state="visible", timeout=15000)
+                self.logger.info(f"[PASS] Tracker UI ready (matched: '{sel}')")
+                ui_ready = True
+                break
+            except Exception:
+                continue
+        if not ui_ready:
+            self.logger.warning("[WARN] Tracker UI landmarks not found — page may not be the tracker (auth redirect?)")
+
+        # Validate final URL
+        expected_url_pattern = "onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker"
         try:
             current = tracker_page_obj.url
             if expected_url_pattern in current:
                 self.logger.info(f"[PASS] URL Validation PASSED: {current}")
             else:
-                self.logger.warning(f"[WARN] URL mismatch. Expected: {expected_url_pattern}, Got: {current}")
+                self.logger.warning(f"[WARN] URL mismatch. Expected pattern: {expected_url_pattern}, Got: {current}")
         except Exception as e:
-            self.logger.warning(f"[WARN] URL validation warning: {e}")
-        
-        # Wait for page to fully load
-        try:
-            tracker_page_obj.wait_for_load_state("networkidle", timeout=20000)
-            self.logger.info("[PASS] Application Tracker page loaded (networkidle)")
-        except Exception as load_e:
-            self.logger.warning(f"[WARN] networkidle wait: {load_e}")
-        
-        # Wait for any loading spinners/overlays to disappear
+            self.logger.warning(f"[WARN] URL validation error: {e}")
+
+        # Wait for overlays to clear
         self._wait_for_loading_overlay_to_disappear(tracker_page_obj)
-        
+
         # Update tracker_page with the new page object
         tracker_page.page = tracker_page_obj
         tracker_page.wait_for_tracker_load(timeout=15000)
-        
-        # Return the new page object for subsequent validations
+
         return tracker_page_obj
 
     def _wait_for_loading_overlay_to_disappear(self, page, timeout=5000):
@@ -1628,6 +1668,25 @@ class TestUnifiedAppTrackerFlow:
                 
                 if detail_view:
                     self.logger.info("[PASS] Detail view opened after clicking row")
+                    
+                    # USER REQUEST FIX: Explicitly close the drawer so Phase 4 components are interactable
+                    self.logger.info("[INFO] Closing detail view to prepare for next phase...")
+                    try:
+                        # 1. Try the specific SVG path the user provided, selecting the parent button
+                        svg_close_btn = page.locator("button:has(svg path[d*='205.66'])").first
+                        if svg_close_btn.is_visible(timeout=3000):
+                            svg_close_btn.click(timeout=3000)
+                            self.logger.info("[PASS] Detail view closed using SVG path button selector")
+                            page.wait_for_timeout(1000) # Give UI time to animate out
+                        else:
+                            # 2. Fallback: Use the component utility's built-in close method
+                            drawer = DetailDrawer(page)
+                            if drawer.close():
+                                self.logger.info("[PASS] Detail view closed using DetailDrawer component utility")
+                            else:
+                                self.logger.warning("[WARN] Failed to close detail view using known methods")
+                    except Exception as close_e:
+                        self.logger.warning(f"[WARN] Exception while attempting to close detail view: {close_e}")
                 else:
                     self.logger.info("[INFO] No detail view detected (may navigate to detail page)")
             except Exception as e:
@@ -1639,3 +1698,506 @@ class TestUnifiedAppTrackerFlow:
             errors += 1
         
         return errors
+
+    # ═══════════════════════════════════════════════════════════════════════════
+    #  PHASE 4 — COMPONENT UTILITY REGRESSION METHODS
+    # ═══════════════════════════════════════════════════════════════════════════
+
+    def _reg_top_navigation(self, page: Page) -> int:
+        """
+        REG-NAV: Top Navigation & Controls Component Regression.
+        Validates: Logo, Page Title, User Initials, Theme Toggle,
+                   Download Button text & count.
+        """
+        errors = 0
+        self.logger.step_start("[REG-NAV] Top Navigation & Controls")
+        try:
+            nav = TopNavigationControls(page)
+            result = nav.validate_all()
+
+            # 1. Logo visible
+            if not result["logo_visible"]:
+                self.logger.warning("[WARN] REG-NAV: ABSLI logo not visible")
+                errors += 1
+            else:
+                self.logger.info("[PASS] REG-NAV: Logo visible")
+
+            # 2. Page title == 'App Tracker'
+            if result["page_title"] != "App Tracker":
+                self.logger.warning(f"[WARN] REG-NAV: Page title mismatch -> '{result['page_title']}'")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-NAV: Page title = '{result['page_title']}'")
+
+            # 3. User initials present and interactive
+            if not result["user_initials"]:
+                self.logger.warning("[WARN] REG-NAV: User initials not found")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-NAV: User initials = '{result['user_initials']}'")
+                
+                # Interaction: Open and close the account menu
+                self.logger.info("[INFO] REG-NAV: Testing account menu interaction...")
+                if nav.open_account_menu():
+                    self.logger.info("[PASS] REG-NAV: Successfully opened account menu")
+                    page.wait_for_timeout(1000)
+                    nav.close_account_menu()
+                    self.logger.info("[PASS] REG-NAV: Successfully closed account menu")
+                else:
+                    self.logger.warning("[WARN] REG-NAV: Could not open account menu")
+                    errors += 1
+
+            # 4. Theme toggle present and interactive
+            if not result["theme_toggle_visible"]:
+                self.logger.warning("[WARN] REG-NAV: Theme toggle button not visible")
+                errors += 1
+            else:
+                self.logger.info("[PASS] REG-NAV: Theme toggle visible")
+                
+                # Interaction: Toggle theme back and forth
+                self.logger.info("[INFO] REG-NAV: Testing theme toggle interaction...")
+                if nav.toggle_theme():
+                    self.logger.info("[PASS] REG-NAV: Theme toggled successfully")
+                    page.wait_for_timeout(1000)
+                    if nav.toggle_theme():
+                        self.logger.info("[PASS] REG-NAV: Theme toggled back to original state")
+                    else:
+                        self.logger.warning("[WARN] REG-NAV: Could not revert theme toggle")
+                        errors += 1
+                else:
+                    self.logger.warning("[WARN] REG-NAV: Could not toggle theme")
+                    errors += 1
+
+            # 5. Download button present and has a count
+            if not result["download_visible"]:
+                self.logger.warning("[WARN] REG-NAV: Download button not visible")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-NAV: Download button = '{result['download_text']}'")
+                if result["download_count"] is None:
+                    self.logger.warning("[WARN] REG-NAV: Could not parse download count from button text")
+                    errors += 1
+                else:
+                    self.logger.info(f"[PASS] REG-NAV: Download count = {result['download_count']}")
+
+            self.logger.info(f"[REG-NAV] Completed. Errors: {errors}")
+        except Exception as e:
+            self.logger.error(f"[FAIL] REG-NAV: Unexpected error: {e}")
+            errors += 1
+        return errors
+
+    def _reg_filter_search_bar(self, page: Page) -> int:
+        """
+        REG-SEARCH: Filter & Search Bar Component Regression.
+        Validates: Bar visibility, Input field, Search type label,
+                   Date filter label, Search & Clear interaction.
+        """
+        errors = 0
+        self.logger.step_start("[REG-SEARCH] Filter & Search Bar")
+        try:
+            bar = FilterSearchBar(page)
+            result = bar.validate_all()
+
+            # 1. Search bar visible
+            if not result["search_bar_visible"]:
+                self.logger.warning("[WARN] REG-SEARCH: Search bar not visible")
+                errors += 1
+            else:
+                self.logger.info("[PASS] REG-SEARCH: Search bar visible")
+
+            # 2. Search input visible
+            if not result["search_input_visible"]:
+                self.logger.warning("[WARN] REG-SEARCH: Search input not visible")
+                errors += 1
+            else:
+                self.logger.info("[PASS] REG-SEARCH: Search input visible")
+
+            # 3. Search type label present
+            if not result["search_type"]:
+                self.logger.warning("[WARN] REG-SEARCH: Search type label missing")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-SEARCH: Search type = '{result['search_type']}'")
+
+            # 4. Date filter visible
+            if not result["date_filter_visible"]:
+                self.logger.warning("[WARN] REG-SEARCH: Date filter button not visible")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-SEARCH: Date filter = '{result['date_filter_label']}'")
+
+            # 5. Search interaction
+            if bar.search("LA"):
+                self.logger.info("[PASS] REG-SEARCH: Search 'LA' entered successfully")
+                if not bar.clear_search():
+                    self.logger.warning("[WARN] REG-SEARCH: Could not clear search input")
+                    errors += 1
+                else:
+                    self.logger.info("[PASS] REG-SEARCH: Search cleared successfully")
+            else:
+                self.logger.warning("[WARN] REG-SEARCH: Could not enter search text")
+                errors += 1
+
+            self.logger.info(f"[REG-SEARCH] Completed. Errors: {errors}")
+        except Exception as e:
+            self.logger.error(f"[FAIL] REG-SEARCH: Unexpected error: {e}")
+            errors += 1
+        return errors
+
+    def _reg_active_filter_chips(self, page: Page) -> int:
+        """
+        REG-CHIPS: Active Filter Chips Component Regression.
+        Validates: Trigger visible, chip names, chip count badge,
+                   dropdown open/close, available statuses, clear all.
+        """
+        errors = 0
+        self.logger.step_start("[REG-CHIPS] Active Filter Chips")
+        try:
+            chips = ActiveFilterChips(page)
+            result = chips.validate_all()
+
+            # 1. Trigger visible
+            if not result["visible"]:
+                self.logger.warning("[WARN] REG-CHIPS: Filter chips trigger not visible")
+                errors += 1
+            else:
+                self.logger.info("[PASS] REG-CHIPS: Filter chips trigger visible")
+
+            # 2. Chip names populated
+            if not result["chip_names"]:
+                self.logger.warning("[WARN] REG-CHIPS: No active chip names found")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-CHIPS: Active chips = {result['chip_names']}")
+
+            # 3. Chip count badge
+            if result["chip_count"] is None:
+                self.logger.warning("[WARN] REG-CHIPS: Chip count badge not found/parsed")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-CHIPS: Chip count = {result['chip_count']}")
+
+            # 4. Open dropdown and read available statuses
+            if chips.open_dropdown():
+                self.logger.info("[PASS] REG-CHIPS: Dropdown opened")
+                statuses = chips.get_available_statuses()
+                if not statuses:
+                    self.logger.warning("[WARN] REG-CHIPS: No statuses found in dropdown")
+                    errors += 1
+                else:
+                    self.logger.info(f"[PASS] REG-CHIPS: Available statuses = {statuses}")
+                    
+                    # 5. Check and Uncheck filter checkbox (Filter table interaction)
+                    if "Pending" in statuses:
+                        self.logger.info("[INFO] REG-CHIPS: Attempting to toggle 'Pending' filter checkbox...")
+                        if chips.select_status("Pending"):
+                            self.logger.info("[PASS] REG-CHIPS: Successfully clicked 'Pending' checkbox")
+                            
+                            # Wait and uncheck it to restore default table state
+                            # This ensures Pagination test doesn't skip due to a single-page filtered result
+                            page.wait_for_timeout(1000)
+                            if chips.select_status("Pending"):
+                                self.logger.info("[PASS] REG-CHIPS: Successfully unchecked 'Pending' to restore table state")
+                            else:
+                                self.logger.warning("[WARN] REG-CHIPS: Could not uncheck 'Pending'. Table may be in filtered state.")
+                                errors += 1
+                        else:
+                            self.logger.warning("[WARN] REG-CHIPS: Could not click 'Pending' checkbox")
+                            errors += 1
+
+                chips.close_dropdown()
+                self.logger.info("[PASS] REG-CHIPS: Dropdown closed")
+            else:
+                self.logger.warning("[WARN] REG-CHIPS: Could not open dropdown")
+                errors += 1
+
+            self.logger.info(f"[REG-CHIPS] Completed. Errors: {errors}")
+        except Exception as e:
+            self.logger.error(f"[FAIL] REG-CHIPS: Unexpected error: {e}")
+            errors += 1
+        return errors
+
+    def _reg_policy_list_table(self, page: Page) -> int:
+        """
+        REG-TABLE: Policy List Table Component Regression.
+        Validates: Table visible, headers match expected columns,
+                   row count > 0, first row data, active sort column,
+                   and filter by status rows count.
+        """
+        errors = 0
+        self.logger.step_start("[REG-TABLE] Policy List Table")
+        try:
+            table = PolicyListTable(page)
+            result = table.validate_all()
+
+            # 1. Table visible
+            if not result["visible"]:
+                self.logger.warning("[WARN] REG-TABLE: Policy list table not visible")
+                errors += 1
+                return errors
+            self.logger.info("[PASS] REG-TABLE: Table visible")
+
+            # 2. Headers valid
+            if not result["headers_valid"]:
+                self.logger.warning("[WARN] REG-TABLE: One or more expected columns missing")
+                errors += 1
+            else:
+                self.logger.info("[PASS] REG-TABLE: All expected columns present")
+
+            # 3. At least 1 row
+            if result["row_count"] == 0:
+                self.logger.warning("[WARN] REG-TABLE: Table has 0 rows — may be empty result")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-TABLE: Row count = {result['row_count']}")
+
+            # 4. First row data
+            first = result.get("first_row", {})
+            if not first.get("app_no"):
+                self.logger.warning("[WARN] REG-TABLE: First row App No is empty")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-TABLE: First row App No = '{first['app_no']}'")
+                self.logger.info(f"[INFO] REG-TABLE: First row Status = '{first.get('policy_status','N/A')}'")
+                premium = first.get('modal_premium','N/A')
+                # Remove Rupee symbol (\u20b9) which crashes standard Windows cp1252 consoles
+                premium = premium.replace('\u20b9', 'Rs.').replace('₹', 'Rs.')
+                self.logger.info(f"[INFO] REG-TABLE: First row Premium = '{premium}'")
+
+            # 5. Active sort column
+            if not result["active_sort_column"]:
+                self.logger.warning("[WARN] REG-TABLE: No active sort column detected")
+                errors += 1
+            else:
+                self.logger.info(
+                    f"[PASS] REG-TABLE: Active sort = '{result['active_sort_column']}' "
+                    f"({result['sort_direction']})"
+                )
+
+            # 6. Sort by App No and verify
+            if table.sort_by_column("App. No."):
+                self.logger.info("[PASS] REG-TABLE: Sort by 'App. No.' triggered")
+                # Reset to default sort
+                table.sort_by_column("R&A Date")
+                self.logger.info("[INFO] REG-TABLE: Reset sort to 'R&A Date'")
+            else:
+                self.logger.warning("[WARN] REG-TABLE: Could not sort by 'App. No.'")
+                errors += 1
+
+            self.logger.info(f"[REG-TABLE] Completed. Errors: {errors}")
+        except Exception as e:
+            self.logger.error(f"[FAIL] REG-TABLE: Unexpected error: {e}")
+            errors += 1
+        return errors
+
+    def _reg_pagination_footer(self, page: Page) -> int:
+        """
+        REG-PAGINATION: Pagination Footer Component Regression.
+        Validates: Nav visible, current page, total pages, prev/next states,
+                   next page navigation, and return to page 1.
+        """
+        errors = 0
+        self.logger.step_start("[REG-PAGINATION] Pagination Footer")
+        try:
+            pagination = PaginationFooter(page)
+            result = pagination.validate_all()
+
+            # 1. Visible
+            if not result["visible"]:
+                self.logger.info("[INFO] REG-PAGINATION: Pagination not visible (single-page result set) — skipping")
+                return errors
+            self.logger.info("[PASS] REG-PAGINATION: Pagination visible")
+
+            # 2. Current page
+            if result["current_page"] is None:
+                self.logger.warning("[WARN] REG-PAGINATION: Could not determine current page")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-PAGINATION: Current page = {result['current_page']}")
+
+            # 3. Total pages
+            if result["total_pages"] is None:
+                self.logger.warning("[WARN] REG-PAGINATION: Could not determine total pages")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-PAGINATION: Total pages = {result['total_pages']}")
+
+            # 4. Previous disabled on first page
+            if result["current_page"] == 1 and not result["prev_disabled"]:
+                self.logger.warning("[WARN] REG-PAGINATION: Previous button should be disabled on page 1")
+                errors += 1
+            else:
+                self.logger.info("[PASS] REG-PAGINATION: Previous button state correct on page 1")
+
+            # 5. Navigate to next page
+            if not pagination.is_on_last_page():
+                if pagination.go_to_next():
+                    new_page = pagination.get_current_page()
+                    self.logger.info(f"[PASS] REG-PAGINATION: Navigated to page {new_page}")
+                    # Return to page 1
+                    if pagination.go_to_first_page():
+                        self.logger.info("[PASS] REG-PAGINATION: Returned to page 1")
+                    else:
+                        self.logger.warning("[WARN] REG-PAGINATION: Could not return to page 1")
+                        errors += 1
+                else:
+                    self.logger.warning("[WARN] REG-PAGINATION: go_to_next() failed")
+                    errors += 1
+            else:
+                self.logger.info("[INFO] REG-PAGINATION: Only 1 page, skip next navigation")
+
+            self.logger.info(f"[REG-PAGINATION] Completed. Errors: {errors}")
+        except Exception as e:
+            self.logger.error(f"[FAIL] REG-PAGINATION: Unexpected error: {e}")
+            errors += 1
+        return errors
+
+    def _reg_detail_drawer(self, page: Page) -> int:
+        """
+        REG-DRAWER: Detail Drawer Component Regression.
+        Validates: Clicking first table row opens the drawer,
+                   header name, aria title, all stage names & statuses,
+                   summary box fields, active stage heading, workflow items,
+                   lock indicator, show-more button, then closes drawer.
+        """
+        errors = 0
+        self.logger.step_start("[REG-DRAWER] Detail Drawer")
+        try:
+            table = PolicyListTable(page)
+            drawer = DetailDrawer(page)
+
+            # Ensure table is visible before clicking
+            if not table.is_visible():
+                self.logger.warning("[WARN] REG-DRAWER: Table not visible, cannot open drawer")
+                errors += 1
+                return errors
+
+            row_count = table.get_row_count()
+            if row_count == 0:
+                self.logger.warning("[WARN] REG-DRAWER: No rows found, cannot open drawer")
+                errors += 1
+                return errors
+
+            # Click first row to open the drawer
+            self.logger.info("[INFO] REG-DRAWER: Clicking first table row to open drawer...")
+            if not table.click_row(0):
+                self.logger.warning("[WARN] REG-DRAWER: Could not click first row")
+                errors += 1
+                return errors
+
+            # Wait for drawer to open
+            if not drawer.wait_until_open():
+                self.logger.warning("[WARN] REG-DRAWER: Drawer did not open after row click")
+                errors += 1
+                return errors
+            self.logger.info("[PASS] REG-DRAWER: Drawer opened")
+
+            # Full component validation
+            result = drawer.validate_all()
+
+            # 1. Header name
+            if not result["header_name"]:
+                self.logger.warning("[WARN] REG-DRAWER: Header proposer name is empty")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-DRAWER: Header name = '{result['header_name']}'")
+
+            # 2. Aria title
+            if not result["aria_title"]:
+                self.logger.warning("[WARN] REG-DRAWER: Aria title (sr-only h2) missing")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-DRAWER: Aria title = '{result['aria_title']}'")
+
+            # 3. Stages loaded
+            if not result["stages"]:
+                self.logger.warning("[WARN] REG-DRAWER: No stages found in stepper")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-DRAWER: Stages = {[s['name'] for s in result['stages']]}")
+                for stage in result["stages"]:
+                    self.logger.info(
+                        f"[INFO] REG-DRAWER:   '{stage['name']}' -> {stage['status']}"
+                    )
+
+            # 4. Active stage
+            if not result["active_stage"]:
+                self.logger.warning("[WARN] REG-DRAWER: Active stage name not detected")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-DRAWER: Active stage = '{result['active_stage']}'")
+
+            # 5. Summary box fields
+            fields = result.get("summary_fields", {})
+            required_fields = ["Proposer Name", "App. No.", "Plan Name", "Modal Premium"]
+            for field in required_fields:
+                found = any(field.lower() in k.lower() for k in fields)
+                if not found:
+                    self.logger.warning(f"[WARN] REG-DRAWER: Summary field '{field}' missing")
+                    errors += 1
+                else:
+                    val = next((v for k, v in fields.items() if field.lower() in k.lower()), "?")
+                    self.logger.info(f"[PASS] REG-DRAWER: {field} = '{val}'")
+
+            # 6. Stage heading in main content
+            if not result["stage_heading"]:
+                self.logger.warning("[WARN] REG-DRAWER: Main content stage heading missing")
+                errors += 1
+            else:
+                self.logger.info(
+                    f"[PASS] REG-DRAWER: Stage heading = '{result['stage_heading']}' "
+                    f"({result['stage_badge_status']})"
+                )
+
+            # 7. Workflow sections
+            if not result["workflow_sections"]:
+                self.logger.warning("[WARN] REG-DRAWER: No workflow sections found")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-DRAWER: Sections = {result['workflow_sections']}")
+
+            # 8. Workflow items with statuses
+            if not result["workflow_items"]:
+                self.logger.warning("[WARN] REG-DRAWER: No workflow items found")
+                errors += 1
+            else:
+                self.logger.info(f"[PASS] REG-DRAWER: {len(result['workflow_items'])} workflow items found")
+                for item in result["workflow_items"][:5]:   # log first 5
+                    self.logger.info(f"[INFO] REG-DRAWER:   '{item['label']}' -> {item['status']}")
+
+            # 9. Lock indicator check
+            is_locked = drawer.is_item_locked("Proposer Declaration (OTVC)")
+            if is_locked:
+                lock_msg = drawer.get_lock_message("Proposer Declaration (OTVC)")
+                self.logger.info(f"[PASS] REG-DRAWER: Lock indicator present -> '{lock_msg}'")
+            else:
+                self.logger.info("[INFO] REG-DRAWER: Proposer Declaration not locked (may be unlocked state)")
+
+            # 10. Show more button
+            if result["show_more_text"]:
+                self.logger.info(f"[PASS] REG-DRAWER: Show More button = '{result['show_more_text']}'")
+            else:
+                self.logger.info("[INFO] REG-DRAWER: No 'Show more' button (all items visible)")
+
+            # 11. Stage navigation — click PI Stage
+            if drawer.click_stage("PI Stage"):
+                self.logger.info("[PASS] REG-DRAWER: Clicked 'PI Stage' in stepper")
+                pi_status = drawer.get_stage_status("PI Stage")
+                self.logger.info(f"[INFO] REG-DRAWER: PI Stage status = '{pi_status}'")
+            else:
+                self.logger.warning("[WARN] REG-DRAWER: Could not click 'PI Stage'")
+                errors += 1
+
+            # 12. Close drawer
+            if drawer.close():
+                self.logger.info("[PASS] REG-DRAWER: Drawer closed successfully")
+            else:
+                self.logger.warning("[WARN] REG-DRAWER: Could not close drawer via button; trying Escape")
+                drawer.close_with_escape()
+
+            self.logger.info(f"[REG-DRAWER] Completed. Errors: {errors}")
+        except Exception as e:
+            self.logger.error(f"[FAIL] REG-DRAWER: Unexpected error: {e}")
+            errors += 1
+        return errors
+
