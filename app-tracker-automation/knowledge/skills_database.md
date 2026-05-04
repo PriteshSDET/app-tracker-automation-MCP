@@ -584,3 +584,112 @@ BROWSER_LAUNCH_ARGS = ['--start-maximized']  # Full screen mode
 
 *Last Updated: May 1, 2026*
 *Project: Aditya Birla App Tracker Automation*
+
+---
+
+## Session: May 4, 2026 - QA Auditing & Regression Testing Skills
+
+### 5. QA Auditor Agent Patterns
+
+#### Skill: Independent Audit Architecture
+**Learned From:** Implementing 3-pipeline QA system (Autonomous → Regression → QA Auditor)
+**Pattern:**
+- **Strict Read-Only:** No code modifications, only analysis and reporting
+- **Independent Verification:** Separate agent for quality gates
+- **Structured Reporting:** 4-layer audit process with clear verdicts
+
+**When to Apply:** Quality assurance of automated test outputs
+
+**Key Insight:** Independent auditors prevent bias and ensure objective quality assessment
+
+#### Skill: Source of Truth Identification
+**Learned From:** Auditing regression runs against business requirements
+**Pattern:**
+```python
+# For new features: Read User Stories, Acceptance Criteria
+source_files = ["stories/login_story.md", "prompts/acceptance_criteria.md"]
+
+# For regressions: Read historical results, baseline expectations
+source_files = ["reports/baseline_results.json", "logs/expected_behavior.log"]
+```
+
+**When to Apply:** Before any audit to establish authoritative reference
+
+**Key Insight:** Always audit against documented requirements, not assumptions
+
+#### Skill: Coverage Gap Analysis
+**Learned From:** Identifying missed logic in regression tests
+**Pattern:**
+- **Perfectly Covered:** Scenarios fully validating business requirements
+- **Missed Logic:** Gaps in error handling, edge cases, data validation
+- **False Passes:** Tests passing without validating core functionality
+
+**When to Apply:** Cross-referencing test results against acceptance criteria
+
+**Key Insight:** Coverage analysis reveals both what's tested and what's missing
+
+#### Skill: Code Quality Standards Audit
+**Learned From:** Evaluating synchronization and locator practices
+**Pattern:**
+```python
+# Synchronization Audit
+hardcoded_waits = code.count("time.sleep(")
+dynamic_waits = code.count("wait_for_load_state(")
+score = dynamic_waits / (hardcoded_waits + dynamic_waits) * 100
+
+# Locator Audit
+fragile_selectors = ["//", "xpath=", "contains(text(),"]
+robust_selectors = ["[data-testid=", ".class-name", "#id"]
+```
+
+**When to Apply:** Reviewing generated or existing test code
+
+**Key Insight:** Quality audits ensure maintainable, reliable automation
+
+### 6. Regression Testing Patterns
+
+#### Skill: Read-Only Failure Analysis
+**Learned From:** Treating test failures as real bugs without code changes
+**Pattern:**
+- **No Self-Healing:** Prohibited from fixing scripts to force passes
+- **Evidence Gathering:** Detailed failure point identification
+- **Bug Reporting:** Structured reports for human investigation
+
+**When to Apply:** Regression test failures in stable test suites
+
+**Key Insight:** Regression failures indicate system changes, not script issues
+
+#### Skill: Component Utility Regression
+**Learned From:** Full regression of reusable UI components
+**Pattern:**
+```python
+# Test each component independently
+components = [TopNavigation, FilterSearchBar, PolicyListTable, PaginationFooter]
+for component in components:
+    result = component.validate_all()
+    # Check specific validations (visibility, interaction, data integrity)
+```
+
+**When to Apply:** Comprehensive regression of UI component libraries
+
+**Key Insight:** Component-level testing ensures framework reliability
+
+#### Skill: Audit Report Generation
+**Learned From:** Structured QA audit reports with actionable insights
+**Pattern:**
+```markdown
+## QA Audit Report
+**Verdict:** Pass/Fail/Needs Rework
+**Coverage Score:** 85%
+**Quality Score:** 95%
+**Missed Coverages:** [List]
+**Actionable Instructions:** [Steps]
+```
+
+**When to Apply:** Communicating audit findings to development teams
+
+**Key Insight:** Clear, actionable reports drive quality improvements
+
+---
+
+*Updated: May 4, 2026 - QA Auditor & Regression Skills Added*

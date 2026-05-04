@@ -34,7 +34,7 @@ Once the target is locked, the Executor enters a focused creation and execution 
 - **Isolated Generation**:
     - Generate a specific, isolated **Page Object** in `pages/` (following the existing OOP component patterns).
     - Generate a specific **Pytest file** in `tests/` utilizing the new Page Object.
-- **Execution**: Run the specific test using the terminal: `python -m pytest <path_to_new_test>`.
+- **Execution**: Run the specific test using the terminal: $env:PYTHONPATH = "."; $env:NODE_TLS_REJECT_UNAUTHORIZED = "0"; pytest"<path_to_new_test>" --clean-alluredir
 - **Self-Healing (3-Attempt Limit)**: 
     - If the test fails due to a locator error or syntax issue, the agent may attempt a "Self-Heal" by analyzing the traceback and modifying the code.
     - **CRITICAL**: The agent is allowed a **maximum of 3 self-healing attempts**.
