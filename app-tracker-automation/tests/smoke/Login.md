@@ -1,16 +1,16 @@
 # Test Plan: Login & App Tracker Navigation
 
 ## 1. Test Case Overview
-**Title:** End-to-End Authentication to Application Tracker  
+**Title:** End-to-End Authentication and Component Validation
 **Module:** UAT Portal / Onboarding  
 **Environment:** Aditya Birla Sun Life (UAT)  
-**Goal:** Verify successful login, dashboard rendering, and redirection to the 'Application Tracker' workspace.
+**Goal:** Verify successful login, redirection to the Application Tracker workspace, and robust validation of all object-oriented UI components (Navigation, Search, Filters, Tables, and Detail Drawers).
 
 ## 2. Prerequisites
-- **Browser:** Google Chrome (Latest Stable)
-- **Network:** Stable connection (Simulate Throttled 4G for perf testing optional)
-- **Credentials:** Valid UAT Admin ID and Password
-- **Cache:** Browser cache cleared (First-run scenario)
+- **Browser:** Playwright Chromium (Headless or UI mode)
+- **Network:** Stable connection
+- **Credentials:** Valid UAT ID and Password
+- **Execution:** Run via `pytest tests/regression/APP_Tracker_Regression.py`
 
 ## 3. Test Data Setup
 | Field | Value Source |
@@ -18,43 +18,41 @@
 | **Login ID** | Loaded from `.env` file (`ADITYA_BIRLA_USER`) |
 | **Password** | Loaded from `.env` file (`ADITYA_BIRLA_PASS`) |
 
-**Note**: Credentials are loaded using multi-path .env loading strategy for flexibility across execution contexts.
-
 ## 4. Step-by-Step Execution
 
 ### Phase 1: Navigation & Authentication
 | Step # | User Action | Expected Result | Validation Checkpoint |
 | :--- | :--- | :--- | :--- |
-| **1** | Initialize browser with full-screen mode and inject layout CSS | Browser opens maximized. CSS styles injected to prevent viewport issues. | Browser Configuration, Layout Stability |
-| **2** | Navigate to `leapuat.adityabirlasunlifeinsurance.com/uat/#/login` | Page loads within <2s. Header displays red branding (`Aditya Birla Capital`). Centered login form visible. **Blue "UAT" badge fixed bottom-left.** URL contains `#/login`. | Layout, Branding, Env Badge, URL |
-| **3** | Enter credentials from .env file | Credentials loaded from `ADITYA_BIRLA_USER` and `ADITYA_BIRLA_PASS`. Text populates. Password masks as bullets. | Credential Loading, Input Masking |
-| **4** | Click `LOGIN >` button | Button clicks (active state). POST request fires. Redirect triggers immediately. | CTA Response, Network Call |
-| **5** | Observe Post-Login Transition | Redirects to `/dashboard` (`leapuat...#\/dashboard`). Page renders without flicker. Session token persists. | Routing Flow, Session Mgmt |
+| **1** | Initialize browser | Browser opens maximized. CSS layout fixes injected. | Browser Configuration, Layout Stability |
+| **2** | Navigate to login URL | Page loads within <2s. | Network Idle, URL matching |
+| **3** | Enter credentials from .env | Credentials populated in input fields. | Credential Loading |
+| **4** | Click `LOGIN >` button | Form submits, post-login transition occurs. | Auth Persistence |
 
 ### Phase 2: App Tracker Setup
 | Step # | User Action | Expected Result | Validation Checkpoint |
 | :--- | :--- | :--- | :--- |
-| **6** | Click `MENU ▾` button (Top Right) using precise selector `button.menu-button[aria-label='menu']` | Menu button clicked. Dropdown expands cleanly. Items: `Help`, `Application Tracker`, `Approvals`, `Logout`. | Navigation Menu, Alignment |
-| **7** | Click `Application Tracker` link | **URL Changes** to: `onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications`.<br>**New tab opens** for Application Tracker. | Deep Linking, Domain Routing, Tab Handling |
-| **8** | Switch to Application Tracker tab and wait for load | Application Tracker page loads. URL contains `app-tracker/applications`. | Tab Switching, Page Load |
+| **5** | Click Top-Right Menu `≡` | Menu opens cleanly without intercept issues. | Menu attachment/visibility |
+| **6** | Click `Application Tracker` link | Employs a robust **3-attempt retry loop** using `click(force=True)`. If successful, the browser opens a new tab while preserving LEAP authentication cookies. | Context Persistence, Domain Routing |
+| **7** | Capture New Tab | The script successfully captures the new `app-tracker/applications` tab. If it fails, falls back to scanning all open pages. | Browser Context Scanning |
 
-### Phase 3: Component Validation
-| Step # | User Action | Expected Result | Validation Checkpoint |
+### Phase 3: Component Utility Regression
+*Note: Validations are executed using isolated, self-cleaning Python component classes to prevent state mutation.*
+
+| Step # | Component | Validation Sequence | Resilience Mechanism |
 | :--- | :--- | :--- | :--- |
-| **9** | Validate Filter Components | **Filter Button**: Visible and clickable.<br>**Title**: "Policy List" displayed.<br>**Search Box**: Text input field (not image) with placeholder.<br>**Date Filter**: "Prev + Current Month" option.<br>**Filter Chips**: Status tags (Pending, Approved, etc.).<br>**Download Button**: Export functionality.<br>**Sort Dropdown**: Clickable with modal closure handling. | Component Presence, Functionality |
-| **10**| Validate Table Components | **Table Header**: Columns visible (App.No, Proposer Name, Plan Name, Modal Premium, Policy Status).<br>**Table Rows**: Data rows displayed using `.MuiBox-root.jss138, tbody tr` selector.<br>**Plan Name**: Extracted using `.first` selector to avoid strict mode violation.<br>**Premium Amount**: Contains currency symbol (₹).<br>**Status Tag**: Status indicators (Pending, etc.).<br>**Sorting Indicator**: SVG icons in table headers.<br>**Row Interaction**: Rows clickable with `force=True`. | Data Structure, Element Extraction, Interaction |
-| **11**| Check Global Consistency | `UAT` badge persists in bottom-left corner across all views. No sensitive data leaks in URL fragments. | Security, Environment Safety |
+| **8** | Top Navigation & Controls | Checks ABSLI Logo, Page Title, User Initials, Theme Toggle, and Download count.<br>**Interactions**: Toggles Theme (Dark/Light) and clicks Account Menu to verify dropdowns, then safely restores state. | Native Playwright interactions via `force=True` to bypass overlay strict mode crashes. |
+| **9** | Filter & Search Bar | Checks Search Input visibility and Search Type labels.<br>**Interactions**: Injects text "LA" into the search field, verifies functionality, then clears text to preserve table state. | Component reset guarantees subsequent table validations are not broken by narrowed data. |
+| **10**| Active Filter Chips | Parses active chips and dynamically counts them.<br>**Interactions**: Opens dropdown by clicking specific visible chip triggers (e.g. "Pending"), checks a new filter, then deliberately unchecks it. | Utilizes an "OR" CSS selector string (`", ".join(selectors)`) to instantly detect modal visibility without cascading 30-second delays. |
+| **11**| Policy List Table | Validates header columns, ensures 10 rows are rendered, checks extracting application numbers and currency strings (Premium).<br>**Interactions**: Clicks a header column to test sorting and restores it. | Graceful currency parsing (`₹`) avoids Python cp1252 `UnicodeEncodeError` terminal crashes. |
+| **12**| Pagination Footer | Checks if the dataset is single-page or multi-page.<br>**Interactions**: Skips interacting if only 1 page exists to prevent false positive failures. | Dynamic skip logic. |
+| **13**| Detail Drawer | **Interactions**: Clicks the first table row to open the side-drawer. Validates Header, Proposer Name, Stages (PI Stage, Underwriting, etc.). Clicks specific stages in the stepper, then explicitly clicks the SVG 'X' button to close. | Explicit drawer closure using precise SVG paths prevents Playwright thread blocking on underlying components. |
 
 ## 5. Pass/Fail Criteria
-- **PASS:** Zero console errors; credentials loaded from .env; seamless routing between Login → Dashboard → Tracker; UI matches visual design specs; UAT badge visible throughout; all component validations pass (filters and table).
-- **FAIL:** Credentials not loaded from .env; blank screens during transition; broken menu links; missing components (e.g., missing UAT badge); failure to redirect to correct domain; component validation failures.
+- **PASS:** Zero timeouts. UI components successfully interacted with and states successfully reverted. Tab navigation succeeds without losing authentication.
+- **FAIL:** `Timeout 10000ms exceeded`, target page closed errors, strict mode violations (`btn.wait_for(state="enabled")`), or corrupted table states causing pagination skips.
 
-## 6. Edge Cases & Negative Testing
-1.  **Invalid Credentials:** Expect inline error message, red borders on inputs, focus reset to first field.
-2.  **Session Expiry:** Refresh on `/app-tracker` while logged out → Should auto-redirect to `/login`.
-3.  **Network Failure:** Simulate offline mode on click → Should show error toast/alert and not hang indefinitely.
-4.  **Keyboard Navigation:** Tab through all elements → Ensure visible focus rings (no mouse-only navigation).
-5.  **Sort Dropdown Timeout:** Open filter modal blocks sort button → Test uses Escape key to close modals before clicking sort.
-6.  **Search Box Image Input:** Targeting magnifying glass instead of text input → Test uses `input[type="text"]` selector.
-7.  **Table Strict Mode Violation:** Multiple `.plan-name` elements → Test uses `.first` selector to target first element only.
-8.  **.env File Not Found:** Credentials not loaded → Test uses multi-path loading strategy to find .env file.
+## 6. Known Edge Cases & Workarounds
+1. **Playwright `enabled` Wait State:** Using `.wait_for(state="enabled")` causes invalid argument crashes. **Fix**: Use `.wait_for(state="visible")` and `.click(force=True)`.
+2. **React Combobox Dropdowns:** Generic click events on MUI/React dropdown triggers often fail silently. **Fix**: Click the *actual visible element inside* the combobox (like the "Pending" chip text).
+3. **Multi-Selector Timeouts:** Sequential `try/except` loops over locator selectors cascade into 30+ second delays. **Fix**: Combine them into a single `or_selector = ", ".join(selectors)`.
+4. **Console Encoding Crashes:** Extracting `₹` symbols natively crashes Windows `cp1252` terminals. **Fix**: Wrap logging logic to catch or sanitize Unicode encodes.
