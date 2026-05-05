@@ -1,0 +1,10 @@
+[2026-05-05T05:49:58.920Z] INFO - BasePage: Loading Aditya Birla UAT login page
+[2026-05-05T05:49:58.926Z] INFO - BasePage: Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[2026-05-05T05:50:02.642Z] DEBUG - Waits: Page loaded successfully
+[2026-05-05T05:50:02.817Z] INFO - BasePage: Entering credentials for user: BR4641
+[2026-05-05T05:50:02.841Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T05:50:02.968Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T05:50:03.063Z] INFO - BasePage: Credentials entered successfully
+[2026-05-05T05:50:03.063Z] INFO - BasePage: Clicking login button
+[2026-05-05T05:50:03.342Z] INFO - BasePage: Login button clicked
+[2026-05-05T05:50:07.919Z] DEBUG - Waits: Page loaded successfully

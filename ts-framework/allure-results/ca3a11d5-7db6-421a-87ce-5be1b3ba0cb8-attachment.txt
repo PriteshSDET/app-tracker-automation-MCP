@@ -1,0 +1,5 @@
+[WARN] 2026-05-05T06:17:01.103Z - [WARN] Could not read search type: TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('button[aria-label=\'Choose search field\']').first() to be visible
+
+[WARN] 2026-05-05T06:17:01.199Z - [WARN] Filter & Search Bar not fully visible

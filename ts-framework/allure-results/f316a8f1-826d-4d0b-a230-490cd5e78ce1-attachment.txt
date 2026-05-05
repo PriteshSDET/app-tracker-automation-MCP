@@ -1,0 +1,43 @@
+[2026-05-05T06:47:08.738Z] INFO - BasePage: Loading Aditya Birla UAT login page
+[2026-05-05T06:47:08.740Z] INFO - BasePage: Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[2026-05-05T06:47:17.390Z] DEBUG - Waits: Page loaded successfully
+[2026-05-05T06:47:17.509Z] INFO - BasePage: Entering credentials for user: BR4641
+[2026-05-05T06:47:17.530Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T06:47:17.654Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T06:47:17.782Z] INFO - BasePage: Credentials entered successfully
+[2026-05-05T06:47:17.784Z] INFO - BasePage: Clicking login button
+[2026-05-05T06:47:18.246Z] INFO - BasePage: Login button clicked
+Waiting for Tracker page to load...
+--- Top Navigation Interactions ---
+[INFO] 2026-05-05T06:47:27.268Z - [OK] Page title: 'App Tracker'
+[INFO] 2026-05-05T06:47:27.276Z - [OK] User initials: SU
+[INFO] 2026-05-05T06:47:27.312Z - [OK] Download button text: 'Download 10 Records'
+[INFO] 2026-05-05T06:47:27.332Z - [OK] Download button text: 'Download 10 Records'
+[INFO] 2026-05-05T06:47:27.333Z - [OK] Download record count: 10
+[INFO] 2026-05-05T06:47:27.333Z - [OK] Top Navigation & Controls validated successfully
+[INFO] 2026-05-05T06:47:27.333Z - [TopNavigationControls] Validation result: {"logoVisible":true,"pageTitle":"App Tracker","userInitials":"SU","themeToggleVisible":true,"downloadVisible":true,"downloadText":"Download 10 Records","downloadCount":10}
+Toggling theme...
+[INFO] 2026-05-05T06:47:27.434Z - [OK] Theme toggled
+Opening account menu...
+[INFO] 2026-05-05T06:47:27.679Z - [OK] Account menu opened
+[INFO] 2026-05-05T06:47:27.686Z - [OK] User initials: SU
+User initials found: SU
+[INFO] 2026-05-05T06:47:27.705Z - [OK] Account menu closed
+--- Filter Chips Interactions ---
+[INFO] 2026-05-05T06:47:27.812Z - [OK] Active Filter Chips trigger bar is visible
+Opening filter dropdown...
+[INFO] 2026-05-05T06:47:33.008Z - [OK] Filter chips dropdown opened
+[INFO] 2026-05-05T06:47:33.218Z - [OK] Filter chips dropdown opened
+[INFO] 2026-05-05T06:47:33.335Z - [OK] Available statuses in dropdown: All,App Form Pending,Policy Coding WIP,Pending,Issued,Rejected,Others
+Available statuses: All,App Form Pending,Policy Coding WIP,Pending,Issued,Rejected,Others
+Clearing all filters...
+[INFO] 2026-05-05T06:47:33.462Z - [OK] Clicked Clear All
+Selecting "App Form Pending" status...
+[INFO] 2026-05-05T06:47:35.518Z - [OK] Selected status: App Form Pending
+[INFO] 2026-05-05T06:47:39.535Z - [OK] Active chips: App Form Pending
+Active chips after selection: App Form Pending
+Verifying table reflects "App Form Pending" filter...
+[INFO] 2026-05-05T06:47:39.552Z - [OK] Table row count: 10
+First row status: App Form Pending
+Cleaning up filters...
+[INFO] 2026-05-05T06:47:39.686Z - [OK] Clicked Clear All

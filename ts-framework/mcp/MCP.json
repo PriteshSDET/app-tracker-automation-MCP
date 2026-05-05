@@ -1,0 +1,132 @@
+{
+  "name": "app-tracker-automation-mcp",
+  "version": "1.0.0",
+  "description": "MCP configuration for App Tracker Automation with TypeScript Playwright and GitHub integration",
+  "author": "AI Automation Team",
+  "license": "MIT",
+  "mcpServers": {
+    "mcp-server": {
+      "command": "npx",
+      "args": ["ts-node", "ts-framework/mcp/mcp_server.ts"],
+      "env": {
+        "TS_NODE_PROJECT": "ts-framework/tsconfig.json"
+      }
+    }
+  },
+  "tools": {
+    "bifrost": {
+      "test_execution": {
+        "description": "Execute Playwright tests using TypeScript framework",
+        "parameters": {
+          "test_file": {
+            "type": "string",
+            "description": "Path to test file to execute"
+          },
+          "environment": {
+            "type": "string",
+            "enum": ["uat", "staging", "production"],
+            "default": "uat"
+          },
+          "browser": {
+            "type": "string",
+            "enum": ["chromium", "firefox", "webkit"],
+            "default": "chromium"
+          },
+          "headed": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "report_analysis": {
+        "description": "Analyze Playwright test reports and provide insights",
+        "parameters": {
+          "report_path": {
+            "type": "string",
+            "description": "Path to test report file"
+          },
+          "analysis_type": {
+            "type": "string",
+            "enum": ["summary", "detailed", "trends"],
+            "default": "summary"
+          }
+        }
+      }
+    },
+    "playwright": {
+      "browser_automation": {
+        "description": "Perform browser automation tasks with Playwright (TypeScript)",
+        "parameters": {
+          "url": {
+            "type": "string",
+            "description": "Target URL to navigate to"
+          },
+          "actions": {
+            "type": "array",
+            "description": "List of browser actions to perform",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["click", "type", "wait", "navigate", "screenshot"]
+                },
+                "selector": {
+                  "type": "string",
+                  "description": "CSS selector for element"
+                },
+                "value": {
+                  "type": "string",
+                  "description": "Value to type or action value"
+                },
+                "timeout": {
+                  "type": "number",
+                  "default": 5000
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "github": {
+      "repository_operations": {
+        "description": "Perform GitHub repository operations",
+        "parameters": {
+          "operation": {
+            "type": "string",
+            "enum": ["create_issue", "update_issue", "create_pull_request", "merge_pull_request", "get_commits", "get_branches"]
+          },
+          "title": {
+            "type": "string",
+            "description": "Title for issue or PR"
+          },
+          "body": {
+            "type": "string",
+            "description": "Body/description for issue or PR"
+          }
+        }
+      }
+    }
+  },
+  "resources": {
+    "test_reports": {
+      "description": "Access to Playwright HTML reports",
+      "uri_pattern": "file://./ts-framework/reports/html/index.html"
+    },
+    "test_data": {
+      "description": "Access to TypeScript test data",
+      "uri_pattern": "file://./ts-framework/data/{filename}"
+    }
+  },
+  "prompts": {
+    "playwright_generation": {
+      "description": "AI prompt for generating TypeScript Playwright code",
+      "path": "ts-framework/docs/prompts/playwright-generation.md"
+    },
+    "qa_rules": {
+      "description": "QA Auditor rules for TypeScript migration",
+      "path": "ts-framework/docs/rules/qa_auditor_rules.md"
+    }
+  }
+}

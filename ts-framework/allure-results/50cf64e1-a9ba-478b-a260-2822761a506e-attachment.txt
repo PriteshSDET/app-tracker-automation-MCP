@@ -1,0 +1,45 @@
+[2026-05-05T06:50:08.945Z] INFO - BasePage: Loading Aditya Birla UAT login page
+[2026-05-05T06:50:08.946Z] INFO - BasePage: Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[2026-05-05T06:50:11.300Z] DEBUG - Waits: Page loaded successfully
+[2026-05-05T06:50:11.474Z] INFO - BasePage: Entering credentials for user: BR4641
+[2026-05-05T06:50:11.495Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T06:50:11.619Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T06:50:11.730Z] INFO - BasePage: Credentials entered successfully
+[2026-05-05T06:50:11.730Z] INFO - BasePage: Clicking login button
+[2026-05-05T06:50:12.088Z] INFO - BasePage: Login button clicked
+Clicking Tracker menu item and waiting for new tab...
+Current Tracker URL: https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications
+--- Top Navigation Interactions ---
+Toggling theme...
+[INFO] 2026-05-05T06:50:18.481Z - [OK] Theme toggled
+Opening account menu...
+[INFO] 2026-05-05T06:50:19.663Z - [OK] Account menu opened
+[INFO] 2026-05-05T06:50:19.704Z - [OK] User initials: SU
+User initials found: SU
+[INFO] 2026-05-05T06:50:19.787Z - [OK] Account menu closed
+--- Filter Chips Interactions ---
+[INFO] 2026-05-05T06:50:19.963Z - [OK] Active Filter Chips trigger bar is visible
+Opening filter dropdown...
+[INFO] 2026-05-05T06:50:25.278Z - [OK] Filter chips dropdown opened
+[INFO] 2026-05-05T06:50:26.530Z - [OK] Filter chips dropdown opened
+[INFO] 2026-05-05T06:50:26.732Z - [OK] Available statuses in dropdown: All,App Form Pending,Policy Coding WIP,Pending,Issued,Rejected,Others
+Available statuses: All,App Form Pending,Policy Coding WIP,Pending,Issued,Rejected,Others
+Clearing all filters...
+[INFO] 2026-05-05T06:50:26.911Z - [OK] Clicked Clear All
+Selecting "App Form Pending" status...
+[INFO] 2026-05-05T06:50:29.064Z - [OK] Selected status: App Form Pending
+[INFO] 2026-05-05T06:50:33.222Z - [OK] Active chips: App Form Pending
+Active chips after selection: App Form Pending
+Verifying table reflects "App Form Pending" filter...
+[INFO] 2026-05-05T06:50:33.239Z - [OK] Table row count: 10
+First row status: App Form Pending
+Cleaning up filters...
+[INFO] 2026-05-05T06:50:33.390Z - [OK] Clicked Clear All
+--- Search Bar Validation ---
+[INFO] 2026-05-05T06:50:35.538Z - [OK] Search type: App No.
+[INFO] 2026-05-05T06:50:35.583Z - [OK] Date filter label: Prev + Current Month
+[INFO] 2026-05-05T06:50:35.583Z - [OK] Filter & Search Bar validated successfully
+[INFO] 2026-05-05T06:50:35.583Z - [FilterSearchBar] Validation result: {"searchBarVisible":true,"searchInputVisible":true,"searchType":"App No.","dateFilterVisible":true,"dateFilterLabel":"Prev + Current Month"}
+--- Pagination Validation ---
+[INFO] 2026-05-05T06:50:41.195Z - [INFO] Pagination not visible - likely single page result
+--- Policy Table Validation ---

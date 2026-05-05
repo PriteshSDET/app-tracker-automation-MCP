@@ -1,0 +1,16 @@
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 STARTING TEST SUITE: Demo Simulated Bug Flow
+[32mINFO    [0m utils.logger:logger.py:58 Time: 18:35:01
+[32mINFO    [0m utils.logger:logger.py:58 ========================================
+
+[32mINFO    [0m utils.logger:logger.py:58 Navigating to Aditya Birla UAT login page...
+[32mINFO    [0m utils.logger:logger.py:58 Performing basic UI interaction...
+[32mINFO    [0m utils.logger:logger.py:58 Validating UI component...
+[31m[1mERROR   [0m utils.logger:logger.py:66 [FAIL] Assertion Error: BUG FOUND: Expected element text did not match actual UI text.
+assert False
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 TEST SUITE ENDED: FAILED
+[32mINFO    [0m utils.logger:logger.py:58 Total Duration: 4.65s
+[32mINFO    [0m utils.logger:logger.py:58 ========================================

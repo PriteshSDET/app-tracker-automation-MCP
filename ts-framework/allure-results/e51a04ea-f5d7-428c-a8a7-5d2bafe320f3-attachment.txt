@@ -1,0 +1,1 @@
+[WARN] 2026-05-05T06:46:57.197Z - [WARN] Dropdown may not have opened — dialog not detected

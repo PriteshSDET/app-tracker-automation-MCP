@@ -1,0 +1,141 @@
+[32mINFO    [0m utils.logger:logger.py:58 No fixed viewport requested; relying on launch args (--start-maximized)
+[32mINFO    [0m utils.logger:logger.py:58 Browser Launch Args: ['--start-maximized']
+[32mINFO    [0m utils.logger:logger.py:58 [OK] Layout fix CSS injected to prevent viewport issues
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 STARTING TEST SUITE: Complete End-to-End Flow
+[32mINFO    [0m utils.logger:logger.py:58 Time: 17:55:14
+[32mINFO    [0m utils.logger:logger.py:58 ========================================
+
+[32mINFO    [0m utils.logger:logger.py:58 Credentials loaded - User: BR4641, Pass: **********
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: Phase 1: Authentication ---
+[32mINFO    [0m utils.logger:logger.py:58 Loading Aditya Birla UAT login page
+[32mINFO    [0m utils.logger:logger.py:58 Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[32mINFO    [0m utils.logger:logger.py:58 Entering credentials for user: BR4641
+[32mINFO    [0m utils.logger:logger.py:58 Credentials entered successfully
+[32mINFO    [0m utils.logger:logger.py:58 Clicking login button
+[32mINFO    [0m utils.logger:logger.py:58 Login button clicked
+[32mINFO    [0m utils.logger:logger.py:58 Navigating via Top-Right Menu...
+[32mINFO    [0m utils.logger:logger.py:58 Found Application Tracker using selector: [role='menuitem']:has-text('Application Tracker')
+[32mINFO    [0m utils.logger:logger.py:58 Setting up new tab listener before clicking Application Tracker link...
+[32mINFO    [0m utils.logger:logger.py:58 Attempting to click Application Tracker link (Attempt 1/3)...
+[33mWARNING [0m utils.logger:logger.py:62 [WARN] Click attempt 1 failed or timed out: Timeout 10000ms exceeded while waiting for event "page"
+[32mINFO    [0m utils.logger:logger.py:58 Attempting to click Application Tracker link (Attempt 2/3)...
+[33mWARNING [0m utils.logger:logger.py:62 [WARN] Click attempt 2 failed or timed out: Timeout 10000ms exceeded while waiting for event "page"
+[32mINFO    [0m utils.logger:logger.py:58 Attempting to click Application Tracker link (Attempt 3/3)...
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] Captured tab on attempt 3: https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications?payload=eyJlbmNyeXB0ZWREYXRhIjoiem5LQldBaGd6MHRHbkFJeVRqZFJoWlo4a3YvYjRQREljeGZwVm8rRHJ0RmZ6SlZDTFpPbk8ycVlDL2FaRUlteVBzQmlBYmxrNktuN2hKczFBSEpWam02cmhJLzdZSHNFWVVreE5iMW1rQ2gwN3J6eXl4TGU1MzlXYzh2TjA5UnJLY0pOdys2bU9LYVdWSnJDRHgxTFc5MUZJS1ArRHJmeURKRzJOaWU1TWxoeWVoeUhuTGdqS3FUV0p2cjNJdmc0TkY1OE5zbTJ5MlFpT3BhdVUvanNFeW51ZUluOS9aY3REZ2JDWjFKOVVOTXVPRnFhMHVvdTdQMVZGUU9nZUdzMW1lTk5YSjE2c3VxU05YR1JjZlJYNi82V01RM2VxaGhpYUprUHRyQy8vTnF6blRDTXRQTzU5SXNZUWpSbDRXTUp3V2Z4MWNpTkkrVGxNVEtGdC9tL1FRZW01NUVIVUltdFJtNFV5dXZ6UnlDbFNTVWJrTk4rV0J6Ujk5ckh0Wi9rY3NjNDJtd3ZaZ3Z5YmNieWpDYmEyeDFnQ2hxNnNhTEMwb3FFZkhDeXZRemtPKzZ4VE9DQy9wWVh4M2p1Z2JrVjFVS2Q4Sysxa0s4aFpuY2kveFM0emovNmF5dnZ4RlZBSS9Bd0lLZ3krY2FNeElMUXkyV3Q0c1JORVpOU3NNQUVORWRiQWJuY1V3eC9TU0w0S2s4ajB3VFVLMXB6M2pEY2NCcHBPVkpmOE5zaUhPU2lPVEdScnZJQWFXcGlNZE9hZlljeVZvaS91dW5qT1VpUjZEekhhOHp3T0FaeGFHWmlJYmFJTGRGYzBrbFlpWUI1N1dCUk5hTElXRW4wZ0M3U2RDZzhBUjQxazkxYmNQWE54dWs3OWI2NVBQN3cyVTV3b2tVcWhiQVBrZ1BJN0Z6cUhPZ1pxOUZhbVMzNXBtaUNaNjFTSFcrOHh4dXJLRjdrMi9OSURpQkRSbW1XTGN6aVNnZDA5dTIrS3kvYjdab2JjL3NYRXVSU3NpYW5MY2xhYVcvNjA3QzBtL0VjcnZTZGszRHpacmhHeTJDZnFwTkg5TGNmRGs0MzhJWExPU3ZHSFJwZkVqekJsUElzZFNyK3h2Yy9mRmhma3l6NGJlWGpKbHZ5ZkpsMVpObWZ1N3NuR3p3NXlrM0puRWNtNDRQVFdxTno0T1VsN3VSVENiMXU1RUZpNTJCTnZIMGUyaVE0NlhVVEVhODExbURBenRvTE1KWkNqeTRUck5SZ28yaDgzNnUrNWJFb0xlY1h3L3oxU1BtK3Y5VlFLRDFWTm9DYisxMVZCaVJCUC8zTVFobTIrb1d6K1o3YTdpZFVwOWJ1RkN0RTBvelorM21VT21uVGh5bXRpRlBTNmExK3VIdUlIcTYzRHJucWlhR3JUTTYyN0txUnAyRnh0MXFFcFUxaDlsM3N3UUw0YmEzNFk4eXhyM200ejlKdGNlbUt3eTVNOHRQbUw4bW1BWmdEeG1TK0dYdzdqdDdZQmtUTlpiUkg5Szcwb1kzVHV5dEZtOWV2WElLUEtFbTRVNzBRVVdSdUhWRno2WEF0ZHcvN3hxTWlaTHVIcHAwb1ducm9Zb09RamtTV0U0TEZNbTVldUNLaWt1blJVK0w1a0xHSnlqbGxTd1QvamdCNDJYdVlha3Nsb3gxczNWcllCQ3JncG5ER05BQ1dCbk5QYmtaTmhNYTFkdnRuU21wbmZGMDhXdDNSaWNObTEwTkFVb20rQUhDdXJVbEx0a25mSFE4SDJvWjNoQ2VWcXUrQjcrczd5MXZKRllTY0s3MkZKQU9vd3NZS21Xc2thVWxtcUxFNVhpYU9LQ2FEWHdPT2hwZEI0VXA2WVpDNDVXZzNxS005SklCd1VGZ1Avbk5JL204SFp5ZEE5c1QvamFOQm5hTkpJTDVrZnZVZjlIanVjalFtekoxZlVuZFArVTJ3M3pOc0NMZ2VuOVJIOHFNUmNxNVNNRkZMaVFEbElhd3VhdVo2WHN5RkRqZEppV0dkcVFNZ1ZqMlFYSVdhUnBtS3QySEZYVThWNDJEQXpOeEVjWDlaRCtCUmRRTXMrZVVGV216bXJzZ2ZJSTNBWGQ0T1Urb2JnOTJoSit0QkpheUJhSFJVc3ZFSERvelFITy9qaWY4dkhVY1pGeU9zQ1dRTnUzNml1eDNENmVvazBDbWZYR0pBVG1ucnJGM0xxNGpHZGp2T0xoUG8rYU8xc2tJWmt3ZE8ra1gzazhCbngzM1BPSlBxNzVxUy9Hc3QvNlByd1hjZEdmM2VPaVd4T3AzUDE0ZlNUNExEclQ4ckpIWTgvbVdUdGQwbCtuZ2Z1N0hrazlrSmJuMzlhVGxvQ2RuRlA3MWtraUtuUGJvdU1xU09EcmZUVUlYU1N3ayt4ZmV4bG02eUZHWkx5SjhmSU12VkZuT29tb251ZjVJY1hhaTdDRUdQclR6bFBYdEZ4RjRKSmtEa3JORTVxcU9JS1lwRGM4OE0wamN1RWh3NnhoUU12eDlKM3EvUEdjN0tSRlYxVHNHREkzRDZjV1EzMWdRcU1JYStZSmZVQWhQdUMwL3phcEsyVEdldVVMZDZQNGtkWUo3blpCRVBISk1iVFhQRmYrY252dzRkT2JSMUpZZ1FpalBTS2VKbmlaNi8zdnU3ZGdnNG9ITlk2S0ZUMkJJLzUwUU8wdVVxbjhHZ2RGTWFoUkF3YmpJYmhZNjVTcHhjMnoxSVM2dHBJSG9ab0t1eGhOeEF2bmwvQWVnSkxuSjlGelBrbmpXSktKMmVZN1B6UTh1UjBlRTI3dz09IiwiaXYiOiJ6bktCV0FoZ3owdEduQUl5In0%3D&sessionToken=eyJleHAiOjE3Nzc5ODM5NDIsIm5vbmNlIjoiVFFJWXE5S2tWSjRla1dISUN4YTE2QSIsImNoYWxsZW5nZSI6IlNxRVVDM0d3SUgtQnZzU3VsWHFNLWp2Y01xZzRBamNIMjBoSEVfNEtLMVEiLCJraWQiOiIxIn0.L87BBIIRNtEEv6WmX24-_XeTHgLo1ETJ2bzTRmOjBL4&codeVerifier=dDj41Ue6j9xx5zkU9lJxttlvDzypOYtB4NgJBi_TRbM
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] Application Tracker page reached networkidle
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] Tracker UI ready (matched: 'table')
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] URL Validation PASSED: https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications
+[32mINFO    [0m utils.logger:logger.py:58 [OK] URL Validation PASSED: https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications
+[32mINFO    [0m utils.logger:logger.py:58 [OK] Page Title Validation PASSED: App Tracker
+[32mINFO    [0m utils.logger:logger.py:58 Application Tracker page loaded successfully
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: --- Phase 3: Full Component Utility Regression --- ---
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: [REG-NAV] Top Navigation & Controls ---
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-NAV: Logo visible
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-NAV: Page title = 'App Tracker'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-NAV: User initials = 'SU'
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-NAV: Testing account menu interaction...
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-NAV: Successfully opened account menu
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-NAV: Successfully closed account menu
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-NAV: Theme toggle visible
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-NAV: Testing theme toggle interaction...
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-NAV: Theme toggled successfully
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-NAV: Theme toggled back to original state
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-NAV: Download button = 'Download 10 Records'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-NAV: Download count = 10
+[32mINFO    [0m utils.logger:logger.py:58 [REG-NAV] Completed. Errors: 0
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: [REG-SEARCH] Filter & Search Bar ---
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-SEARCH: Search bar visible
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-SEARCH: Search input visible
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-SEARCH: Search type = 'App No.'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-SEARCH: Date filter = 'Prev + Current Month'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-SEARCH: Search 'LA' entered successfully
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-SEARCH: Search cleared successfully
+[32mINFO    [0m utils.logger:logger.py:58 [REG-SEARCH] Completed. Errors: 0
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: [REG-CHIPS] Active Filter Chips ---
+[32mINFO    [0m utils.logger:active_filter_chips.py:157 [OK] Active Filter Chips trigger bar is visible
+[32mINFO    [0m utils.logger:active_filter_chips.py:181 [OK] Active chips: ['App Form Pending', 'Policy Coding WIP', 'Pending', 'Issued', 'Rejected', 'Others']
+[32mINFO    [0m utils.logger:active_filter_chips.py:199 [OK] Chip count badge: 6
+[32mINFO    [0m utils.logger:active_filter_chips.py:374 [ActiveFilterChips] Validation result: {'visible': True, 'chip_names': ['App Form Pending', 'Policy Coding WIP', 'Pending', 'Issued', 'Rejected', 'Others'], 'chip_count': 6}
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-CHIPS: Filter chips trigger visible
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-CHIPS: Active chips = ['App Form Pending', 'Policy Coding WIP', 'Pending', 'Issued', 'Rejected', 'Others']
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-CHIPS: Chip count = 6
+[33mWARNING [0m utils.logger:active_filter_chips.py:229 [WARN] Dropdown may not have opened — dialog not detected
+[32mINFO    [0m utils.logger:active_filter_chips.py:230 [OK] Filter chips dropdown opened
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-CHIPS: Dropdown opened
+[32mINFO    [0m utils.logger:active_filter_chips.py:230 [OK] Filter chips dropdown opened
+[32mINFO    [0m utils.logger:active_filter_chips.py:259 [OK] Available statuses in dropdown: ['All', 'App Form Pending', 'Policy Coding WIP', 'Pending', 'Issued', 'Rejected', 'Others']
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-CHIPS: Available statuses = ['All', 'App Form Pending', 'Policy Coding WIP', 'Pending', 'Issued', 'Rejected', 'Others']
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-CHIPS: Attempting to toggle 'Pending' filter checkbox...
+[32mINFO    [0m utils.logger:active_filter_chips.py:298 [OK] Selected status: Pending
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-CHIPS: Successfully clicked 'Pending' checkbox
+[32mINFO    [0m utils.logger:active_filter_chips.py:298 [OK] Selected status: Pending
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-CHIPS: Successfully unchecked 'Pending' to restore table state
+[32mINFO    [0m utils.logger:active_filter_chips.py:241 [OK] Filter chips dropdown closed
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-CHIPS: Dropdown closed
+[32mINFO    [0m utils.logger:logger.py:58 [REG-CHIPS] Completed. Errors: 0
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: [REG-TABLE] Policy List Table ---
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-TABLE: Table visible
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-TABLE: All expected columns present
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-TABLE: Row count = 10
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-TABLE: First row App No = 'LA53544020'
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-TABLE: First row Status = 'App Form Pending'
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-TABLE: First row Premium = 'Rs. 30,318.00'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-TABLE: Active sort = 'R&A Date' (descending)
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-TABLE: Sort by 'App. No.' triggered
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-TABLE: Reset sort to 'R&A Date'
+[32mINFO    [0m utils.logger:logger.py:58 [REG-TABLE] Completed. Errors: 0
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: [REG-PAGINATION] Pagination Footer ---
+[33mWARNING [0m PaginationFooter:pagination_footer.py:93 [WARN] Pagination footer not visible: Locator.wait_for: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("nav[role='navigation'][aria-label='Pagination']").first to be visible
+    24 × locator resolved to hidden <nav role="navigation" aria-label="Pagination" class="flex items-center justify-between gap-3 border-border w-full border-0 rounded-none px-4 py-3 bg-transparent">…</nav>
+
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-PAGINATION: Pagination not visible (single-page result set) — skipping
+[32mINFO    [0m utils.logger:logger.py:58 --- STEP START: [REG-DRAWER] Detail Drawer ---
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER: Clicking first table row to open drawer...
+[32mINFO    [0m utils.logger:detail_drawer.py:191 [OK] Detail Drawer is open (selector: div[role='dialog'][data-state='open'])
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Drawer opened
+[32mINFO    [0m utils.logger:detail_drawer.py:191 [OK] Detail Drawer is open (selector: div[role='dialog'][data-state='open'])
+[32mINFO    [0m utils.logger:detail_drawer.py:238 [OK] Drawer header name: 'Utpal Mal Utpal'
+[32mINFO    [0m utils.logger:detail_drawer.py:278 [OK] Stages: [{'name': 'Login & OTP Stage', 'status': 'In Progress'}, {'name': 'PI Stage', 'status': 'Not Started'}, {'name': 'Underwriting Stage', 'status': 'Not Started'}, {'name': 'Final Decision', 'status': 'Not Started'}]
+[32mINFO    [0m utils.logger:detail_drawer.py:289 [OK] Active stage: 'Login & OTP Stage'
+[32mINFO    [0m utils.logger:detail_drawer.py:363 [OK] Summary fields: {'Proposer Name': 'Utpal Mal Utpal', 'App. No.': 'LA53542192', 'Plan Name': 'BSLI Vision Life Income Plan', 'App. Recv. On': "01 Apr '26", 'Modal Premium': '₹ 36,619.44', 'Policy No.': 'NA', 'R&A Date': "01 Apr '26"}
+[32mINFO    [0m utils.logger:detail_drawer.py:428 [OK] Workflow sections: ['Mandatory Declarations', 'PIVC - Proposer', 'Document Upload', 'Payment', 'Autopay Setup', 'Proposer Declaration (OTVC)']
+[32mINFO    [0m utils.logger:detail_drawer.py:596 [DetailDrawer] Validation result: {'is_open': True, 'header_name': 'Utpal Mal Utpal', 'aria_title': 'Application details — Utpal Mal Utpal', 'stages': [{'name': 'Login & OTP Stage', 'status': 'In Progress'}, {'name': 'PI Stage', 'status': 'Not Started'}, {'name': 'Underwriting Stage', 'status': 'Not Started'}, {'name': 'Final Decision', 'status': 'Not Started'}], 'active_stage': 'Login & OTP Stage', 'summary_fields': {'Proposer Name': 'Utpal Mal Utpal', 'App. No.': 'LA53542192', 'Plan Name': 'BSLI Vision Life Income Plan', 'App. Recv. On': "01 Apr '26", 'Modal Premium': '₹ 36,619.44', 'Policy No.': 'NA', 'R&A Date': "01 Apr '26"}, 'stage_heading': 'Login & OTP Stage', 'stage_badge_status': 'In Progress', 'workflow_sections': ['Mandatory Declarations', 'PIVC - Proposer', 'Document Upload', 'Payment', 'Autopay Setup', 'Proposer Declaration (OTVC)'], 'workflow_items': [{'label': 'Seller/SP Declaration', 'status': 'Pending'}, {'label': 'Mode of PIVC', 'status': ''}, {'label': 'Status of PIVC', 'status': 'Pending'}, {'label': 'KYC Address Proof', 'status': 'Completed'}, {'label': 'KYC Identification Proof', 'status': 'Completed'}, {'label': 'PAN CARD FOR OWNER/PAYER', 'status': 'Pending'}], 'show_more_text': 'Show 5 more'}
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Header name = 'Utpal Mal Utpal'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Aria title = 'Application details — Utpal Mal Utpal'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Stages = ['Login & OTP Stage', 'PI Stage', 'Underwriting Stage', 'Final Decision']
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER:   'Login & OTP Stage' -> In Progress
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER:   'PI Stage' -> Not Started
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER:   'Underwriting Stage' -> Not Started
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER:   'Final Decision' -> Not Started
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Active stage = 'Login & OTP Stage'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Proposer Name = 'Utpal Mal Utpal'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: App. No. = 'LA53542192'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Plan Name = 'BSLI Vision Life Income Plan'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Modal Premium = '₹ 36,619.44'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Stage heading = 'Login & OTP Stage' (In Progress)
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Sections = ['Mandatory Declarations', 'PIVC - Proposer', 'Document Upload', 'Payment', 'Autopay Setup', 'Proposer Declaration (OTVC)']
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: 6 workflow items found
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER:   'Seller/SP Declaration' -> Pending
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER:   'Mode of PIVC' -> 
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER:   'Status of PIVC' -> Pending
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER:   'KYC Address Proof' -> Completed
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER:   'KYC Identification Proof' -> Completed
+[32mINFO    [0m utils.logger:detail_drawer.py:490 [OK] 'Proposer Declaration (OTVC)' locked: True
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Lock indicator present -> 'To initiate this stage, rest of the 'Login & OTP' stages need to be completed'
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Show More button = 'Show 5 more'
+[32mINFO    [0m utils.logger:detail_drawer.py:337 [OK] Clicked stage: PI Stage
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Clicked 'PI Stage' in stepper
+[32mINFO    [0m utils.logger:detail_drawer.py:278 [OK] Stages: [{'name': 'Login & OTP Stage', 'status': 'In Progress'}, {'name': 'PI Stage', 'status': 'Not Started'}, {'name': 'Underwriting Stage', 'status': 'Not Started'}, {'name': 'Final Decision', 'status': 'Not Started'}]
+[32mINFO    [0m utils.logger:logger.py:58 [INFO] REG-DRAWER: PI Stage status = 'Not Started'
+[32mINFO    [0m utils.logger:detail_drawer.py:214 [OK] Detail Drawer closed
+[32mINFO    [0m utils.logger:logger.py:58 [PASS] REG-DRAWER: Drawer closed successfully
+[32mINFO    [0m utils.logger:logger.py:58 [REG-DRAWER] Completed. Errors: 0
+[32mINFO    [0m utils.logger:logger.py:58 
+========================================
+[32mINFO    [0m utils.logger:logger.py:58 TEST SUITE ENDED: ALL_PASSED
+[32mINFO    [0m utils.logger:logger.py:58 Total Duration: 58.38s
+[32mINFO    [0m utils.logger:logger.py:58 ========================================

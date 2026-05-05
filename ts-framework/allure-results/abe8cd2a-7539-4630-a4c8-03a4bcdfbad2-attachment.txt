@@ -1,0 +1,8 @@
+[WARN] 2026-05-05T07:15:38.716Z - [WARN] Could not read search type: Error: locator.waitFor: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('button[aria-label=\'Choose search field\']').first() to be visible
+
+[WARN] 2026-05-05T07:15:38.730Z - [WARN] Filter & Search Bar not fully visible
+[WARN] 2026-05-05T07:15:38.733Z - [WARN] Could not close date filter: Error: keyboard.press: Target page, context or browser has been closed
+[WARN] 2026-05-05T07:15:38.746Z - [WARN] Pagination footer not visible: Error: locator.waitFor: Target page, context or browser has been closed
+[WARN] 2026-05-05T07:15:38.768Z - [WARN] Policy List Table not visible: Error: locator.waitFor: Target page, context or browser has been closed

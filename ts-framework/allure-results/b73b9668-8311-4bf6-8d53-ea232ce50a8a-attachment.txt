@@ -1,0 +1,7 @@
+[WARN] 2026-05-05T07:05:45.332Z - [WARN] Pagination footer not visible: TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('nav[role=\'navigation\'][aria-label=\'Pagination\']').first() to be visible
+    24 × locator resolved to hidden <nav role="navigation" aria-label="Pagination" class="flex items-center justify-between gap-3 border-border w-full border-0 rounded-none px-4 py-3 bg-transparent">…</nav>
+
+[WARN] 2026-05-05T07:05:51.199Z - [WARN] Could not read all item statuses: Error: locator.all: Target page, context or browser has been closed
+[WARN] 2026-05-05T07:05:51.301Z - [WARN] Could not close drawer: Error: locator.waitFor: Target page, context or browser has been closed

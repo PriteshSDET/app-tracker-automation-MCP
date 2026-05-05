@@ -1,0 +1,29 @@
+{
+  "execution_info": {
+    "timestamp": "2026-04-28T17:39:06.654890",
+    "framework": "App Tracker Automation",
+    "test_type": "AI-Generated Smoke Test",
+    "prompts_used": [
+      "testcase-generation.md",
+      "playwright-generation.md"
+    ],
+    "environment": "UAT",
+    "browser": "Chromium"
+  },
+  "test_files": {
+    "test_case": "tests/smoke/Login.md",
+    "test_script": "tests/smoke/execute_login_tracker_test.py",
+    "locators": "locators/aditya_birla_locators.py",
+    "pages": [
+      "pages/aditya_birla_login_page.py",
+      "pages/aditya_birla_dashboard_page.py",
+      "pages/aditya_birla_tracker_page.py"
+    ]
+  },
+  "reports_generated": [],
+  "artifacts_created": [
+    "screenshots/failed",
+    "screenshots/passed",
+    "reports/allure/.gitkeep"
+  ]
+}

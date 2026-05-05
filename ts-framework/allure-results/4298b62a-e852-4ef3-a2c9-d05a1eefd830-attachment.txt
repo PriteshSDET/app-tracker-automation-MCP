@@ -1,0 +1,2 @@
+[WARN] 2026-05-05T06:45:55.226Z - [WARN] Dropdown may not have opened — dialog not detected
+[WARN] 2026-05-05T06:45:55.280Z - [WARN] Could not click 'Clear All': Error: locator.isVisible: Target page, context or browser has been closed

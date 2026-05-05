@@ -1,0 +1,32 @@
+[WARN] 2026-05-05T07:00:47.051Z - [WARN] Pagination footer not visible: TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('nav[role=\'navigation\'][aria-label=\'Pagination\']').first() to be visible
+    24 × locator resolved to hidden <nav role="navigation" aria-label="Pagination" class="flex items-center justify-between gap-3 border-border w-full border-0 rounded-none px-4 py-3 bg-transparent">…</nav>
+
+[WARN] 2026-05-05T07:00:56.779Z - [WARN] Search failed for 'LA53544139': Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type=\'text\'][placeholder*=\'Search\']').first()
+    - locator resolved to <input value="" type="text" maxlength="10" inputmode="text" placeholder="Search by App No." class="flex-1 min-w-0 bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none"/>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <html lang="en" class="dark">…</html> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <html lang="en" class="dark">…</html> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    15 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <html lang="en" class="dark">…</html> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+

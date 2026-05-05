@@ -1,0 +1,40 @@
+[2026-05-05T06:47:43.865Z] INFO - BasePage: Loading Aditya Birla UAT login page
+[2026-05-05T06:47:43.868Z] INFO - BasePage: Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[2026-05-05T06:47:46.823Z] DEBUG - Waits: Page loaded successfully
+[2026-05-05T06:47:46.965Z] INFO - BasePage: Entering credentials for user: BR4641
+[2026-05-05T06:47:46.986Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T06:47:47.198Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T06:47:47.303Z] INFO - BasePage: Credentials entered successfully
+[2026-05-05T06:47:47.311Z] INFO - BasePage: Clicking login button
+[2026-05-05T06:47:47.669Z] INFO - BasePage: Login button clicked
+Waiting for Tracker page to load...
+--- Top Navigation Interactions ---
+[INFO] 2026-05-05T06:47:56.400Z - [OK] Page title: 'App Tracker'
+[INFO] 2026-05-05T06:47:56.406Z - [OK] User initials: SU
+[INFO] 2026-05-05T06:47:56.436Z - [OK] Download button text: 'Download 10 Records'
+[INFO] 2026-05-05T06:47:56.448Z - [OK] Download button text: 'Download 10 Records'
+[INFO] 2026-05-05T06:47:56.448Z - [OK] Download record count: 10
+[INFO] 2026-05-05T06:47:56.449Z - [OK] Top Navigation & Controls validated successfully
+[INFO] 2026-05-05T06:47:56.449Z - [TopNavigationControls] Validation result: {"logoVisible":true,"pageTitle":"App Tracker","userInitials":"SU","themeToggleVisible":true,"downloadVisible":true,"downloadText":"Download 10 Records","downloadCount":10}
+Toggling theme...
+[INFO] 2026-05-05T06:47:56.529Z - [OK] Theme toggled
+Opening account menu...
+[INFO] 2026-05-05T06:47:56.756Z - [OK] Account menu opened
+[INFO] 2026-05-05T06:47:56.765Z - [OK] User initials: SU
+User initials found: SU
+[INFO] 2026-05-05T06:47:56.820Z - [OK] Account menu closed
+--- Filter Chips Interactions ---
+[INFO] 2026-05-05T06:47:56.908Z - [OK] Active Filter Chips trigger bar is visible
+Opening filter dropdown...
+[INFO] 2026-05-05T06:48:02.058Z - [OK] Filter chips dropdown opened
+[INFO] 2026-05-05T06:48:07.163Z - [OK] Filter chips dropdown opened
+[INFO] 2026-05-05T06:48:07.168Z - [OK] Available statuses in dropdown: 
+Available statuses: 
+--- Search Bar Validation ---
+[INFO] 2026-05-05T06:48:07.201Z - [OK] Search type: App No.
+[INFO] 2026-05-05T06:48:07.217Z - [OK] Date filter label: Prev + Current Month
+[INFO] 2026-05-05T06:48:07.218Z - [OK] Filter & Search Bar validated successfully
+[INFO] 2026-05-05T06:48:07.218Z - [FilterSearchBar] Validation result: {"searchBarVisible":true,"searchInputVisible":true,"searchType":"App No.","dateFilterVisible":true,"dateFilterLabel":"Prev + Current Month"}
+--- Pagination Validation ---
+[INFO] 2026-05-05T06:48:15.165Z - [INFO] Pagination not visible - likely single page result
+--- Policy Table Validation ---

@@ -1,0 +1,35 @@
+[2026-05-05T06:54:45.510Z] INFO - BasePage: Loading Aditya Birla UAT login page
+[2026-05-05T06:54:45.528Z] INFO - BasePage: Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[2026-05-05T06:54:48.844Z] DEBUG - Waits: Page loaded successfully
+[2026-05-05T06:54:49.041Z] INFO - BasePage: Entering credentials for user: BR4641
+[2026-05-05T06:54:49.070Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T06:54:49.187Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T06:54:49.306Z] INFO - BasePage: Credentials entered successfully
+[2026-05-05T06:54:49.307Z] INFO - BasePage: Clicking login button
+[2026-05-05T06:54:49.639Z] INFO - BasePage: Login button clicked
+Clicking Tracker menu item...
+Current Tracker URL: https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications
+--- Top Navigation Interactions ---
+Toggling theme...
+[INFO] 2026-05-05T06:54:57.656Z - [OK] Theme toggled
+Opening account menu...
+[INFO] 2026-05-05T06:54:59.442Z - [OK] Account menu opened
+[INFO] 2026-05-05T06:54:59.457Z - [OK] User initials: SU
+User initials found: SU
+[INFO] 2026-05-05T06:54:59.530Z - [OK] Account menu closed
+--- Filter Chips Interactions ---
+[INFO] 2026-05-05T06:54:59.695Z - [OK] Active Filter Chips trigger bar is visible
+Opening filter dropdown...
+[INFO] 2026-05-05T06:55:04.983Z - [OK] Filter chips dropdown opened
+[INFO] 2026-05-05T06:55:07.846Z - [OK] Filter chips dropdown opened
+[INFO] 2026-05-05T06:55:08.386Z - [OK] Available statuses in dropdown: All,App Form Pending,Policy Coding WIP,Pending,Issued,Rejected,Others
+Available statuses: All,App Form Pending,Policy Coding WIP,Pending,Issued,Rejected,Others
+Clearing all filters...
+[INFO] 2026-05-05T06:55:09.313Z - [OK] Clicked Clear All
+Selecting "App Form Pending" status...
+[INFO] 2026-05-05T06:55:12.683Z - [OK] Selected status: App Form Pending
+[INFO] 2026-05-05T06:55:16.846Z - [OK] Active chips: App Form Pending
+Active chips after selection: App Form Pending
+Verifying table reflects "App Form Pending" filter...
+[INFO] 2026-05-05T06:55:16.893Z - [OK] Table row count: 10
+First row status: 

@@ -1,0 +1,21 @@
+{
+  "name": "app-tracker-automation-ts",
+  "version": "1.0.0",
+  "description": "App Tracker Automation Framework in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^20.19.39",
+    "allure-playwright": "^3.7.2",
+    "dotenv": "^16.0.0",
+    "typescript": "^5.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,10 @@
+[WARN] 2026-05-05T06:51:01.632Z - [WARN] Dropdown may not have opened — dialog not detected
+[WARN] 2026-05-05T06:51:07.743Z - [WARN] Dropdown may not have opened — dialog not detected
+[WARN] 2026-05-05T06:51:17.936Z - [WARN] Pagination footer not visible: TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('nav[role=\'navigation\'][aria-label=\'Pagination\']').first() to be visible
+    24 × locator resolved to hidden <nav role="navigation" aria-label="Pagination" class="flex items-center justify-between gap-3 border-border w-full border-0 rounded-none px-4 py-3 bg-transparent">…</nav>
+
+[WARN] 2026-05-05T06:51:19.042Z - [WARN] Could not read table headers: Error: locator.textContent: Target page, context or browser has been closed
+[WARN] 2026-05-05T06:51:19.047Z - [WARN] Could not count rows: Error: locator.all: Target page, context or browser has been closed
+[WARN] 2026-05-05T06:51:19.051Z - [WARN] Could not determine active sort column: Error: locator.isVisible: Target page, context or browser has been closed

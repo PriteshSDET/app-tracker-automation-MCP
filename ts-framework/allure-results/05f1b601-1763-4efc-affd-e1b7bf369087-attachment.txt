@@ -1,0 +1,29 @@
+[2026-05-05T06:19:12.643Z] INFO - BasePage: Loading Aditya Birla UAT login page
+[2026-05-05T06:19:12.651Z] INFO - BasePage: Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[2026-05-05T06:19:15.082Z] DEBUG - Waits: Page loaded successfully
+[2026-05-05T06:19:15.173Z] INFO - BasePage: Entering credentials for user: BR4641
+[2026-05-05T06:19:15.196Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T06:19:15.280Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T06:19:15.354Z] INFO - BasePage: Credentials entered successfully
+[2026-05-05T06:19:15.354Z] INFO - BasePage: Clicking login button
+[2026-05-05T06:19:15.554Z] INFO - BasePage: Login button clicked
+Validating Search Bar...
+[INFO] 2026-05-05T06:19:21.104Z - [OK] Search type: App No.
+[INFO] 2026-05-05T06:19:21.126Z - [OK] Date filter label: Prev + Current Month
+[INFO] 2026-05-05T06:19:21.126Z - [OK] Filter & Search Bar validated successfully
+[INFO] 2026-05-05T06:19:21.126Z - [FilterSearchBar] Validation result: {"searchBarVisible":true,"searchInputVisible":true,"searchType":"App No.","dateFilterVisible":true,"dateFilterLabel":"Prev + Current Month"}
+Validating Policy Table...
+[INFO] 2026-05-05T06:19:21.164Z - [OK] Policy List Table is visible
+[INFO] 2026-05-05T06:19:22.235Z - [OK] Table headers: App. No.,Proposer Name,Plan Name,App. Recv. On,Modal Premium,Policy No.,Policy Status,R&A Date
+[INFO] 2026-05-05T06:19:22.235Z - [OK] All expected columns present
+[INFO] 2026-05-05T06:19:22.240Z - [OK] Table row count: 10
+[INFO] 2026-05-05T06:19:22.258Z - [OK] Active sort: 'R&A Date' (descending)
+[INFO] 2026-05-05T06:19:22.316Z - [OK] Row 0 data: {"app_no":"LA53544139","proposer_name":"Subodh Amal Utpal","plan_name":"ABSLI Digishield Plan","app_recv_on":"05 May '26","modal_premium":"₹ 8,939.85","policy_no":"—","policy_status":"App Form Pending","ra_date":"05 May '26"}
+[INFO] 2026-05-05T06:19:22.316Z - [PolicyListTable] Validation result: {"visible":true,"headersValid":true,"rowCount":10,"firstRow":{"app_no":"LA53544139","proposer_name":"Subodh Amal Utpal","plan_name":"ABSLI Digishield Plan","app_recv_on":"05 May '26","modal_premium":"₹ 8,939.85","policy_no":"—","policy_status":"App Form Pending","ra_date":"05 May '26"},"activeSortColumn":"R&A Date","sortDirection":"descending"}
+Validating Pagination...
+[INFO] 2026-05-05T06:19:32.349Z - [INFO] Pagination not visible - likely single page result
+Pagination is not visible (likely single page results).
+Searching for Application No: LA53544139
+[INFO] 2026-05-05T06:19:32.458Z - [OK] Searched for: 'LA53544139'
+[INFO] 2026-05-05T06:19:34.488Z - [OK] Table row count: 1
+Filtered row count: 1

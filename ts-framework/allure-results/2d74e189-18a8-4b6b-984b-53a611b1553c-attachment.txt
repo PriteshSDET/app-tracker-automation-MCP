@@ -1,0 +1,55 @@
+[2026-05-05T07:05:17.322Z] INFO - BasePage: Loading Aditya Birla UAT login page
+[2026-05-05T07:05:17.334Z] INFO - BasePage: Navigating to: https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login
+[2026-05-05T07:05:20.252Z] DEBUG - Waits: Page loaded successfully
+[2026-05-05T07:05:20.437Z] INFO - BasePage: Entering credentials for user: BR4641
+[2026-05-05T07:05:20.472Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T07:05:20.596Z] DEBUG - Waits: Locator element became visible
+[2026-05-05T07:05:20.697Z] INFO - BasePage: Credentials entered successfully
+[2026-05-05T07:05:20.698Z] INFO - BasePage: Clicking login button
+[2026-05-05T07:05:20.997Z] INFO - BasePage: Login button clicked
+Clicking Tracker menu item...
+Current Tracker URL: https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications
+--- Top Navigation Interactions ---
+[INFO] 2026-05-05T07:05:30.969Z - [OK] Theme toggled
+[INFO] 2026-05-05T07:05:32.059Z - [OK] Account menu opened
+[INFO] 2026-05-05T07:05:32.068Z - [OK] User initials: SU
+User initials found: SU
+[INFO] 2026-05-05T07:05:32.102Z - [OK] Account menu closed
+--- Filter Chips Interactions ---
+[INFO] 2026-05-05T07:05:32.203Z - [OK] Active Filter Chips trigger is visible
+Opening filter dropdown...
+[INFO] 2026-05-05T07:05:32.550Z - [OK] Filter chips dropdown opened
+[INFO] 2026-05-05T07:05:34.600Z - [OK] Available statuses: 
+Available statuses: 
+[INFO] 2026-05-05T07:05:35.166Z - [OK] Filter chips dropdown closed
+--- Search Bar Validation ---
+[INFO] 2026-05-05T07:05:35.248Z - [OK] Search type: App No.
+[INFO] 2026-05-05T07:05:35.281Z - [OK] Date filter label: Prev + Current Month
+[INFO] 2026-05-05T07:05:35.282Z - [OK] Filter & Search Bar validated successfully
+[INFO] 2026-05-05T07:05:35.282Z - [FilterSearchBar] Validation result: {"searchBarVisible":true,"searchInputVisible":true,"searchType":"App No.","dateFilterVisible":true,"dateFilterLabel":"Prev + Current Month"}
+[INFO] 2026-05-05T07:05:35.293Z - [OK] Date filter closed
+--- Pagination Validation ---
+[INFO] 2026-05-05T07:05:45.333Z - [INFO] Pagination not visible - likely single page result
+--- Policy Table Validation ---
+[INFO] 2026-05-05T07:05:45.385Z - [OK] Policy List Table is visible
+[INFO] 2026-05-05T07:05:46.496Z - [OK] Table headers: App. No.,Proposer Name,Plan Name,App. Recv. On,Modal Premium,Policy No.,Policy Status,R&A Date
+[INFO] 2026-05-05T07:05:46.496Z - [OK] All expected columns present
+[INFO] 2026-05-05T07:05:46.504Z - [OK] Table row count: 10
+[INFO] 2026-05-05T07:05:46.535Z - [OK] Active sort: 'R&A Date' (descending)
+[INFO] 2026-05-05T07:05:46.640Z - [OK] Row 0 data: {"app_no":"LA53544139","proposer_name":"Subodh Amal Utpal","plan_name":"ABSLI Digishield Plan","app_recv_on":"05 May '26","modal_premium":"₹ 8,939.85","policy_no":"—","policy_status":"App Form Pending","ra_date":"05 May '26"}
+[INFO] 2026-05-05T07:05:46.641Z - [PolicyListTable] Validation result: {"visible":true,"headersValid":true,"rowCount":10,"firstRow":{"app_no":"LA53544139","proposer_name":"Subodh Amal Utpal","plan_name":"ABSLI Digishield Plan","app_recv_on":"05 May '26","modal_premium":"₹ 8,939.85","policy_no":"—","policy_status":"App Form Pending","ra_date":"05 May '26"},"activeSortColumn":"R&A Date","sortDirection":"descending"}
+Searching for App No: LA53544139
+[INFO] 2026-05-05T07:05:46.840Z - [OK] Searched for: 'LA53544139'
+[INFO] 2026-05-05T07:05:49.871Z - [OK] Table row count: 1
+Filtered count: 1
+--- Detail Drawer Validation ---
+[INFO] 2026-05-05T07:05:49.994Z - [OK] Clicked row 0
+[INFO] 2026-05-05T07:05:50.059Z - [OK] Detail Drawer is open (selector: div[role='dialog'][data-state='open'])
+[INFO] 2026-05-05T07:05:50.195Z - [OK] Detail Drawer is open (selector: div[role='dialog'][data-state='open'])
+[INFO] 2026-05-05T07:05:50.319Z - [OK] Drawer header name: 'Subodh Amal Utpal'
+[INFO] 2026-05-05T07:05:50.647Z - [OK] Stages: [{"name":"Login & OTP Stage","status":"In Progress"},{"name":"PI Stage","status":"Not Started"},{"name":"Underwriting Stage","status":"Not Started"},{"name":"Final Decision","status":"Not Started"}]
+[INFO] 2026-05-05T07:05:50.664Z - [OK] Active stage: 'Login & OTP Stage'
+[INFO] 2026-05-05T07:05:50.875Z - [OK] Summary fields: {"Proposer Name":"Subodh Amal Utpal","App. No.":"LA53544139","Plan Name":"ABSLI Digishield Plan","App. Recv. On":"05 May '26","Modal Premium":"₹ 8,939.85","Policy No.":"NA","R&A Date":"05 May '26"}
+[INFO] 2026-05-05T07:05:50.996Z - [OK] Workflow sections: Mandatory Declarations,PIVC - Proposer,Document Upload,Payment,Autopay Setup,Proposer Declaration (OTVC)
+[INFO] 2026-05-05T07:05:51.276Z - [DetailDrawer] Validation result: {"isOpen":true,"headerName":"Subodh Amal Utpal","ariaTitle":"Application details — Subodh Amal Utpal","stages":[{"name":"Login & OTP Stage","status":"In Progress"},{"name":"PI Stage","status":"Not Started"},{"name":"Underwriting Stage","status":"Not Started"},{"name":"Final Decision","status":"Not Started"}],"activeStage":"Login & OTP Stage","summaryFields":{"Proposer Name":"Subodh Amal Utpal","App. No.":"LA53544139","Plan Name":"ABSLI Digishield Plan","App. Recv. On":"05 May '26","Modal Premium":"₹ 8,939.85","Policy No.":"NA","R&A Date":"05 May '26"},"stageHeading":"Login & OTP Stage","stageBadgeStatus":"In Progress","workflowSections":["Mandatory Declarations","PIVC - Proposer","Document Upload","Payment","Autopay Setup","Proposer Declaration (OTVC)"],"workflowItems":[{"label":"Seller/SP Declaration","status":"Pending"},{"label":"Mode of PIVC","status":""}],"showMoreText":null}
+Drawer header: Subodh Amal Utpal
