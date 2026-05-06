@@ -1,5 +1,0 @@
-[WARN] 2026-05-05T07:30:41.137Z - [WARN] Pagination footer not visible: TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
-Call log:
-  - waiting for locator('nav[role=\'navigation\'][aria-label=\'Pagination\']').first() to be visible
-    24 × locator resolved to hidden <nav role="navigation" aria-label="Pagination" class="flex items-center justify-between gap-3 border-border w-full border-0 rounded-none px-4 py-3 bg-transparent">…</nav>
-

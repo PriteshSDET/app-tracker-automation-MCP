@@ -1,0 +1,9 @@
+{
+  "name": "app-tracker-automation",
+  "version": "1.0.0",
+  "description": "Python-based App Tracker automation suite with Allure reporting",
+  "scripts": {
+    "report:generate": "allure generate reports/allure --clean -o reports/allure-report",
+    "report:open": "allure open reports/allure-report"
+  }
+}

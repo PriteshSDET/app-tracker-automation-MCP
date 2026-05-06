@@ -1,4 +1,4 @@
-﻿"""
+"""
 Aditya Birla Sun Life Insurance Portal Locators
 UAT Environment Specific Locators
 """
@@ -32,7 +32,9 @@ class AdityaBirlaLocators:
         "pending_dots": "[class*='pending'], [class*='orange'], [status*='pending']",
         "new_application_button": "button:has-text('NEW APPLICATION'), button:has-text('+ NEW')",
         "menu_button": "button:has-text('MENU'), [class*='menu'], .dropdown-toggle",
-        "uat_badge": "[class*='uat'], [data-env='uat'], .uat-badge"
+        "uat_badge": "[class*='uat'], [data-env='uat'], .uat-badge",
+        "track_button": "button:has-text('Track'), .btn-track",
+        "sidebar_track_button": ".right-sidebar button:has-text('Track'), #sidebar-track-btn"
     }
     
     # Menu Navigation

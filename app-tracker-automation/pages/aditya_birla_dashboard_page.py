@@ -1,4 +1,4 @@
-﻿"""
+"""
 Aditya Birla Sun Life Insurance Dashboard Page
 Enhanced dashboard page for UAT environment
 """
@@ -154,7 +154,7 @@ class AdityaBirlaDashboardPage(BasePage):
                 self.logger.info("Already navigated away from login page")
             
             # Wait for any page content to load - be very flexible
-            self.waits.wait_for_timeout(3000)
+            self.page.wait_for_timeout(3000)
             
             # Check for menu button which indicates dashboard is loaded
             try:

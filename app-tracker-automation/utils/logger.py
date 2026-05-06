@@ -1,10 +1,12 @@
-﻿"""
+"""
 Logger utility for test execution logging
 """
 
 import logging
 import os
+import allure
 from datetime import datetime
+from contextlib import contextmanager
 from utils.config import Config
 
 
@@ -84,6 +86,20 @@ class Logger:
     def step_end(self, step_name: str, status: str):
         """Log step end"""
         self.info(f"--- STEP END: {step_name} - {status} ---")
+
+    @contextmanager
+    def step(self, step_name: str):
+        """Context manager for a test step, providing visibility in both console and Allure"""
+        self.info(f"➡️ Executing: {step_name}...")
+        self.step_start(step_name)
+        with allure.step(step_name):
+            try:
+                yield
+                self.step_end(step_name, "PASSED")
+            except Exception as e:
+                self.step_end(step_name, "FAILED")
+                self.error(f"Step '{step_name}' failed with error: {str(e)}")
+                raise e
     
     def screenshot(self, description: str, path: str):
         """Log screenshot taken"""

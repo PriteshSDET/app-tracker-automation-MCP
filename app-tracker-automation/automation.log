@@ -1,0 +1,56 @@
+2026-05-06 10:40:20 - utils.logger - INFO - No fixed viewport requested; relying on launch args (--start-maximized)
+2026-05-06 10:40:20 - utils.logger - INFO - Browser Launch Args: ['--start-maximized']
+2026-05-06 10:40:20 - utils.logger - INFO - [OK] Layout fix CSS injected to prevent viewport issues
+2026-05-06 10:40:20 - utils.logger - INFO - 
+========================================
+2026-05-06 10:40:20 - utils.logger - INFO - STARTING TEST SUITE: Complete End-to-End Flow
+2026-05-06 10:40:20 - utils.logger - INFO - Time: 10:40:20
+2026-05-06 10:40:20 - utils.logger - INFO - ========================================
+
+2026-05-06 10:40:20 - utils.logger - INFO - Credentials loaded - User: None, Pass: None
+2026-05-06 10:40:20 - utils.logger - ERROR - Credentials not loaded from .env. User: None, Pass: None
+2026-05-06 10:40:21 - utils.logger - INFO - 
+========================================
+2026-05-06 10:40:21 - utils.logger - INFO - STARTING TEST SUITE: Demo Simulated Bug Flow
+2026-05-06 10:40:21 - utils.logger - INFO - Time: 10:40:21
+2026-05-06 10:40:21 - utils.logger - INFO - ========================================
+
+2026-05-06 10:40:21 - utils.logger - INFO - Navigating to Aditya Birla UAT login page...
+2026-05-06 10:40:23 - utils.logger - INFO - Performing basic UI interaction...
+2026-05-06 10:40:24 - utils.logger - INFO - Validating UI component...
+2026-05-06 10:40:24 - utils.logger - ERROR - [FAIL] Assertion Error: BUG FOUND: Expected element text did not match actual UI text.
+assert False
+2026-05-06 10:40:24 - utils.logger - INFO - 
+========================================
+2026-05-06 10:40:24 - utils.logger - INFO - TEST SUITE ENDED: FAILED
+2026-05-06 10:40:24 - utils.logger - INFO - Total Duration: 2.65s
+2026-05-06 10:40:24 - utils.logger - INFO - ========================================
+
+2026-05-06 10:41:31 - utils.logger - INFO - No fixed viewport requested; relying on launch args (--start-maximized)
+2026-05-06 10:41:31 - utils.logger - INFO - Browser Launch Args: ['--start-maximized']
+2026-05-06 10:41:31 - utils.logger - INFO - [OK] Layout fix CSS injected to prevent viewport issues
+2026-05-06 10:41:31 - utils.logger - INFO - 
+========================================
+2026-05-06 10:41:31 - utils.logger - INFO - STARTING TEST SUITE: Complete End-to-End Flow
+2026-05-06 10:41:31 - utils.logger - INFO - Time: 10:41:31
+2026-05-06 10:41:31 - utils.logger - INFO - ========================================
+
+2026-05-06 10:41:31 - utils.logger - INFO - Credentials loaded - User: None, Pass: None
+2026-05-06 10:41:31 - utils.logger - ERROR - Credentials not loaded from .env. User: None, Pass: None
+2026-05-06 10:41:32 - utils.logger - INFO - 
+========================================
+2026-05-06 10:41:32 - utils.logger - INFO - STARTING TEST SUITE: Demo Simulated Bug Flow
+2026-05-06 10:41:32 - utils.logger - INFO - Time: 10:41:32
+2026-05-06 10:41:32 - utils.logger - INFO - ========================================
+
+2026-05-06 10:41:32 - utils.logger - INFO - Navigating to Aditya Birla UAT login page...
+2026-05-06 10:41:34 - utils.logger - INFO - Performing basic UI interaction...
+2026-05-06 10:41:35 - utils.logger - INFO - Validating UI component...
+2026-05-06 10:41:35 - utils.logger - ERROR - [FAIL] Assertion Error: BUG FOUND: Expected element text did not match actual UI text.
+assert False
+2026-05-06 10:41:35 - utils.logger - INFO - 
+========================================
+2026-05-06 10:41:35 - utils.logger - INFO - TEST SUITE ENDED: FAILED
+2026-05-06 10:41:35 - utils.logger - INFO - Total Duration: 2.71s
+2026-05-06 10:41:35 - utils.logger - INFO - ========================================
+

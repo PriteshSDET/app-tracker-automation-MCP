@@ -1,5 +1,0 @@
-[WARN] 2026-05-05T06:55:04.975Z - [WARN] Dropdown may not have opened — dialog not detected
-[WARN] 2026-05-05T06:55:18.906Z - [WARN] Could not read status badge for row 0: TimeoutError: locator.textContent: Timeout 2000ms exceeded.
-Call log:
-  - waiting for locator('div.overflow-auto table tbody tr').first().locator('td:nth-child(7)').first().locator('span.inline-flex.items-center.rounded.font-medium').first()
-

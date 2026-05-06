@@ -1,2 +1,0 @@
-[WARN] 2026-05-05T06:44:39.500Z - [WARN] Dropdown may not have opened — dialog not detected
-[WARN] 2026-05-05T06:44:39.519Z - [WARN] Clear All button not found via any selector

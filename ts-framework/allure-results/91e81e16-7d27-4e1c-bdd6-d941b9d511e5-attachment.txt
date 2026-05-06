@@ -1,9 +1,0 @@
-[WARN] 2026-05-05T06:49:19.852Z - [WARN] Could not read page title: TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
-Call log:
-  - waiting for locator('span.font-semibold.text-foreground.whitespace-nowrap').first() to be visible
-
-[WARN] 2026-05-05T06:49:22.865Z - [WARN] Could not read user initials: TimeoutError: locator.getAttribute: Timeout 3000ms exceeded.
-Call log:
-  - waiting for locator('span[role=\'img\']').first()
-
-[WARN] 2026-05-05T06:49:23.012Z - [WARN] Top Navigation validation partial - check results
