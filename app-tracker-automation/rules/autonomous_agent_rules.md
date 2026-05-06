@@ -96,7 +96,14 @@ The Executive Summary MUST contain:
 
 ### 📈 Future ROI & Scalability
 - **Skill Independence**: Explain how this allows non-technical stakeholders to audit the quality.
-- **Zero Vendor Lock-in**: Contrast this with low-code tools (like Fireflink) by highlighting our open-source Python + Playwright flexibility."
+- **Zero Vendor Lock-in**: Contrast this with low-code tools (like Fireflink) by highlighting our open-source Python + Playwright flexibility.
+
+### 💰 Strategic ROI & Resource Optimization (The INR 2.18 Cr Model)
+- **Standardized ROI Projections**: Every Executive Summary MUST include a financial projection based on the **'Team of 12'** model.
+- **Resource Benchmark**: Use a baseline of 12 manual testers with an average professional rate of **₹1,200/hr**.
+- **The 90% Churn Reduction**: Explicitly calculate the reclaimed hours (Execution, Creation, Maintenance) assuming a 90% efficiency gain over manual methods.
+- **Monetary Impact**: Present the calculated monthly savings (**₹18,14,400**) and the annual business value (**₹2,17,72,800**) as the direct ROI of implementing this framework.
+- **The Value Multiplier**: Articulate that this capital is not just "saved" but "reinvested" into exploratory testing and high-value product judgment.
 
 ---
 

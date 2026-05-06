@@ -1,4 +1,4 @@
-﻿"""
+"""
 Aditya Birla Sun Life Insurance Login Page
 Enhanced login page for UAT environment
 """
@@ -132,8 +132,9 @@ class AdityaBirlaLoginPage(BasePage):
             # Click login
             self.click_login_button()
             
-            # Wait for redirect
-            self.page.wait_for_timeout(3000)
+            # Wait for redirect and network to settle
+            self.page.wait_for_load_state("networkidle", timeout=15000)
+            self.page.wait_for_timeout(5000)
             
             # Check if login was successful (redirected away from login page)
             current_url = self.page.url
@@ -148,7 +149,7 @@ class AdityaBirlaLoginPage(BasePage):
                     self.logger.error("Login failed - still on login page")
                     return False
             else:
-                self.logger.info("Login successful - redirected from login page")
+                self.logger.info(f"Login successful - redirected from login page to: {current_url}")
                 return True
                 
         except Exception as e:
