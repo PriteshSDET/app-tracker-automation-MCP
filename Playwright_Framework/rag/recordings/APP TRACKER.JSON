@@ -1,0 +1,2992 @@
+[
+{
+    "title": "Recording 5/14/2026 at 12:50:28 PM",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 767,
+            "height": 633,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login",
+                    "title": "ABSLI | LEAP"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Login ID/AD/ID"
+                ],
+                [
+                    "#loginId"
+                ],
+                [
+                    "xpath///*[@id=\"loginId\"]"
+                ],
+                [
+                    "pierce/#loginId"
+                ]
+            ],
+            "offsetY": 6,
+            "offsetX": 73.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Login ID/AD/ID"
+                ],
+                [
+                    "#loginId"
+                ],
+                [
+                    "xpath///*[@id=\"loginId\"]"
+                ],
+                [
+                    "pierce/#loginId"
+                ]
+            ],
+            "offsetY": 19,
+            "offsetX": 23.5,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/dashboard",
+                    "title": "ABSLI | LEAP"
+                }
+            ]
+        },
+        {
+            "type": "change",
+            "value": "BR4641",
+            "selectors": [
+                [
+                    "aria/Login ID/AD/ID"
+                ],
+                [
+                    "#loginId"
+                ],
+                [
+                    "xpath///*[@id=\"loginId\"]"
+                ],
+                [
+                    "pierce/#loginId"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ],
+                [
+                    "pierce/#password"
+                ]
+            ],
+            "offsetY": 22,
+            "offsetX": 51.5
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "f"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ],
+                [
+                    "pierce/#password"
+                ]
+            ],
+            "offsetY": 28,
+            "offsetX": 145.5
+        },
+        {
+            "type": "change",
+            "value": "q7",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ],
+                [
+                    "pierce/#password"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "q7LD44$",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ],
+                [
+                    "pierce/#password"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "4",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "q7LD44$J!",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ],
+                [
+                    "pierce/#password"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "1",
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "q7LD44$J!d7",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ],
+                [
+                    "pierce/#password"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "form > div:nth-of-type(2) svg"
+                ],
+                [
+                    "xpath///*[@id=\"containerClass\"]/div/main/div[1]/div[2]/form/div[2]/div/div/div/button/span[1]/svg"
+                ],
+                [
+                    "pierce/form > div:nth-of-type(2) svg"
+                ]
+            ],
+            "offsetY": 21.5,
+            "offsetX": 2.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ],
+                [
+                    "pierce/#password"
+                ],
+                [
+                    "text/q7LD44$J!d7"
+                ]
+            ],
+            "offsetY": 12,
+            "offsetX": 31.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ],
+                [
+                    "pierce/#password"
+                ],
+                [
+                    "text/q7LD44$J!d7"
+                ]
+            ],
+            "offsetY": 12,
+            "offsetX": 34.5
+        },
+        {
+            "type": "change",
+            "value": "q7LD4$J!d7",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ],
+                [
+                    "pierce/#password"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "span.MuiButton-label"
+                ],
+                [
+                    "xpath///*[@id=\"containerClass\"]/div/main/div[1]/div[2]/form/div[3]/div/button/span[1]"
+                ],
+                [
+                    "pierce/span.MuiButton-label"
+                ],
+                [
+                    "text/LOGIN"
+                ]
+            ],
+            "offsetY": 12,
+            "offsetX": 46.890625,
+            "assertedEvents": [
+                {
+                    "type": "navigation"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "span.MuiIconButton-label > span > span"
+                ],
+                [
+                    "xpath///*[@id=\"header\"]/div[2]/button/span[1]/span/span"
+                ],
+                [
+                    "pierce/span.MuiIconButton-label > span > span"
+                ],
+                [
+                    "text/▼"
+                ]
+            ],
+            "offsetY": 3.5,
+            "offsetX": 4.890625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Application Tracker"
+                ],
+                [
+                    "li:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"user-menu\"]/div[3]/ul/li[2]"
+                ],
+                [
+                    "pierce/li:nth-of-type(2)"
+                ],
+                [
+                    "text/Application Tracker"
+                ]
+            ],
+            "offsetY": 17,
+            "offsetX": 103
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications?payload=eyJlbmNyeXB0ZWREYXRhIjoiQTlycHV6SmJZMldCZ3dQSHBtaldPYTRDZGV2Q3NWTW5FWjhsaGNMbmJaMEZ1ZDI5WDgwaEZJUXB0bFhPQ0g5RHIxZHg0VzFQZlJaRDBnL2tpbDVCS0pqUG1YVkR5cjJRenA2b24raDEvTENqZzV2a2hyWVRlN2c4Q2lpZ3NmclBUVmpzVXVDYWM4Rlo1TDVVOTQ2dk9VR3lwUnUrVHZLSlRzNlpmTlIxZmlScG96VlpYQjNJbUNHTlBlckxNZ3BEQVpmY1RPdVVyQW1iRHdQV2YyWFdhTTljc2R4bWdjT05kTFhHRUgrZk85N0F6T1dEQW50VmQzekx0OTFkOHBDRlZPRnJJdlBJcEFlSXJwaGxJODMxZlFPR0tQbDY5ZkY5WnJOZmNhT1pNZmFmWitDc1BQVjBPMk5INU5aa05TZVRQMFZDVkZUb1BUeDJIYjJyZE1pU2dlZTRyNlN6clFwbjF3SG02dVl2U0FzSFA5STcweGVrUm1LbnBKQTlwWlRhcGZLOXlYVzBuMTJhMEMxN0FRd21ieStVTzJvVlhYRm9TVStsTE5aQVZiZmlUQkJ1Q0pBTzRob29VKzgxcnBFckNMMjlyRmlYYjcwbTQvdkxWeTROUERiYlRaZnJSOXpWYkZxOFhieDZkc1E2U0psZ2xHU1BEa2xuZnArallDVnhEMndlWG5KUkM3UW8xZUtKTytHeDgvQ1JOMFBOUXM5QzB5L1U0VktGbEhGRVVJZ2toWXRIeHovUXpKZW1yT0cyd2xiTFNkMTNqMzY5MGQzditCamtGQXY4cXY2TXdPU1BSSCt5ZVRCekRJcWRQK1d1MUNuREpSTXhmTVNXdGlGZ3FEVVVmcXF3c0lZSHRDMGoxcmZwekFHRVFSZ3o0a1B0OWhZVG5hWDZlQ1pGRlRKR2hncSsrbUZDWlg2Y05GOWJxTTBxWGFjK1BuSGk3ckJEeVVHU3FEU3BMcURzNXYxRm15SkpXQnE4MU1VMTY5c2o3L293NzFmMlZkWjgxNGFWdzhKTm8wUzdpRWkzMEJQcldSSVJrMW42bzdxYUlDOGQrN3lzR0RGZUJ4eEZWNklHbnpxbEJ6c0hhblBob0ZrblMzdlBiKzN1dkFyWVNvWDM5TWE1bFBlWVAySk9MaUNnc3RmYUN0SGltOEUvWnUreUdVQ05CYzE3VDRpZ1M3K1o3WnRFV3FhejBTYWdSQ1ZTbmcyZEJxVlZ3UlgxemJTSklBa1FFS3FmZU1rZHFLSFcxRkZpb0RRaWJCOUFrU1EvaDV1RUZCVG5oSTkraXRpUDdOdlBYKzRtYm5sQm9CcEhlN1NWRFBUM1h1Mm04VFVyNlFjUS9BbXd0ekNucTYyMS93akgwa1liRjdGV1hNZkNhMVcrV05nUWt0dGx3UStQcmY5UVpZWis5ZUpEN0FWNm5TdUFBbEpYK1hxRnAwU3JvNlAwanVtM0Nsd1FjMWZ1UXVaMDV3QVNkVmU3V3cvWjU4UVI0NlZtblNwTzVudi9EblB2bnJPM2pNa1VaSnliTVhJK0c1Tm1rSHNyMG9Pd2ZpYWN3UXE3TkhDeG4rYmkrUUNSM08zSmtXZmxGaTdzUmZidm9pVEpwdzBOSGJHS2h3U1ZpeTNuUGp0YUJRUjZKRjgxMGF3TXZLV3J2QnQ0b0t2ZXBEaWJSSnJjc1ExYlJOQTZ1djFYbnJyS3lpRGYzYVpzQnVHdDZwcll2eEtxU3I2Y3FUZVBzWWlDTlF2K0dqMEZrdXl3bmN5QzA2Y0ZhbXI5azY3UlJhQ1ZRMW5Ybjc4NCttc3gvVkRPbldZdzExMXdCZk9YVGRQcFR6ck01QVpWallsNnhOL0x0cktUSEtvYUV0N1pQRXpvQU5kY0l0bWpCNVFvTmVSZjloVHpRS0RiK3FRem5RcVAva0sxeENDVjIwTmVVTmw4RG1QSEhCZXJrTldRSWlZbjg2YkFrdGNYMlpzblpBVXp2Y2w2TjZZMUtFdFNOa1JXZWNDd082Uk9YMFl0MkVWamNwZTJuNUg5QUdOU2ZTMXFHZWVGR0dyMTFqZjNPaTQ1WmJ2VU5kd1Q0dkZ3N3lKMmFWUmFzNXVpMnEvd0U0cWdLdkZ6YzhucUdqaWVtUkRxY0VzSTh0VmhFaDhVYXRLaHo4SUJjNmNKS3hPcDJPRmdnSmttd3k1dXhKcTVwc0E0S29KcHNBMTYyVFI1eWY5WXg4ZWxOa0szem45YVA3L0xxTUpveGwxNDgxYzVGUXpwaWgraXRzQjlxVW51czNVZGc3bVMyOXM0ekF6bDR3NGZ4UkVWWUczbTc0alVVZExVWHlCSC9GU3V1dHdjZ3R2S2l1NXZIcVBCTFczWlA2ZUZtMTc0aTBZYy9hR2dHZDBWcExkTnNEVU1RN1JBdW56bVhSNDNMSlZObE03SVhnc0svMmRCUVZGYzFTTEVtRmFRSGNZVWdQNGkvNU9TOGk3enBWUGt2MGpVc2Q5NjdBemlvVjVkQkpCek5GK0ovRDBiVXlFRXFVN2pNMGpCZmpqM0F5Tm0zTUF2aWZOL0JmTjc2OUwxNkl2UTZVaGM0MHVaUExtMzlUMWhBLzA3ZkVUNTRKckZLeGRVYm16YzNGTC8zOUZIQVZRbmdvVVpZUXFNcUpuVG8wTVk3cUtWM1BMWDFKdjE2VW1hRGd6ZmhNWkgwenhPb2NZZkVVK0R3b3dteXBIZDhiRG5UUHZyenVjY0VNSVVPVVBaa2dSaWJ5WkhRVUxUZTVkenh3dTFUNHlCZ1lJV1NCYk1EcUZHYmMyeGxqdGpnZz09IiwiaXYiOiJBOXJwdXpKYlkyV0Jnd1BIIn0%3D&sessionToken=eyJleHAiOjE3Nzg4Mjk3NDcsIm5vbmNlIjoiMlg2SW92VUpNWklQZHVpakFJVzBWUSIsImNoYWxsZW5nZSI6IkZLSW5zaElrVGtHX3lsMDQzSjNYRnl3ZUZBaU12aURiNFZGWVQ2ZDk4XzAiLCJraWQiOiIyIn0.nnGd11tQwF6Tga28Olt3T6Amtl5OmYP0g6dnfEeCD0w&codeVerifier=HmOHrrV1nKzgYO1obZeiEEDMvqqNSnDJBHwRZB9vcNY",
+            "selectors": [
+                [
+                    "tr:nth-of-type(1) > td:nth-of-type(7) > span > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[1]/td[7]/span/span"
+                ],
+                [
+                    "pierce/tr:nth-of-type(1) > td:nth-of-type(7) > span > span"
+                ]
+            ],
+            "offsetY": 6.6328125,
+            "offsetX": 0.75
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications?payload=eyJlbmNyeXB0ZWREYXRhIjoiQTlycHV6SmJZMldCZ3dQSHBtaldPYTRDZGV2Q3NWTW5FWjhsaGNMbmJaMEZ1ZDI5WDgwaEZJUXB0bFhPQ0g5RHIxZHg0VzFQZlJaRDBnL2tpbDVCS0pqUG1YVkR5cjJRenA2b24raDEvTENqZzV2a2hyWVRlN2c4Q2lpZ3NmclBUVmpzVXVDYWM4Rlo1TDVVOTQ2dk9VR3lwUnUrVHZLSlRzNlpmTlIxZmlScG96VlpYQjNJbUNHTlBlckxNZ3BEQVpmY1RPdVVyQW1iRHdQV2YyWFdhTTljc2R4bWdjT05kTFhHRUgrZk85N0F6T1dEQW50VmQzekx0OTFkOHBDRlZPRnJJdlBJcEFlSXJwaGxJODMxZlFPR0tQbDY5ZkY5WnJOZmNhT1pNZmFmWitDc1BQVjBPMk5INU5aa05TZVRQMFZDVkZUb1BUeDJIYjJyZE1pU2dlZTRyNlN6clFwbjF3SG02dVl2U0FzSFA5STcweGVrUm1LbnBKQTlwWlRhcGZLOXlYVzBuMTJhMEMxN0FRd21ieStVTzJvVlhYRm9TVStsTE5aQVZiZmlUQkJ1Q0pBTzRob29VKzgxcnBFckNMMjlyRmlYYjcwbTQvdkxWeTROUERiYlRaZnJSOXpWYkZxOFhieDZkc1E2U0psZ2xHU1BEa2xuZnArallDVnhEMndlWG5KUkM3UW8xZUtKTytHeDgvQ1JOMFBOUXM5QzB5L1U0VktGbEhGRVVJZ2toWXRIeHovUXpKZW1yT0cyd2xiTFNkMTNqMzY5MGQzditCamtGQXY4cXY2TXdPU1BSSCt5ZVRCekRJcWRQK1d1MUNuREpSTXhmTVNXdGlGZ3FEVVVmcXF3c0lZSHRDMGoxcmZwekFHRVFSZ3o0a1B0OWhZVG5hWDZlQ1pGRlRKR2hncSsrbUZDWlg2Y05GOWJxTTBxWGFjK1BuSGk3ckJEeVVHU3FEU3BMcURzNXYxRm15SkpXQnE4MU1VMTY5c2o3L293NzFmMlZkWjgxNGFWdzhKTm8wUzdpRWkzMEJQcldSSVJrMW42bzdxYUlDOGQrN3lzR0RGZUJ4eEZWNklHbnpxbEJ6c0hhblBob0ZrblMzdlBiKzN1dkFyWVNvWDM5TWE1bFBlWVAySk9MaUNnc3RmYUN0SGltOEUvWnUreUdVQ05CYzE3VDRpZ1M3K1o3WnRFV3FhejBTYWdSQ1ZTbmcyZEJxVlZ3UlgxemJTSklBa1FFS3FmZU1rZHFLSFcxRkZpb0RRaWJCOUFrU1EvaDV1RUZCVG5oSTkraXRpUDdOdlBYKzRtYm5sQm9CcEhlN1NWRFBUM1h1Mm04VFVyNlFjUS9BbXd0ekNucTYyMS93akgwa1liRjdGV1hNZkNhMVcrV05nUWt0dGx3UStQcmY5UVpZWis5ZUpEN0FWNm5TdUFBbEpYK1hxRnAwU3JvNlAwanVtM0Nsd1FjMWZ1UXVaMDV3QVNkVmU3V3cvWjU4UVI0NlZtblNwTzVudi9EblB2bnJPM2pNa1VaSnliTVhJK0c1Tm1rSHNyMG9Pd2ZpYWN3UXE3TkhDeG4rYmkrUUNSM08zSmtXZmxGaTdzUmZidm9pVEpwdzBOSGJHS2h3U1ZpeTNuUGp0YUJRUjZKRjgxMGF3TXZLV3J2QnQ0b0t2ZXBEaWJSSnJjc1ExYlJOQTZ1djFYbnJyS3lpRGYzYVpzQnVHdDZwcll2eEtxU3I2Y3FUZVBzWWlDTlF2K0dqMEZrdXl3bmN5QzA2Y0ZhbXI5azY3UlJhQ1ZRMW5Ybjc4NCttc3gvVkRPbldZdzExMXdCZk9YVGRQcFR6ck01QVpWallsNnhOL0x0cktUSEtvYUV0N1pQRXpvQU5kY0l0bWpCNVFvTmVSZjloVHpRS0RiK3FRem5RcVAva0sxeENDVjIwTmVVTmw4RG1QSEhCZXJrTldRSWlZbjg2YkFrdGNYMlpzblpBVXp2Y2w2TjZZMUtFdFNOa1JXZWNDd082Uk9YMFl0MkVWamNwZTJuNUg5QUdOU2ZTMXFHZWVGR0dyMTFqZjNPaTQ1WmJ2VU5kd1Q0dkZ3N3lKMmFWUmFzNXVpMnEvd0U0cWdLdkZ6YzhucUdqaWVtUkRxY0VzSTh0VmhFaDhVYXRLaHo4SUJjNmNKS3hPcDJPRmdnSmttd3k1dXhKcTVwc0E0S29KcHNBMTYyVFI1eWY5WXg4ZWxOa0szem45YVA3L0xxTUpveGwxNDgxYzVGUXpwaWgraXRzQjlxVW51czNVZGc3bVMyOXM0ekF6bDR3NGZ4UkVWWUczbTc0alVVZExVWHlCSC9GU3V1dHdjZ3R2S2l1NXZIcVBCTFczWlA2ZUZtMTc0aTBZYy9hR2dHZDBWcExkTnNEVU1RN1JBdW56bVhSNDNMSlZObE03SVhnc0svMmRCUVZGYzFTTEVtRmFRSGNZVWdQNGkvNU9TOGk3enBWUGt2MGpVc2Q5NjdBemlvVjVkQkpCek5GK0ovRDBiVXlFRXFVN2pNMGpCZmpqM0F5Tm0zTUF2aWZOL0JmTjc2OUwxNkl2UTZVaGM0MHVaUExtMzlUMWhBLzA3ZkVUNTRKckZLeGRVYm16YzNGTC8zOUZIQVZRbmdvVVpZUXFNcUpuVG8wTVk3cUtWM1BMWDFKdjE2VW1hRGd6ZmhNWkgwenhPb2NZZkVVK0R3b3dteXBIZDhiRG5UUHZyenVjY0VNSVVPVVBaa2dSaWJ5WkhRVUxUZTVkenh3dTFUNHlCZ1lJV1NCYk1EcUZHYmMyeGxqdGpnZz09IiwiaXYiOiJBOXJwdXpKYlkyV0Jnd1BIIn0%3D&sessionToken=eyJleHAiOjE3Nzg4Mjk3NDcsIm5vbmNlIjoiMlg2SW92VUpNWklQZHVpakFJVzBWUSIsImNoYWxsZW5nZSI6IkZLSW5zaElrVGtHX3lsMDQzSjNYRnl3ZUZBaU12aURiNFZGWVQ2ZDk4XzAiLCJraWQiOiIyIn0.nnGd11tQwF6Tga28Olt3T6Amtl5OmYP0g6dnfEeCD0w&codeVerifier=HmOHrrV1nKzgYO1obZeiEEDMvqqNSnDJBHwRZB9vcNY",
+            "selectors": [
+                [
+                    "div.inset-0"
+                ],
+                [
+                    "xpath//html/body/div[2]"
+                ],
+                [
+                    "pierce/div.inset-0"
+                ]
+            ],
+            "offsetY": 288,
+            "offsetX": 1383,
+            "button": "secondary"
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications?payload=eyJlbmNyeXB0ZWREYXRhIjoiQTlycHV6SmJZMldCZ3dQSHBtaldPYTRDZGV2Q3NWTW5FWjhsaGNMbmJaMEZ1ZDI5WDgwaEZJUXB0bFhPQ0g5RHIxZHg0VzFQZlJaRDBnL2tpbDVCS0pqUG1YVkR5cjJRenA2b24raDEvTENqZzV2a2hyWVRlN2c4Q2lpZ3NmclBUVmpzVXVDYWM4Rlo1TDVVOTQ2dk9VR3lwUnUrVHZLSlRzNlpmTlIxZmlScG96VlpYQjNJbUNHTlBlckxNZ3BEQVpmY1RPdVVyQW1iRHdQV2YyWFdhTTljc2R4bWdjT05kTFhHRUgrZk85N0F6T1dEQW50VmQzekx0OTFkOHBDRlZPRnJJdlBJcEFlSXJwaGxJODMxZlFPR0tQbDY5ZkY5WnJOZmNhT1pNZmFmWitDc1BQVjBPMk5INU5aa05TZVRQMFZDVkZUb1BUeDJIYjJyZE1pU2dlZTRyNlN6clFwbjF3SG02dVl2U0FzSFA5STcweGVrUm1LbnBKQTlwWlRhcGZLOXlYVzBuMTJhMEMxN0FRd21ieStVTzJvVlhYRm9TVStsTE5aQVZiZmlUQkJ1Q0pBTzRob29VKzgxcnBFckNMMjlyRmlYYjcwbTQvdkxWeTROUERiYlRaZnJSOXpWYkZxOFhieDZkc1E2U0psZ2xHU1BEa2xuZnArallDVnhEMndlWG5KUkM3UW8xZUtKTytHeDgvQ1JOMFBOUXM5QzB5L1U0VktGbEhGRVVJZ2toWXRIeHovUXpKZW1yT0cyd2xiTFNkMTNqMzY5MGQzditCamtGQXY4cXY2TXdPU1BSSCt5ZVRCekRJcWRQK1d1MUNuREpSTXhmTVNXdGlGZ3FEVVVmcXF3c0lZSHRDMGoxcmZwekFHRVFSZ3o0a1B0OWhZVG5hWDZlQ1pGRlRKR2hncSsrbUZDWlg2Y05GOWJxTTBxWGFjK1BuSGk3ckJEeVVHU3FEU3BMcURzNXYxRm15SkpXQnE4MU1VMTY5c2o3L293NzFmMlZkWjgxNGFWdzhKTm8wUzdpRWkzMEJQcldSSVJrMW42bzdxYUlDOGQrN3lzR0RGZUJ4eEZWNklHbnpxbEJ6c0hhblBob0ZrblMzdlBiKzN1dkFyWVNvWDM5TWE1bFBlWVAySk9MaUNnc3RmYUN0SGltOEUvWnUreUdVQ05CYzE3VDRpZ1M3K1o3WnRFV3FhejBTYWdSQ1ZTbmcyZEJxVlZ3UlgxemJTSklBa1FFS3FmZU1rZHFLSFcxRkZpb0RRaWJCOUFrU1EvaDV1RUZCVG5oSTkraXRpUDdOdlBYKzRtYm5sQm9CcEhlN1NWRFBUM1h1Mm04VFVyNlFjUS9BbXd0ekNucTYyMS93akgwa1liRjdGV1hNZkNhMVcrV05nUWt0dGx3UStQcmY5UVpZWis5ZUpEN0FWNm5TdUFBbEpYK1hxRnAwU3JvNlAwanVtM0Nsd1FjMWZ1UXVaMDV3QVNkVmU3V3cvWjU4UVI0NlZtblNwTzVudi9EblB2bnJPM2pNa1VaSnliTVhJK0c1Tm1rSHNyMG9Pd2ZpYWN3UXE3TkhDeG4rYmkrUUNSM08zSmtXZmxGaTdzUmZidm9pVEpwdzBOSGJHS2h3U1ZpeTNuUGp0YUJRUjZKRjgxMGF3TXZLV3J2QnQ0b0t2ZXBEaWJSSnJjc1ExYlJOQTZ1djFYbnJyS3lpRGYzYVpzQnVHdDZwcll2eEtxU3I2Y3FUZVBzWWlDTlF2K0dqMEZrdXl3bmN5QzA2Y0ZhbXI5azY3UlJhQ1ZRMW5Ybjc4NCttc3gvVkRPbldZdzExMXdCZk9YVGRQcFR6ck01QVpWallsNnhOL0x0cktUSEtvYUV0N1pQRXpvQU5kY0l0bWpCNVFvTmVSZjloVHpRS0RiK3FRem5RcVAva0sxeENDVjIwTmVVTmw4RG1QSEhCZXJrTldRSWlZbjg2YkFrdGNYMlpzblpBVXp2Y2w2TjZZMUtFdFNOa1JXZWNDd082Uk9YMFl0MkVWamNwZTJuNUg5QUdOU2ZTMXFHZWVGR0dyMTFqZjNPaTQ1WmJ2VU5kd1Q0dkZ3N3lKMmFWUmFzNXVpMnEvd0U0cWdLdkZ6YzhucUdqaWVtUkRxY0VzSTh0VmhFaDhVYXRLaHo4SUJjNmNKS3hPcDJPRmdnSmttd3k1dXhKcTVwc0E0S29KcHNBMTYyVFI1eWY5WXg4ZWxOa0szem45YVA3L0xxTUpveGwxNDgxYzVGUXpwaWgraXRzQjlxVW51czNVZGc3bVMyOXM0ekF6bDR3NGZ4UkVWWUczbTc0alVVZExVWHlCSC9GU3V1dHdjZ3R2S2l1NXZIcVBCTFczWlA2ZUZtMTc0aTBZYy9hR2dHZDBWcExkTnNEVU1RN1JBdW56bVhSNDNMSlZObE03SVhnc0svMmRCUVZGYzFTTEVtRmFRSGNZVWdQNGkvNU9TOGk3enBWUGt2MGpVc2Q5NjdBemlvVjVkQkpCek5GK0ovRDBiVXlFRXFVN2pNMGpCZmpqM0F5Tm0zTUF2aWZOL0JmTjc2OUwxNkl2UTZVaGM0MHVaUExtMzlUMWhBLzA3ZkVUNTRKckZLeGRVYm16YzNGTC8zOUZIQVZRbmdvVVpZUXFNcUpuVG8wTVk3cUtWM1BMWDFKdjE2VW1hRGd6ZmhNWkgwenhPb2NZZkVVK0R3b3dteXBIZDhiRG5UUHZyenVjY0VNSVVPVVBaa2dSaWJ5WkhRVUxUZTVkenh3dTFUNHlCZ1lJV1NCYk1EcUZHYmMyeGxqdGpnZz09IiwiaXYiOiJBOXJwdXpKYlkyV0Jnd1BIIn0%3D&sessionToken=eyJleHAiOjE3Nzg4Mjk3NDcsIm5vbmNlIjoiMlg2SW92VUpNWklQZHVpakFJVzBWUSIsImNoYWxsZW5nZSI6IkZLSW5zaElrVGtHX3lsMDQzSjNYRnl3ZUZBaU12aURiNFZGWVQ2ZDk4XzAiLCJraWQiOiIyIn0.nnGd11tQwF6Tga28Olt3T6Amtl5OmYP0g6dnfEeCD0w&codeVerifier=HmOHrrV1nKzgYO1obZeiEEDMvqqNSnDJBHwRZB9vcNY",
+            "selectors": [
+                [
+                    "div.inset-0"
+                ],
+                [
+                    "xpath//html/body/div[2]"
+                ],
+                [
+                    "pierce/div.inset-0"
+                ]
+            ],
+            "offsetY": 288,
+            "offsetX": 1383,
+            "button": "secondary"
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications?payload=eyJlbmNyeXB0ZWREYXRhIjoiQTlycHV6SmJZMldCZ3dQSHBtaldPYTRDZGV2Q3NWTW5FWjhsaGNMbmJaMEZ1ZDI5WDgwaEZJUXB0bFhPQ0g5RHIxZHg0VzFQZlJaRDBnL2tpbDVCS0pqUG1YVkR5cjJRenA2b24raDEvTENqZzV2a2hyWVRlN2c4Q2lpZ3NmclBUVmpzVXVDYWM4Rlo1TDVVOTQ2dk9VR3lwUnUrVHZLSlRzNlpmTlIxZmlScG96VlpYQjNJbUNHTlBlckxNZ3BEQVpmY1RPdVVyQW1iRHdQV2YyWFdhTTljc2R4bWdjT05kTFhHRUgrZk85N0F6T1dEQW50VmQzekx0OTFkOHBDRlZPRnJJdlBJcEFlSXJwaGxJODMxZlFPR0tQbDY5ZkY5WnJOZmNhT1pNZmFmWitDc1BQVjBPMk5INU5aa05TZVRQMFZDVkZUb1BUeDJIYjJyZE1pU2dlZTRyNlN6clFwbjF3SG02dVl2U0FzSFA5STcweGVrUm1LbnBKQTlwWlRhcGZLOXlYVzBuMTJhMEMxN0FRd21ieStVTzJvVlhYRm9TVStsTE5aQVZiZmlUQkJ1Q0pBTzRob29VKzgxcnBFckNMMjlyRmlYYjcwbTQvdkxWeTROUERiYlRaZnJSOXpWYkZxOFhieDZkc1E2U0psZ2xHU1BEa2xuZnArallDVnhEMndlWG5KUkM3UW8xZUtKTytHeDgvQ1JOMFBOUXM5QzB5L1U0VktGbEhGRVVJZ2toWXRIeHovUXpKZW1yT0cyd2xiTFNkMTNqMzY5MGQzditCamtGQXY4cXY2TXdPU1BSSCt5ZVRCekRJcWRQK1d1MUNuREpSTXhmTVNXdGlGZ3FEVVVmcXF3c0lZSHRDMGoxcmZwekFHRVFSZ3o0a1B0OWhZVG5hWDZlQ1pGRlRKR2hncSsrbUZDWlg2Y05GOWJxTTBxWGFjK1BuSGk3ckJEeVVHU3FEU3BMcURzNXYxRm15SkpXQnE4MU1VMTY5c2o3L293NzFmMlZkWjgxNGFWdzhKTm8wUzdpRWkzMEJQcldSSVJrMW42bzdxYUlDOGQrN3lzR0RGZUJ4eEZWNklHbnpxbEJ6c0hhblBob0ZrblMzdlBiKzN1dkFyWVNvWDM5TWE1bFBlWVAySk9MaUNnc3RmYUN0SGltOEUvWnUreUdVQ05CYzE3VDRpZ1M3K1o3WnRFV3FhejBTYWdSQ1ZTbmcyZEJxVlZ3UlgxemJTSklBa1FFS3FmZU1rZHFLSFcxRkZpb0RRaWJCOUFrU1EvaDV1RUZCVG5oSTkraXRpUDdOdlBYKzRtYm5sQm9CcEhlN1NWRFBUM1h1Mm04VFVyNlFjUS9BbXd0ekNucTYyMS93akgwa1liRjdGV1hNZkNhMVcrV05nUWt0dGx3UStQcmY5UVpZWis5ZUpEN0FWNm5TdUFBbEpYK1hxRnAwU3JvNlAwanVtM0Nsd1FjMWZ1UXVaMDV3QVNkVmU3V3cvWjU4UVI0NlZtblNwTzVudi9EblB2bnJPM2pNa1VaSnliTVhJK0c1Tm1rSHNyMG9Pd2ZpYWN3UXE3TkhDeG4rYmkrUUNSM08zSmtXZmxGaTdzUmZidm9pVEpwdzBOSGJHS2h3U1ZpeTNuUGp0YUJRUjZKRjgxMGF3TXZLV3J2QnQ0b0t2ZXBEaWJSSnJjc1ExYlJOQTZ1djFYbnJyS3lpRGYzYVpzQnVHdDZwcll2eEtxU3I2Y3FUZVBzWWlDTlF2K0dqMEZrdXl3bmN5QzA2Y0ZhbXI5azY3UlJhQ1ZRMW5Ybjc4NCttc3gvVkRPbldZdzExMXdCZk9YVGRQcFR6ck01QVpWallsNnhOL0x0cktUSEtvYUV0N1pQRXpvQU5kY0l0bWpCNVFvTmVSZjloVHpRS0RiK3FRem5RcVAva0sxeENDVjIwTmVVTmw4RG1QSEhCZXJrTldRSWlZbjg2YkFrdGNYMlpzblpBVXp2Y2w2TjZZMUtFdFNOa1JXZWNDd082Uk9YMFl0MkVWamNwZTJuNUg5QUdOU2ZTMXFHZWVGR0dyMTFqZjNPaTQ1WmJ2VU5kd1Q0dkZ3N3lKMmFWUmFzNXVpMnEvd0U0cWdLdkZ6YzhucUdqaWVtUkRxY0VzSTh0VmhFaDhVYXRLaHo4SUJjNmNKS3hPcDJPRmdnSmttd3k1dXhKcTVwc0E0S29KcHNBMTYyVFI1eWY5WXg4ZWxOa0szem45YVA3L0xxTUpveGwxNDgxYzVGUXpwaWgraXRzQjlxVW51czNVZGc3bVMyOXM0ekF6bDR3NGZ4UkVWWUczbTc0alVVZExVWHlCSC9GU3V1dHdjZ3R2S2l1NXZIcVBCTFczWlA2ZUZtMTc0aTBZYy9hR2dHZDBWcExkTnNEVU1RN1JBdW56bVhSNDNMSlZObE03SVhnc0svMmRCUVZGYzFTTEVtRmFRSGNZVWdQNGkvNU9TOGk3enBWUGt2MGpVc2Q5NjdBemlvVjVkQkpCek5GK0ovRDBiVXlFRXFVN2pNMGpCZmpqM0F5Tm0zTUF2aWZOL0JmTjc2OUwxNkl2UTZVaGM0MHVaUExtMzlUMWhBLzA3ZkVUNTRKckZLeGRVYm16YzNGTC8zOUZIQVZRbmdvVVpZUXFNcUpuVG8wTVk3cUtWM1BMWDFKdjE2VW1hRGd6ZmhNWkgwenhPb2NZZkVVK0R3b3dteXBIZDhiRG5UUHZyenVjY0VNSVVPVVBaa2dSaWJ5WkhRVUxUZTVkenh3dTFUNHlCZ1lJV1NCYk1EcUZHYmMyeGxqdGpnZz09IiwiaXYiOiJBOXJwdXpKYlkyV0Jnd1BIIn0%3D&sessionToken=eyJleHAiOjE3Nzg4Mjk3NDcsIm5vbmNlIjoiMlg2SW92VUpNWklQZHVpakFJVzBWUSIsImNoYWxsZW5nZSI6IkZLSW5zaElrVGtHX3lsMDQzSjNYRnl3ZUZBaU12aURiNFZGWVQ2ZDk4XzAiLCJraWQiOiIyIn0.nnGd11tQwF6Tga28Olt3T6Amtl5OmYP0g6dnfEeCD0w&codeVerifier=HmOHrrV1nKzgYO1obZeiEEDMvqqNSnDJBHwRZB9vcNY",
+            "selectors": [
+                [
+                    "div.inset-0"
+                ],
+                [
+                    "xpath//html/body/div[2]"
+                ],
+                [
+                    "pierce/div.inset-0"
+                ]
+            ],
+            "offsetY": 330,
+            "offsetX": 1828
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications?payload=eyJlbmNyeXB0ZWREYXRhIjoiQTlycHV6SmJZMldCZ3dQSHBtaldPYTRDZGV2Q3NWTW5FWjhsaGNMbmJaMEZ1ZDI5WDgwaEZJUXB0bFhPQ0g5RHIxZHg0VzFQZlJaRDBnL2tpbDVCS0pqUG1YVkR5cjJRenA2b24raDEvTENqZzV2a2hyWVRlN2c4Q2lpZ3NmclBUVmpzVXVDYWM4Rlo1TDVVOTQ2dk9VR3lwUnUrVHZLSlRzNlpmTlIxZmlScG96VlpYQjNJbUNHTlBlckxNZ3BEQVpmY1RPdVVyQW1iRHdQV2YyWFdhTTljc2R4bWdjT05kTFhHRUgrZk85N0F6T1dEQW50VmQzekx0OTFkOHBDRlZPRnJJdlBJcEFlSXJwaGxJODMxZlFPR0tQbDY5ZkY5WnJOZmNhT1pNZmFmWitDc1BQVjBPMk5INU5aa05TZVRQMFZDVkZUb1BUeDJIYjJyZE1pU2dlZTRyNlN6clFwbjF3SG02dVl2U0FzSFA5STcweGVrUm1LbnBKQTlwWlRhcGZLOXlYVzBuMTJhMEMxN0FRd21ieStVTzJvVlhYRm9TVStsTE5aQVZiZmlUQkJ1Q0pBTzRob29VKzgxcnBFckNMMjlyRmlYYjcwbTQvdkxWeTROUERiYlRaZnJSOXpWYkZxOFhieDZkc1E2U0psZ2xHU1BEa2xuZnArallDVnhEMndlWG5KUkM3UW8xZUtKTytHeDgvQ1JOMFBOUXM5QzB5L1U0VktGbEhGRVVJZ2toWXRIeHovUXpKZW1yT0cyd2xiTFNkMTNqMzY5MGQzditCamtGQXY4cXY2TXdPU1BSSCt5ZVRCekRJcWRQK1d1MUNuREpSTXhmTVNXdGlGZ3FEVVVmcXF3c0lZSHRDMGoxcmZwekFHRVFSZ3o0a1B0OWhZVG5hWDZlQ1pGRlRKR2hncSsrbUZDWlg2Y05GOWJxTTBxWGFjK1BuSGk3ckJEeVVHU3FEU3BMcURzNXYxRm15SkpXQnE4MU1VMTY5c2o3L293NzFmMlZkWjgxNGFWdzhKTm8wUzdpRWkzMEJQcldSSVJrMW42bzdxYUlDOGQrN3lzR0RGZUJ4eEZWNklHbnpxbEJ6c0hhblBob0ZrblMzdlBiKzN1dkFyWVNvWDM5TWE1bFBlWVAySk9MaUNnc3RmYUN0SGltOEUvWnUreUdVQ05CYzE3VDRpZ1M3K1o3WnRFV3FhejBTYWdSQ1ZTbmcyZEJxVlZ3UlgxemJTSklBa1FFS3FmZU1rZHFLSFcxRkZpb0RRaWJCOUFrU1EvaDV1RUZCVG5oSTkraXRpUDdOdlBYKzRtYm5sQm9CcEhlN1NWRFBUM1h1Mm04VFVyNlFjUS9BbXd0ekNucTYyMS93akgwa1liRjdGV1hNZkNhMVcrV05nUWt0dGx3UStQcmY5UVpZWis5ZUpEN0FWNm5TdUFBbEpYK1hxRnAwU3JvNlAwanVtM0Nsd1FjMWZ1UXVaMDV3QVNkVmU3V3cvWjU4UVI0NlZtblNwTzVudi9EblB2bnJPM2pNa1VaSnliTVhJK0c1Tm1rSHNyMG9Pd2ZpYWN3UXE3TkhDeG4rYmkrUUNSM08zSmtXZmxGaTdzUmZidm9pVEpwdzBOSGJHS2h3U1ZpeTNuUGp0YUJRUjZKRjgxMGF3TXZLV3J2QnQ0b0t2ZXBEaWJSSnJjc1ExYlJOQTZ1djFYbnJyS3lpRGYzYVpzQnVHdDZwcll2eEtxU3I2Y3FUZVBzWWlDTlF2K0dqMEZrdXl3bmN5QzA2Y0ZhbXI5azY3UlJhQ1ZRMW5Ybjc4NCttc3gvVkRPbldZdzExMXdCZk9YVGRQcFR6ck01QVpWallsNnhOL0x0cktUSEtvYUV0N1pQRXpvQU5kY0l0bWpCNVFvTmVSZjloVHpRS0RiK3FRem5RcVAva0sxeENDVjIwTmVVTmw4RG1QSEhCZXJrTldRSWlZbjg2YkFrdGNYMlpzblpBVXp2Y2w2TjZZMUtFdFNOa1JXZWNDd082Uk9YMFl0MkVWamNwZTJuNUg5QUdOU2ZTMXFHZWVGR0dyMTFqZjNPaTQ1WmJ2VU5kd1Q0dkZ3N3lKMmFWUmFzNXVpMnEvd0U0cWdLdkZ6YzhucUdqaWVtUkRxY0VzSTh0VmhFaDhVYXRLaHo4SUJjNmNKS3hPcDJPRmdnSmttd3k1dXhKcTVwc0E0S29KcHNBMTYyVFI1eWY5WXg4ZWxOa0szem45YVA3L0xxTUpveGwxNDgxYzVGUXpwaWgraXRzQjlxVW51czNVZGc3bVMyOXM0ekF6bDR3NGZ4UkVWWUczbTc0alVVZExVWHlCSC9GU3V1dHdjZ3R2S2l1NXZIcVBCTFczWlA2ZUZtMTc0aTBZYy9hR2dHZDBWcExkTnNEVU1RN1JBdW56bVhSNDNMSlZObE03SVhnc0svMmRCUVZGYzFTTEVtRmFRSGNZVWdQNGkvNU9TOGk3enBWUGt2MGpVc2Q5NjdBemlvVjVkQkpCek5GK0ovRDBiVXlFRXFVN2pNMGpCZmpqM0F5Tm0zTUF2aWZOL0JmTjc2OUwxNkl2UTZVaGM0MHVaUExtMzlUMWhBLzA3ZkVUNTRKckZLeGRVYm16YzNGTC8zOUZIQVZRbmdvVVpZUXFNcUpuVG8wTVk3cUtWM1BMWDFKdjE2VW1hRGd6ZmhNWkgwenhPb2NZZkVVK0R3b3dteXBIZDhiRG5UUHZyenVjY0VNSVVPVVBaa2dSaWJ5WkhRVUxUZTVkenh3dTFUNHlCZ1lJV1NCYk1EcUZHYmMyeGxqdGpnZz09IiwiaXYiOiJBOXJwdXpKYlkyV0Jnd1BIIn0%3D&sessionToken=eyJleHAiOjE3Nzg4Mjk3NDcsIm5vbmNlIjoiMlg2SW92VUpNWklQZHVpakFJVzBWUSIsImNoYWxsZW5nZSI6IkZLSW5zaElrVGtHX3lsMDQzSjNYRnl3ZUZBaU12aURiNFZGWVQ2ZDk4XzAiLCJraWQiOiIyIn0.nnGd11tQwF6Tga28Olt3T6Amtl5OmYP0g6dnfEeCD0w&codeVerifier=HmOHrrV1nKzgYO1obZeiEEDMvqqNSnDJBHwRZB9vcNY",
+            "selectors": [
+                [
+                    "div.inset-0"
+                ],
+                [
+                    "xpath//html/body/div[2]"
+                ],
+                [
+                    "pierce/div.inset-0"
+                ]
+            ],
+            "offsetY": 330,
+            "offsetX": 1828,
+            "button": "secondary"
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications?payload=eyJlbmNyeXB0ZWREYXRhIjoiQTlycHV6SmJZMldCZ3dQSHBtaldPYTRDZGV2Q3NWTW5FWjhsaGNMbmJaMEZ1ZDI5WDgwaEZJUXB0bFhPQ0g5RHIxZHg0VzFQZlJaRDBnL2tpbDVCS0pqUG1YVkR5cjJRenA2b24raDEvTENqZzV2a2hyWVRlN2c4Q2lpZ3NmclBUVmpzVXVDYWM4Rlo1TDVVOTQ2dk9VR3lwUnUrVHZLSlRzNlpmTlIxZmlScG96VlpYQjNJbUNHTlBlckxNZ3BEQVpmY1RPdVVyQW1iRHdQV2YyWFdhTTljc2R4bWdjT05kTFhHRUgrZk85N0F6T1dEQW50VmQzekx0OTFkOHBDRlZPRnJJdlBJcEFlSXJwaGxJODMxZlFPR0tQbDY5ZkY5WnJOZmNhT1pNZmFmWitDc1BQVjBPMk5INU5aa05TZVRQMFZDVkZUb1BUeDJIYjJyZE1pU2dlZTRyNlN6clFwbjF3SG02dVl2U0FzSFA5STcweGVrUm1LbnBKQTlwWlRhcGZLOXlYVzBuMTJhMEMxN0FRd21ieStVTzJvVlhYRm9TVStsTE5aQVZiZmlUQkJ1Q0pBTzRob29VKzgxcnBFckNMMjlyRmlYYjcwbTQvdkxWeTROUERiYlRaZnJSOXpWYkZxOFhieDZkc1E2U0psZ2xHU1BEa2xuZnArallDVnhEMndlWG5KUkM3UW8xZUtKTytHeDgvQ1JOMFBOUXM5QzB5L1U0VktGbEhGRVVJZ2toWXRIeHovUXpKZW1yT0cyd2xiTFNkMTNqMzY5MGQzditCamtGQXY4cXY2TXdPU1BSSCt5ZVRCekRJcWRQK1d1MUNuREpSTXhmTVNXdGlGZ3FEVVVmcXF3c0lZSHRDMGoxcmZwekFHRVFSZ3o0a1B0OWhZVG5hWDZlQ1pGRlRKR2hncSsrbUZDWlg2Y05GOWJxTTBxWGFjK1BuSGk3ckJEeVVHU3FEU3BMcURzNXYxRm15SkpXQnE4MU1VMTY5c2o3L293NzFmMlZkWjgxNGFWdzhKTm8wUzdpRWkzMEJQcldSSVJrMW42bzdxYUlDOGQrN3lzR0RGZUJ4eEZWNklHbnpxbEJ6c0hhblBob0ZrblMzdlBiKzN1dkFyWVNvWDM5TWE1bFBlWVAySk9MaUNnc3RmYUN0SGltOEUvWnUreUdVQ05CYzE3VDRpZ1M3K1o3WnRFV3FhejBTYWdSQ1ZTbmcyZEJxVlZ3UlgxemJTSklBa1FFS3FmZU1rZHFLSFcxRkZpb0RRaWJCOUFrU1EvaDV1RUZCVG5oSTkraXRpUDdOdlBYKzRtYm5sQm9CcEhlN1NWRFBUM1h1Mm04VFVyNlFjUS9BbXd0ekNucTYyMS93akgwa1liRjdGV1hNZkNhMVcrV05nUWt0dGx3UStQcmY5UVpZWis5ZUpEN0FWNm5TdUFBbEpYK1hxRnAwU3JvNlAwanVtM0Nsd1FjMWZ1UXVaMDV3QVNkVmU3V3cvWjU4UVI0NlZtblNwTzVudi9EblB2bnJPM2pNa1VaSnliTVhJK0c1Tm1rSHNyMG9Pd2ZpYWN3UXE3TkhDeG4rYmkrUUNSM08zSmtXZmxGaTdzUmZidm9pVEpwdzBOSGJHS2h3U1ZpeTNuUGp0YUJRUjZKRjgxMGF3TXZLV3J2QnQ0b0t2ZXBEaWJSSnJjc1ExYlJOQTZ1djFYbnJyS3lpRGYzYVpzQnVHdDZwcll2eEtxU3I2Y3FUZVBzWWlDTlF2K0dqMEZrdXl3bmN5QzA2Y0ZhbXI5azY3UlJhQ1ZRMW5Ybjc4NCttc3gvVkRPbldZdzExMXdCZk9YVGRQcFR6ck01QVpWallsNnhOL0x0cktUSEtvYUV0N1pQRXpvQU5kY0l0bWpCNVFvTmVSZjloVHpRS0RiK3FRem5RcVAva0sxeENDVjIwTmVVTmw4RG1QSEhCZXJrTldRSWlZbjg2YkFrdGNYMlpzblpBVXp2Y2w2TjZZMUtFdFNOa1JXZWNDd082Uk9YMFl0MkVWamNwZTJuNUg5QUdOU2ZTMXFHZWVGR0dyMTFqZjNPaTQ1WmJ2VU5kd1Q0dkZ3N3lKMmFWUmFzNXVpMnEvd0U0cWdLdkZ6YzhucUdqaWVtUkRxY0VzSTh0VmhFaDhVYXRLaHo4SUJjNmNKS3hPcDJPRmdnSmttd3k1dXhKcTVwc0E0S29KcHNBMTYyVFI1eWY5WXg4ZWxOa0szem45YVA3L0xxTUpveGwxNDgxYzVGUXpwaWgraXRzQjlxVW51czNVZGc3bVMyOXM0ekF6bDR3NGZ4UkVWWUczbTc0alVVZExVWHlCSC9GU3V1dHdjZ3R2S2l1NXZIcVBCTFczWlA2ZUZtMTc0aTBZYy9hR2dHZDBWcExkTnNEVU1RN1JBdW56bVhSNDNMSlZObE03SVhnc0svMmRCUVZGYzFTTEVtRmFRSGNZVWdQNGkvNU9TOGk3enBWUGt2MGpVc2Q5NjdBemlvVjVkQkpCek5GK0ovRDBiVXlFRXFVN2pNMGpCZmpqM0F5Tm0zTUF2aWZOL0JmTjc2OUwxNkl2UTZVaGM0MHVaUExtMzlUMWhBLzA3ZkVUNTRKckZLeGRVYm16YzNGTC8zOUZIQVZRbmdvVVpZUXFNcUpuVG8wTVk3cUtWM1BMWDFKdjE2VW1hRGd6ZmhNWkgwenhPb2NZZkVVK0R3b3dteXBIZDhiRG5UUHZyenVjY0VNSVVPVVBaa2dSaWJ5WkhRVUxUZTVkenh3dTFUNHlCZ1lJV1NCYk1EcUZHYmMyeGxqdGpnZz09IiwiaXYiOiJBOXJwdXpKYlkyV0Jnd1BIIn0%3D&sessionToken=eyJleHAiOjE3Nzg4Mjk3NDcsIm5vbmNlIjoiMlg2SW92VUpNWklQZHVpakFJVzBWUSIsImNoYWxsZW5nZSI6IkZLSW5zaElrVGtHX3lsMDQzSjNYRnl3ZUZBaU12aURiNFZGWVQ2ZDk4XzAiLCJraWQiOiIyIn0.nnGd11tQwF6Tga28Olt3T6Amtl5OmYP0g6dnfEeCD0w&codeVerifier=HmOHrrV1nKzgYO1obZeiEEDMvqqNSnDJBHwRZB9vcNY",
+            "selectors": [
+                [
+                    "div.inset-0"
+                ],
+                [
+                    "xpath//html/body/div[2]"
+                ],
+                [
+                    "pierce/div.inset-0"
+                ]
+            ],
+            "offsetY": 126,
+            "offsetX": 1042
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications?payload=eyJlbmNyeXB0ZWREYXRhIjoiQTlycHV6SmJZMldCZ3dQSHBtaldPYTRDZGV2Q3NWTW5FWjhsaGNMbmJaMEZ1ZDI5WDgwaEZJUXB0bFhPQ0g5RHIxZHg0VzFQZlJaRDBnL2tpbDVCS0pqUG1YVkR5cjJRenA2b24raDEvTENqZzV2a2hyWVRlN2c4Q2lpZ3NmclBUVmpzVXVDYWM4Rlo1TDVVOTQ2dk9VR3lwUnUrVHZLSlRzNlpmTlIxZmlScG96VlpYQjNJbUNHTlBlckxNZ3BEQVpmY1RPdVVyQW1iRHdQV2YyWFdhTTljc2R4bWdjT05kTFhHRUgrZk85N0F6T1dEQW50VmQzekx0OTFkOHBDRlZPRnJJdlBJcEFlSXJwaGxJODMxZlFPR0tQbDY5ZkY5WnJOZmNhT1pNZmFmWitDc1BQVjBPMk5INU5aa05TZVRQMFZDVkZUb1BUeDJIYjJyZE1pU2dlZTRyNlN6clFwbjF3SG02dVl2U0FzSFA5STcweGVrUm1LbnBKQTlwWlRhcGZLOXlYVzBuMTJhMEMxN0FRd21ieStVTzJvVlhYRm9TVStsTE5aQVZiZmlUQkJ1Q0pBTzRob29VKzgxcnBFckNMMjlyRmlYYjcwbTQvdkxWeTROUERiYlRaZnJSOXpWYkZxOFhieDZkc1E2U0psZ2xHU1BEa2xuZnArallDVnhEMndlWG5KUkM3UW8xZUtKTytHeDgvQ1JOMFBOUXM5QzB5L1U0VktGbEhGRVVJZ2toWXRIeHovUXpKZW1yT0cyd2xiTFNkMTNqMzY5MGQzditCamtGQXY4cXY2TXdPU1BSSCt5ZVRCekRJcWRQK1d1MUNuREpSTXhmTVNXdGlGZ3FEVVVmcXF3c0lZSHRDMGoxcmZwekFHRVFSZ3o0a1B0OWhZVG5hWDZlQ1pGRlRKR2hncSsrbUZDWlg2Y05GOWJxTTBxWGFjK1BuSGk3ckJEeVVHU3FEU3BMcURzNXYxRm15SkpXQnE4MU1VMTY5c2o3L293NzFmMlZkWjgxNGFWdzhKTm8wUzdpRWkzMEJQcldSSVJrMW42bzdxYUlDOGQrN3lzR0RGZUJ4eEZWNklHbnpxbEJ6c0hhblBob0ZrblMzdlBiKzN1dkFyWVNvWDM5TWE1bFBlWVAySk9MaUNnc3RmYUN0SGltOEUvWnUreUdVQ05CYzE3VDRpZ1M3K1o3WnRFV3FhejBTYWdSQ1ZTbmcyZEJxVlZ3UlgxemJTSklBa1FFS3FmZU1rZHFLSFcxRkZpb0RRaWJCOUFrU1EvaDV1RUZCVG5oSTkraXRpUDdOdlBYKzRtYm5sQm9CcEhlN1NWRFBUM1h1Mm04VFVyNlFjUS9BbXd0ekNucTYyMS93akgwa1liRjdGV1hNZkNhMVcrV05nUWt0dGx3UStQcmY5UVpZWis5ZUpEN0FWNm5TdUFBbEpYK1hxRnAwU3JvNlAwanVtM0Nsd1FjMWZ1UXVaMDV3QVNkVmU3V3cvWjU4UVI0NlZtblNwTzVudi9EblB2bnJPM2pNa1VaSnliTVhJK0c1Tm1rSHNyMG9Pd2ZpYWN3UXE3TkhDeG4rYmkrUUNSM08zSmtXZmxGaTdzUmZidm9pVEpwdzBOSGJHS2h3U1ZpeTNuUGp0YUJRUjZKRjgxMGF3TXZLV3J2QnQ0b0t2ZXBEaWJSSnJjc1ExYlJOQTZ1djFYbnJyS3lpRGYzYVpzQnVHdDZwcll2eEtxU3I2Y3FUZVBzWWlDTlF2K0dqMEZrdXl3bmN5QzA2Y0ZhbXI5azY3UlJhQ1ZRMW5Ybjc4NCttc3gvVkRPbldZdzExMXdCZk9YVGRQcFR6ck01QVpWallsNnhOL0x0cktUSEtvYUV0N1pQRXpvQU5kY0l0bWpCNVFvTmVSZjloVHpRS0RiK3FRem5RcVAva0sxeENDVjIwTmVVTmw4RG1QSEhCZXJrTldRSWlZbjg2YkFrdGNYMlpzblpBVXp2Y2w2TjZZMUtFdFNOa1JXZWNDd082Uk9YMFl0MkVWamNwZTJuNUg5QUdOU2ZTMXFHZWVGR0dyMTFqZjNPaTQ1WmJ2VU5kd1Q0dkZ3N3lKMmFWUmFzNXVpMnEvd0U0cWdLdkZ6YzhucUdqaWVtUkRxY0VzSTh0VmhFaDhVYXRLaHo4SUJjNmNKS3hPcDJPRmdnSmttd3k1dXhKcTVwc0E0S29KcHNBMTYyVFI1eWY5WXg4ZWxOa0szem45YVA3L0xxTUpveGwxNDgxYzVGUXpwaWgraXRzQjlxVW51czNVZGc3bVMyOXM0ekF6bDR3NGZ4UkVWWUczbTc0alVVZExVWHlCSC9GU3V1dHdjZ3R2S2l1NXZIcVBCTFczWlA2ZUZtMTc0aTBZYy9hR2dHZDBWcExkTnNEVU1RN1JBdW56bVhSNDNMSlZObE03SVhnc0svMmRCUVZGYzFTTEVtRmFRSGNZVWdQNGkvNU9TOGk3enBWUGt2MGpVc2Q5NjdBemlvVjVkQkpCek5GK0ovRDBiVXlFRXFVN2pNMGpCZmpqM0F5Tm0zTUF2aWZOL0JmTjc2OUwxNkl2UTZVaGM0MHVaUExtMzlUMWhBLzA3ZkVUNTRKckZLeGRVYm16YzNGTC8zOUZIQVZRbmdvVVpZUXFNcUpuVG8wTVk3cUtWM1BMWDFKdjE2VW1hRGd6ZmhNWkgwenhPb2NZZkVVK0R3b3dteXBIZDhiRG5UUHZyenVjY0VNSVVPVVBaa2dSaWJ5WkhRVUxUZTVkenh3dTFUNHlCZ1lJV1NCYk1EcUZHYmMyeGxqdGpnZz09IiwiaXYiOiJBOXJwdXpKYlkyV0Jnd1BIIn0%3D&sessionToken=eyJleHAiOjE3Nzg4Mjk3NDcsIm5vbmNlIjoiMlg2SW92VUpNWklQZHVpakFJVzBWUSIsImNoYWxsZW5nZSI6IkZLSW5zaElrVGtHX3lsMDQzSjNYRnl3ZUZBaU12aURiNFZGWVQ2ZDk4XzAiLCJraWQiOiIyIn0.nnGd11tQwF6Tga28Olt3T6Amtl5OmYP0g6dnfEeCD0w&codeVerifier=HmOHrrV1nKzgYO1obZeiEEDMvqqNSnDJBHwRZB9vcNY",
+            "selectors": [
+                [
+                    "div.inset-0"
+                ],
+                [
+                    "xpath//html/body/div[2]"
+                ],
+                [
+                    "pierce/div.inset-0"
+                ]
+            ],
+            "offsetY": 315,
+            "offsetX": 574,
+            "button": "secondary"
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications?payload=eyJlbmNyeXB0ZWREYXRhIjoiQTlycHV6SmJZMldCZ3dQSHBtaldPYTRDZGV2Q3NWTW5FWjhsaGNMbmJaMEZ1ZDI5WDgwaEZJUXB0bFhPQ0g5RHIxZHg0VzFQZlJaRDBnL2tpbDVCS0pqUG1YVkR5cjJRenA2b24raDEvTENqZzV2a2hyWVRlN2c4Q2lpZ3NmclBUVmpzVXVDYWM4Rlo1TDVVOTQ2dk9VR3lwUnUrVHZLSlRzNlpmTlIxZmlScG96VlpYQjNJbUNHTlBlckxNZ3BEQVpmY1RPdVVyQW1iRHdQV2YyWFdhTTljc2R4bWdjT05kTFhHRUgrZk85N0F6T1dEQW50VmQzekx0OTFkOHBDRlZPRnJJdlBJcEFlSXJwaGxJODMxZlFPR0tQbDY5ZkY5WnJOZmNhT1pNZmFmWitDc1BQVjBPMk5INU5aa05TZVRQMFZDVkZUb1BUeDJIYjJyZE1pU2dlZTRyNlN6clFwbjF3SG02dVl2U0FzSFA5STcweGVrUm1LbnBKQTlwWlRhcGZLOXlYVzBuMTJhMEMxN0FRd21ieStVTzJvVlhYRm9TVStsTE5aQVZiZmlUQkJ1Q0pBTzRob29VKzgxcnBFckNMMjlyRmlYYjcwbTQvdkxWeTROUERiYlRaZnJSOXpWYkZxOFhieDZkc1E2U0psZ2xHU1BEa2xuZnArallDVnhEMndlWG5KUkM3UW8xZUtKTytHeDgvQ1JOMFBOUXM5QzB5L1U0VktGbEhGRVVJZ2toWXRIeHovUXpKZW1yT0cyd2xiTFNkMTNqMzY5MGQzditCamtGQXY4cXY2TXdPU1BSSCt5ZVRCekRJcWRQK1d1MUNuREpSTXhmTVNXdGlGZ3FEVVVmcXF3c0lZSHRDMGoxcmZwekFHRVFSZ3o0a1B0OWhZVG5hWDZlQ1pGRlRKR2hncSsrbUZDWlg2Y05GOWJxTTBxWGFjK1BuSGk3ckJEeVVHU3FEU3BMcURzNXYxRm15SkpXQnE4MU1VMTY5c2o3L293NzFmMlZkWjgxNGFWdzhKTm8wUzdpRWkzMEJQcldSSVJrMW42bzdxYUlDOGQrN3lzR0RGZUJ4eEZWNklHbnpxbEJ6c0hhblBob0ZrblMzdlBiKzN1dkFyWVNvWDM5TWE1bFBlWVAySk9MaUNnc3RmYUN0SGltOEUvWnUreUdVQ05CYzE3VDRpZ1M3K1o3WnRFV3FhejBTYWdSQ1ZTbmcyZEJxVlZ3UlgxemJTSklBa1FFS3FmZU1rZHFLSFcxRkZpb0RRaWJCOUFrU1EvaDV1RUZCVG5oSTkraXRpUDdOdlBYKzRtYm5sQm9CcEhlN1NWRFBUM1h1Mm04VFVyNlFjUS9BbXd0ekNucTYyMS93akgwa1liRjdGV1hNZkNhMVcrV05nUWt0dGx3UStQcmY5UVpZWis5ZUpEN0FWNm5TdUFBbEpYK1hxRnAwU3JvNlAwanVtM0Nsd1FjMWZ1UXVaMDV3QVNkVmU3V3cvWjU4UVI0NlZtblNwTzVudi9EblB2bnJPM2pNa1VaSnliTVhJK0c1Tm1rSHNyMG9Pd2ZpYWN3UXE3TkhDeG4rYmkrUUNSM08zSmtXZmxGaTdzUmZidm9pVEpwdzBOSGJHS2h3U1ZpeTNuUGp0YUJRUjZKRjgxMGF3TXZLV3J2QnQ0b0t2ZXBEaWJSSnJjc1ExYlJOQTZ1djFYbnJyS3lpRGYzYVpzQnVHdDZwcll2eEtxU3I2Y3FUZVBzWWlDTlF2K0dqMEZrdXl3bmN5QzA2Y0ZhbXI5azY3UlJhQ1ZRMW5Ybjc4NCttc3gvVkRPbldZdzExMXdCZk9YVGRQcFR6ck01QVpWallsNnhOL0x0cktUSEtvYUV0N1pQRXpvQU5kY0l0bWpCNVFvTmVSZjloVHpRS0RiK3FRem5RcVAva0sxeENDVjIwTmVVTmw4RG1QSEhCZXJrTldRSWlZbjg2YkFrdGNYMlpzblpBVXp2Y2w2TjZZMUtFdFNOa1JXZWNDd082Uk9YMFl0MkVWamNwZTJuNUg5QUdOU2ZTMXFHZWVGR0dyMTFqZjNPaTQ1WmJ2VU5kd1Q0dkZ3N3lKMmFWUmFzNXVpMnEvd0U0cWdLdkZ6YzhucUdqaWVtUkRxY0VzSTh0VmhFaDhVYXRLaHo4SUJjNmNKS3hPcDJPRmdnSmttd3k1dXhKcTVwc0E0S29KcHNBMTYyVFI1eWY5WXg4ZWxOa0szem45YVA3L0xxTUpveGwxNDgxYzVGUXpwaWgraXRzQjlxVW51czNVZGc3bVMyOXM0ekF6bDR3NGZ4UkVWWUczbTc0alVVZExVWHlCSC9GU3V1dHdjZ3R2S2l1NXZIcVBCTFczWlA2ZUZtMTc0aTBZYy9hR2dHZDBWcExkTnNEVU1RN1JBdW56bVhSNDNMSlZObE03SVhnc0svMmRCUVZGYzFTTEVtRmFRSGNZVWdQNGkvNU9TOGk3enBWUGt2MGpVc2Q5NjdBemlvVjVkQkpCek5GK0ovRDBiVXlFRXFVN2pNMGpCZmpqM0F5Tm0zTUF2aWZOL0JmTjc2OUwxNkl2UTZVaGM0MHVaUExtMzlUMWhBLzA3ZkVUNTRKckZLeGRVYm16YzNGTC8zOUZIQVZRbmdvVVpZUXFNcUpuVG8wTVk3cUtWM1BMWDFKdjE2VW1hRGd6ZmhNWkgwenhPb2NZZkVVK0R3b3dteXBIZDhiRG5UUHZyenVjY0VNSVVPVVBaa2dSaWJ5WkhRVUxUZTVkenh3dTFUNHlCZ1lJV1NCYk1EcUZHYmMyeGxqdGpnZz09IiwiaXYiOiJBOXJwdXpKYlkyV0Jnd1BIIn0%3D&sessionToken=eyJleHAiOjE3Nzg4Mjk3NDcsIm5vbmNlIjoiMlg2SW92VUpNWklQZHVpakFJVzBWUSIsImNoYWxsZW5nZSI6IkZLSW5zaElrVGtHX3lsMDQzSjNYRnl3ZUZBaU12aURiNFZGWVQ2ZDk4XzAiLCJraWQiOiIyIn0.nnGd11tQwF6Tga28Olt3T6Amtl5OmYP0g6dnfEeCD0w&codeVerifier=HmOHrrV1nKzgYO1obZeiEEDMvqqNSnDJBHwRZB9vcNY",
+            "selectors": [
+                [
+                    "div.inset-0"
+                ],
+                [
+                    "xpath//html/body/div[2]"
+                ],
+                [
+                    "pierce/div.inset-0"
+                ]
+            ],
+            "offsetY": 363,
+            "offsetX": 787,
+            "button": "secondary"
+        },
+        {
+            "type": "navigate",
+            "url": "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login",
+                    "title": "ABSLI | LEAP"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "https://leapuat.adityabirlasunlifeinsurance.com/uat/",
+            "selectors": [
+                [
+                    "aria/Login ID/AD/ID"
+                ],
+                [
+                    "#loginId"
+                ],
+                [
+                    "xpath///*[@id=\"loginId\"]"
+                ],
+                [
+                    "pierce/#loginId"
+                ]
+            ],
+            "offsetY": 6,
+            "offsetX": 73.5
+        },
+        {
+            "type": "click",
+            "target": "https://leapuat.adityabirlasunlifeinsurance.com/uat/",
+            "selectors": [
+                [
+                    "aria/Login ID/AD/ID"
+                ],
+                [
+                    "#loginId"
+                ],
+                [
+                    "xpath///*[@id=\"loginId\"]"
+                ],
+                [
+                    "pierce/#loginId"
+                ]
+            ],
+            "offsetY": 19,
+            "offsetX": 23.5
+        },
+        {
+            "type": "navigate",
+            "url": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+                    "title": "App Tracker"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Close",
+                    "aria/[role=\"image\"]"
+                ],
+                [
+                    "header svg"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r1i:\"]/header/button/svg"
+                ],
+                [
+                    "pierce/header svg"
+                ]
+            ],
+            "offsetY": 8.0078125,
+            "offsetX": 6.4921875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Close",
+                    "aria/[role=\"image\"]"
+                ],
+                [
+                    "header svg"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r1i:\"]/header/button/svg"
+                ],
+                [
+                    "pierce/header svg"
+                ]
+            ],
+            "offsetY": 8.0078125,
+            "offsetX": 6.4921875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Choose search field"
+                ],
+                [
+                    "div:nth-of-type(3) > div button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div button"
+                ]
+            ],
+            "offsetY": 28.0703125,
+            "offsetX": 44.5
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Policy No.[role=\"button\"]"
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r1c:\"]/button[2]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 15.0625,
+            "offsetX": 56.015625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Policy No.[role=\"button\"]"
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r1c:\"]/button[2]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 15.0625,
+            "offsetX": 56.015625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Policy No.[role=\"button\"]"
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r1c:\"]/button[2]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 15.0625,
+            "offsetX": 56.015625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Toggle theme"
+                ],
+                [
+                    "#root > div > nav button.inline-flex"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/nav/div/div[2]/button[1]"
+                ],
+                [
+                    "pierce/#root > div > nav button.inline-flex"
+                ]
+            ],
+            "offsetY": 17.615781784057617,
+            "offsetX": 26.91888427734375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Toggle theme"
+                ],
+                [
+                    "#root > div > nav button.inline-flex"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/nav/div/div[2]/button[1]"
+                ],
+                [
+                    "pierce/#root > div > nav button.inline-flex"
+                ]
+            ],
+            "offsetY": 17.615781784057617,
+            "offsetX": 26.91888427734375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "nav button.flex > svg"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/nav/div/div[2]/button[2]/svg"
+                ],
+                [
+                    "pierce/nav button.flex > svg"
+                ]
+            ],
+            "offsetY": 3.046875,
+            "offsetX": 2.484375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "main > div"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div"
+                ],
+                [
+                    "pierce/main > div"
+                ]
+            ],
+            "offsetY": 17.5234375,
+            "offsetX": 673
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Name"
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(3)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r5:\"]/button[3]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(3)"
+                ]
+            ],
+            "offsetY": 27.109375,
+            "offsetX": 29.015625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Choose search field"
+                ],
+                [
+                    "div:nth-of-type(3) > div button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div button"
+                ]
+            ],
+            "offsetY": 24.0703125,
+            "offsetX": 50.5
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/App No."
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(1)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r5:\"]/button[1]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(1)"
+                ],
+                [
+                    "text/App No."
+                ]
+            ],
+            "offsetY": 33.015625,
+            "offsetX": 42.015625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "html"
+                ],
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 183,
+            "offsetX": 603
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "button.inline-flex > div.shrink-0"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/button[2]/div[2]"
+                ],
+                [
+                    "pierce/button.inline-flex > div.shrink-0"
+                ]
+            ],
+            "offsetY": 10.5703125,
+            "offsetX": 4.984375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/All",
+                    "aria/[role=\"checkbox\"]"
+                ],
+                [
+                    "div.pt-1 > button button"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r8:\"]/div/div[1]/button/div/button"
+                ],
+                [
+                    "pierce/div.pt-1 > button button"
+                ]
+            ],
+            "offsetY": 14.5234375,
+            "offsetX": 11.5234375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/App Form Pending[role=\"button\"]",
+                    "aria/[role=\"checkbox\"]"
+                ],
+                [
+                    "div.max-h-\\[300px\\] > button:nth-of-type(1) button"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r8:\"]/div/div[3]/button[1]/div/button"
+                ],
+                [
+                    "pierce/div.max-h-\\[300px\\] > button:nth-of-type(1) button"
+                ]
+            ],
+            "offsetY": 13.0703125,
+            "offsetX": 4.5234375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Clear All"
+                ],
+                [
+                    "div.border-t > button"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r8:\"]/div/div[4]/button"
+                ],
+                [
+                    "pierce/div.border-t > button"
+                ],
+                [
+                    "text/Clear All"
+                ]
+            ],
+            "offsetY": 22.4613037109375,
+            "offsetX": 186.0477294921875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/App Form Pending[role=\"button\"]",
+                    "aria/[role=\"checkbox\"]"
+                ],
+                [
+                    "div.max-h-\\[300px\\] > button:nth-of-type(1) button"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r8:\"]/div/div[3]/button[1]/div/button"
+                ],
+                [
+                    "pierce/div.max-h-\\[300px\\] > button:nth-of-type(1) button"
+                ]
+            ],
+            "offsetY": 9.0703125,
+            "offsetX": 13.5234375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "div:nth-of-type(3) > div"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div"
+                ]
+            ],
+            "offsetY": 22.5703125,
+            "offsetX": 370
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Cxzcxzc",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "tr:nth-of-type(2) > td:nth-of-type(2) > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[2]/td[2]/span"
+                ],
+                [
+                    "pierce/tr:nth-of-type(2) > td:nth-of-type(2) > span"
+                ]
+            ],
+            "offsetY": 18.6484375,
+            "offsetX": 31.171875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aside li:nth-of-type(2) span.text-xs"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/div/aside/ol/li[2]/button/span[2]/span[2]"
+                ],
+                [
+                    "pierce/aside li:nth-of-type(2) span.text-xs"
+                ]
+            ],
+            "offsetY": 3.1328125,
+            "offsetX": 62.546875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aside li:nth-of-type(3) span.text-xs"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/div/aside/ol/li[3]/button/span[2]/span[2]"
+                ],
+                [
+                    "pierce/aside li:nth-of-type(3) span.text-xs"
+                ]
+            ],
+            "offsetY": 14.171875,
+            "offsetX": 74.546875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aside li:nth-of-type(4) span.text-xs"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/div/aside/ol/li[4]/button/span[2]/span[2]"
+                ],
+                [
+                    "pierce/aside li:nth-of-type(4) span.text-xs"
+                ]
+            ],
+            "offsetY": 4.2109375,
+            "offsetX": 65.546875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Close",
+                    "aria/[role=\"graphics-symbol\"]"
+                ],
+                [
+                    "header path"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/header/button/svg/path"
+                ],
+                [
+                    "pierce/header path"
+                ]
+            ],
+            "offsetY": 2.525249481201172,
+            "offsetX": 2.7440185546875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Page 2"
+                ],
+                [
+                    "div:nth-of-type(8) li:nth-of-type(2) > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/div/ul/li[2]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) li:nth-of-type(2) > button"
+                ]
+            ],
+            "offsetY": 8.9453125,
+            "offsetX": 10.96875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Page 3"
+                ],
+                [
+                    "div:nth-of-type(8) li:nth-of-type(3) > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/div/ul/li[3]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) li:nth-of-type(3) > button"
+                ]
+            ],
+            "offsetY": 20.9453125,
+            "offsetX": 19.9921875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Page 4"
+                ],
+                [
+                    "div:nth-of-type(8) li:nth-of-type(4) > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/div/ul/li[4]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) li:nth-of-type(4) > button"
+                ]
+            ],
+            "offsetY": 20.9453125,
+            "offsetX": 23.015625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Page 5"
+                ],
+                [
+                    "div:nth-of-type(8) li:nth-of-type(5) > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/div/ul/li[5]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) li:nth-of-type(5) > button"
+                ]
+            ],
+            "offsetY": 19.9453125,
+            "offsetX": 28.8984375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Next page"
+                ],
+                [
+                    "div:nth-of-type(8) button:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/button[2]"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) button:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 17.62542724609375,
+            "offsetX": 51.8509521484375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Previous page",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "div:nth-of-type(8) button:nth-of-type(1) > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/button[1]/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) button:nth-of-type(1) > span"
+                ]
+            ],
+            "offsetY": 10.745361328125,
+            "offsetX": 0.2942962646484375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Previous page",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "div:nth-of-type(8) button:nth-of-type(1) > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/button[1]/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) button:nth-of-type(1) > span"
+                ]
+            ],
+            "offsetY": 10.745361328125,
+            "offsetX": 0.2942962646484375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "html"
+                ],
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 930,
+            "offsetX": 1101
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Download 40 Records"
+                ],
+                [
+                    "div.items-start > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[1]/button"
+                ],
+                [
+                    "pierce/div.items-start > button"
+                ],
+                [
+                    "text/Download 40 Records"
+                ]
+            ],
+            "offsetY": 8.203521728515625,
+            "offsetX": 100.12725830078125
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "button.inline-flex > div.shrink-0"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/button[2]/div[2]"
+                ],
+                [
+                    "pierce/button.inline-flex > div.shrink-0"
+                ]
+            ],
+            "offsetY": 13.5703125,
+            "offsetX": 0.984375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/All",
+                    "aria/[role=\"checkbox\"]"
+                ],
+                [
+                    "div.pt-1 > button button"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r8:\"]/div/div[1]/button/div/button"
+                ],
+                [
+                    "pierce/div.pt-1 > button button"
+                ]
+            ],
+            "offsetY": 14.5234375,
+            "offsetX": 5.5234375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "main > div > div.items-start"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[1]"
+                ],
+                [
+                    "pierce/main > div > div.items-start"
+                ]
+            ],
+            "offsetY": 31.5234375,
+            "offsetX": 381
+        },
+        {
+            "type": "doubleClick",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/LA53544182"
+                ],
+                [
+                    "tr:nth-of-type(1) > td.sticky"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[1]/td[1]"
+                ],
+                [
+                    "pierce/tr:nth-of-type(1) > td.sticky"
+                ]
+            ],
+            "offsetY": 289,
+            "offsetX": 123
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/LA53544182"
+                ],
+                [
+                    "tr:nth-of-type(1) > td.sticky"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[1]/td[1]"
+                ],
+                [
+                    "pierce/tr:nth-of-type(1) > td.sticky"
+                ]
+            ],
+            "offsetY": 27.3671875,
+            "offsetX": 8.5,
+            "duration": 867.3199999928474
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "div.p-6"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/div/aside/div[2]"
+                ],
+                [
+                    "pierce/div.p-6"
+                ]
+            ],
+            "offsetY": 119.1796875,
+            "offsetX": 12,
+            "duration": 973.6850000023842
+        },
+        {
+            "type": "keyDown",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "key": "c"
+        },
+        {
+            "type": "keyUp",
+            "key": "c",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Close",
+                    "aria/[role=\"image\"]"
+                ],
+                [
+                    "header svg"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/header/button/svg"
+                ],
+                [
+                    "pierce/header svg"
+                ]
+            ],
+            "offsetY": 1.0078125,
+            "offsetX": 18.4921875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Search by App No."
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "offsetY": 15.5625,
+            "offsetX": 67.96875
+        },
+        {
+            "type": "change",
+            "value": "LA53544182",
+            "selectors": [
+                [
+                    "aria/Search by App No."
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Choose search field",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "div:nth-of-type(3) > div span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/button/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div span"
+                ],
+                [
+                    "text/App No."
+                ]
+            ],
+            "offsetY": 12.5625,
+            "offsetX": 38.5
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Policy No.[role=\"button\"]"
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r5:\"]/button[2]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 15.0625,
+            "offsetX": 69.015625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Choose search field",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "div:nth-of-type(3) > div span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/button/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div span"
+                ]
+            ],
+            "offsetY": 18.5625,
+            "offsetX": 52.5
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "tr:nth-of-type(1) > td:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[1]/td[2]"
+                ],
+                [
+                    "pierce/tr:nth-of-type(1) > td:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 27.3671875,
+            "offsetX": 6.15625,
+            "duration": 1157.844999998808
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/[role=\"dialog\"]",
+                    "aria/[role=\"banner\"]"
+                ],
+                [
+                    "header"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/header"
+                ],
+                [
+                    "pierce/header"
+                ]
+            ],
+            "offsetY": 33,
+            "offsetX": 10,
+            "duration": 703.5949999988079
+        },
+        {
+            "type": "keyDown",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "key": "c"
+        },
+        {
+            "type": "keyUp",
+            "key": "c",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Close",
+                    "aria/[role=\"graphics-symbol\"]"
+                ],
+                [
+                    "header path"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/header/button/svg/path"
+                ],
+                [
+                    "pierce/header path"
+                ]
+            ],
+            "offsetY": 6.259624481201172,
+            "offsetX": 5.7440185546875
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Search by Policy No."
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "offsetY": 9.5625,
+            "offsetX": 61.1640625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Choose search field",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "div:nth-of-type(3) > div span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/button/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div span"
+                ]
+            ],
+            "offsetY": 18.5625,
+            "offsetX": 50.5
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Name"
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(3)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r5:\"]/button[3]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(3)"
+                ]
+            ],
+            "offsetY": 15.109375,
+            "offsetX": 57.015625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Search by Name"
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "offsetY": 0.5625,
+            "offsetX": 58.6875
+        },
+        {
+            "type": "change",
+            "value": "Utpal Mal Utpal",
+            "selectors": [
+                [
+                    "aria/Search by Name"
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications"
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Page 2"
+                ],
+                [
+                    "div:nth-of-type(8) li:nth-of-type(2) > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/div/ul/li[2]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) li:nth-of-type(2) > button"
+                ]
+            ],
+            "offsetY": 15.9609375,
+            "offsetX": 11.8984375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/ABSLI Akshaya Plan"
+                ],
+                [
+                    "tr:nth-of-type(2) > td:nth-of-type(3)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[2]/td[3]"
+                ],
+                [
+                    "pierce/tr:nth-of-type(2) > td:nth-of-type(3)"
+                ]
+            ],
+            "offsetY": 38.8984375,
+            "offsetX": 82.5234375
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "tr:nth-of-type(2) > td:nth-of-type(2) > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[2]/td[2]/span"
+                ],
+                [
+                    "pierce/tr:nth-of-type(2) > td:nth-of-type(2) > span"
+                ]
+            ],
+            "offsetY": 8.6484375,
+            "offsetX": 35.53125
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "tr:nth-of-type(1) > td:nth-of-type(2) > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[1]/td[2]/span"
+                ],
+                [
+                    "pierce/tr:nth-of-type(1) > td:nth-of-type(2) > span"
+                ]
+            ],
+            "offsetY": 7.1171875,
+            "offsetX": 51.53125
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Clear search"
+                ],
+                [
+                    "div:nth-of-type(3) > div div.gap-2 > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div div.gap-2 > button"
+                ]
+            ],
+            "offsetY": 17.578125,
+            "offsetX": 4.4765625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "tr:nth-of-type(5) > td:nth-of-type(7) > span > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[5]/td[7]/span/span"
+                ],
+                [
+                    "pierce/tr:nth-of-type(5) > td:nth-of-type(7) > span > span"
+                ]
+            ],
+            "offsetY": 2.7578125,
+            "offsetX": 24.6015625
+        },
+        {
+            "type": "click",
+            "target": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "selectors": [
+                [
+                    "aria/Close",
+                    "aria/[role=\"image\"]"
+                ],
+                [
+                    "header svg"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/header/button/svg"
+                ],
+                [
+                    "pierce/header svg"
+                ]
+            ],
+            "offsetY": 14.0078125,
+            "offsetX": 15.4921875
+        }
+    ]
+}
+,
+    {
+        "title": "Recording 5/14/2026 at 12:51:28 PM",
+        "steps": [
+        {
+            "type": "setViewport",
+            "width": 1144,
+            "height": 949,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://onboarding-uat.adityabirlasunlifeinsurance.com/app-tracker/applications",
+                    "title": "App Tracker"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Toggle theme"
+                ],
+                [
+                    "#root > div > nav button.inline-flex"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/nav/div/div[2]/button[1]"
+                ],
+                [
+                    "pierce/#root > div > nav button.inline-flex"
+                ]
+            ],
+            "offsetY": 17.615781784057617,
+            "offsetX": 26.91888427734375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Toggle theme"
+                ],
+                [
+                    "#root > div > nav button.inline-flex"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/nav/div/div[2]/button[1]"
+                ],
+                [
+                    "pierce/#root > div > nav button.inline-flex"
+                ]
+            ],
+            "offsetY": 17.615781784057617,
+            "offsetX": 26.91888427734375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "nav button.flex > svg"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/nav/div/div[2]/button[2]/svg"
+                ],
+                [
+                    "pierce/nav button.flex > svg"
+                ]
+            ],
+            "offsetY": 3.046875,
+            "offsetX": 2.484375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "main > div"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div"
+                ],
+                [
+                    "pierce/main > div"
+                ]
+            ],
+            "offsetY": 17.5234375,
+            "offsetX": 673
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Name"
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(3)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r5:\"]/button[3]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(3)"
+                ]
+            ],
+            "offsetY": 27.109375,
+            "offsetX": 29.015625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Choose search field"
+                ],
+                [
+                    "div:nth-of-type(3) > div button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div button"
+                ]
+            ],
+            "offsetY": 24.0703125,
+            "offsetX": 50.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/App No."
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(1)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r5:\"]/button[1]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(1)"
+                ],
+                [
+                    "text/App No."
+                ]
+            ],
+            "offsetY": 33.015625,
+            "offsetX": 42.015625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "html"
+                ],
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 183,
+            "offsetX": 603
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.inline-flex > div.shrink-0"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/button[2]/div[2]"
+                ],
+                [
+                    "pierce/button.inline-flex > div.shrink-0"
+                ]
+            ],
+            "offsetY": 10.5703125,
+            "offsetX": 4.984375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/All",
+                    "aria/[role=\"checkbox\"]"
+                ],
+                [
+                    "div.pt-1 > button button"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r8:\"]/div/div[1]/button/div/button"
+                ],
+                [
+                    "pierce/div.pt-1 > button button"
+                ]
+            ],
+            "offsetY": 14.5234375,
+            "offsetX": 11.5234375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/App Form Pending[role=\"button\"]",
+                    "aria/[role=\"checkbox\"]"
+                ],
+                [
+                    "div.max-h-\\[300px\\] > button:nth-of-type(1) button"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r8:\"]/div/div[3]/button[1]/div/button"
+                ],
+                [
+                    "pierce/div.max-h-\\[300px\\] > button:nth-of-type(1) button"
+                ]
+            ],
+            "offsetY": 13.0703125,
+            "offsetX": 4.5234375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Clear All"
+                ],
+                [
+                    "div.border-t > button"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r8:\"]/div/div[4]/button"
+                ],
+                [
+                    "pierce/div.border-t > button"
+                ],
+                [
+                    "text/Clear All"
+                ]
+            ],
+            "offsetY": 22.4613037109375,
+            "offsetX": 186.0477294921875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/App Form Pending[role=\"button\"]",
+                    "aria/[role=\"checkbox\"]"
+                ],
+                [
+                    "div.max-h-\\[300px\\] > button:nth-of-type(1) button"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r8:\"]/div/div[3]/button[1]/div/button"
+                ],
+                [
+                    "pierce/div.max-h-\\[300px\\] > button:nth-of-type(1) button"
+                ]
+            ],
+            "offsetY": 9.0703125,
+            "offsetX": 13.5234375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div:nth-of-type(3) > div"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div"
+                ]
+            ],
+            "offsetY": 22.5703125,
+            "offsetX": 370
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Cxzcxzc",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "tr:nth-of-type(2) > td:nth-of-type(2) > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[2]/td[2]/span"
+                ],
+                [
+                    "pierce/tr:nth-of-type(2) > td:nth-of-type(2) > span"
+                ]
+            ],
+            "offsetY": 18.6484375,
+            "offsetX": 31.171875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aside li:nth-of-type(2) span.text-xs"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/div/aside/ol/li[2]/button/span[2]/span[2]"
+                ],
+                [
+                    "pierce/aside li:nth-of-type(2) span.text-xs"
+                ]
+            ],
+            "offsetY": 3.1328125,
+            "offsetX": 62.546875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aside li:nth-of-type(3) span.text-xs"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/div/aside/ol/li[3]/button/span[2]/span[2]"
+                ],
+                [
+                    "pierce/aside li:nth-of-type(3) span.text-xs"
+                ]
+            ],
+            "offsetY": 14.171875,
+            "offsetX": 74.546875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aside li:nth-of-type(4) span.text-xs"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/div/aside/ol/li[4]/button/span[2]/span[2]"
+                ],
+                [
+                    "pierce/aside li:nth-of-type(4) span.text-xs"
+                ]
+            ],
+            "offsetY": 4.2109375,
+            "offsetX": 65.546875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Close",
+                    "aria/[role=\"graphics-symbol\"]"
+                ],
+                [
+                    "header path"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/header/button/svg/path"
+                ],
+                [
+                    "pierce/header path"
+                ]
+            ],
+            "offsetY": 2.525249481201172,
+            "offsetX": 2.7440185546875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Page 2"
+                ],
+                [
+                    "div:nth-of-type(8) li:nth-of-type(2) > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/div/ul/li[2]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) li:nth-of-type(2) > button"
+                ]
+            ],
+            "offsetY": 8.9453125,
+            "offsetX": 10.96875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Page 3"
+                ],
+                [
+                    "div:nth-of-type(8) li:nth-of-type(3) > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/div/ul/li[3]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) li:nth-of-type(3) > button"
+                ]
+            ],
+            "offsetY": 20.9453125,
+            "offsetX": 19.9921875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Page 4"
+                ],
+                [
+                    "div:nth-of-type(8) li:nth-of-type(4) > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/div/ul/li[4]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) li:nth-of-type(4) > button"
+                ]
+            ],
+            "offsetY": 20.9453125,
+            "offsetX": 23.015625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Page 5"
+                ],
+                [
+                    "div:nth-of-type(8) li:nth-of-type(5) > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/div/ul/li[5]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) li:nth-of-type(5) > button"
+                ]
+            ],
+            "offsetY": 19.9453125,
+            "offsetX": 28.8984375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Next page"
+                ],
+                [
+                    "div:nth-of-type(8) button:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/button[2]"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) button:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 17.62542724609375,
+            "offsetX": 51.8509521484375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Previous page",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "div:nth-of-type(8) button:nth-of-type(1) > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/button[1]/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) button:nth-of-type(1) > span"
+                ]
+            ],
+            "offsetY": 10.745361328125,
+            "offsetX": 0.2942962646484375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Previous page",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "div:nth-of-type(8) button:nth-of-type(1) > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/button[1]/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) button:nth-of-type(1) > span"
+                ]
+            ],
+            "offsetY": 10.745361328125,
+            "offsetX": 0.2942962646484375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "html"
+                ],
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 930,
+            "offsetX": 1101
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Download 40 Records"
+                ],
+                [
+                    "div.items-start > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[1]/button"
+                ],
+                [
+                    "pierce/div.items-start > button"
+                ],
+                [
+                    "text/Download 40 Records"
+                ]
+            ],
+            "offsetY": 8.203521728515625,
+            "offsetX": 100.12725830078125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.inline-flex > div.shrink-0"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/button[2]/div[2]"
+                ],
+                [
+                    "pierce/button.inline-flex > div.shrink-0"
+                ]
+            ],
+            "offsetY": 13.5703125,
+            "offsetX": 0.984375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/All",
+                    "aria/[role=\"checkbox\"]"
+                ],
+                [
+                    "div.pt-1 > button button"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r8:\"]/div/div[1]/button/div/button"
+                ],
+                [
+                    "pierce/div.pt-1 > button button"
+                ]
+            ],
+            "offsetY": 14.5234375,
+            "offsetX": 5.5234375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "main > div > div.items-start"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[1]"
+                ],
+                [
+                    "pierce/main > div > div.items-start"
+                ]
+            ],
+            "offsetY": 31.5234375,
+            "offsetX": 381
+        },
+        {
+            "type": "doubleClick",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/LA53544182"
+                ],
+                [
+                    "tr:nth-of-type(1) > td.sticky"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[1]/td[1]"
+                ],
+                [
+                    "pierce/tr:nth-of-type(1) > td.sticky"
+                ]
+            ],
+            "offsetY": 289,
+            "offsetX": 123
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/LA53544182"
+                ],
+                [
+                    "tr:nth-of-type(1) > td.sticky"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[1]/td[1]"
+                ],
+                [
+                    "pierce/tr:nth-of-type(1) > td.sticky"
+                ]
+            ],
+            "offsetY": 27.3671875,
+            "offsetX": 8.5,
+            "duration": 867.3199999928474
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.p-6"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/div/aside/div[2]"
+                ],
+                [
+                    "pierce/div.p-6"
+                ]
+            ],
+            "offsetY": 119.1796875,
+            "offsetX": 12,
+            "duration": 973.6850000023842
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "c"
+        },
+        {
+            "type": "keyUp",
+            "key": "c",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Close",
+                    "aria/[role=\"image\"]"
+                ],
+                [
+                    "header svg"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/header/button/svg"
+                ],
+                [
+                    "pierce/header svg"
+                ]
+            ],
+            "offsetY": 1.0078125,
+            "offsetX": 18.4921875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Search by App No."
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "offsetY": 15.5625,
+            "offsetX": 67.96875
+        },
+        {
+            "type": "change",
+            "value": "LA53544182",
+            "selectors": [
+                [
+                    "aria/Search by App No."
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Choose search field",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "div:nth-of-type(3) > div span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/button/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div span"
+                ],
+                [
+                    "text/App No."
+                ]
+            ],
+            "offsetY": 12.5625,
+            "offsetX": 38.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Policy No.[role=\"button\"]"
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r5:\"]/button[2]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 15.0625,
+            "offsetX": 69.015625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Choose search field",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "div:nth-of-type(3) > div span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/button/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div span"
+                ]
+            ],
+            "offsetY": 18.5625,
+            "offsetX": 52.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "tr:nth-of-type(1) > td:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[1]/td[2]"
+                ],
+                [
+                    "pierce/tr:nth-of-type(1) > td:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 27.3671875,
+            "offsetX": 6.15625,
+            "duration": 1157.844999998808
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/[role=\"dialog\"]",
+                    "aria/[role=\"banner\"]"
+                ],
+                [
+                    "header"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/header"
+                ],
+                [
+                    "pierce/header"
+                ]
+            ],
+            "offsetY": 33,
+            "offsetX": 10,
+            "duration": 703.5949999988079
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "c"
+        },
+        {
+            "type": "keyUp",
+            "key": "c",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Close",
+                    "aria/[role=\"graphics-symbol\"]"
+                ],
+                [
+                    "header path"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/header/button/svg/path"
+                ],
+                [
+                    "pierce/header path"
+                ]
+            ],
+            "offsetY": 6.259624481201172,
+            "offsetX": 5.7440185546875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Search by Policy No."
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "offsetY": 9.5625,
+            "offsetX": 61.1640625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Choose search field",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "div:nth-of-type(3) > div span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/button/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div span"
+                ]
+            ],
+            "offsetY": 18.5625,
+            "offsetX": 50.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Name"
+                ],
+                [
+                    "body > div:nth-of-type(2) button:nth-of-type(3)"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:r5:\"]/button[3]"
+                ],
+                [
+                    "pierce/body > div:nth-of-type(2) button:nth-of-type(3)"
+                ]
+            ],
+            "offsetY": 15.109375,
+            "offsetX": 57.015625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Search by Name"
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "offsetY": 0.5625,
+            "offsetX": 58.6875
+        },
+        {
+            "type": "change",
+            "value": "Utpal Mal Utpal",
+            "selectors": [
+                [
+                    "aria/Search by Name"
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Page 2"
+                ],
+                [
+                    "div:nth-of-type(8) li:nth-of-type(2) > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[8]/div/div/nav/div/ul/li[2]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(8) li:nth-of-type(2) > button"
+                ]
+            ],
+            "offsetY": 15.9609375,
+            "offsetX": 11.8984375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/ABSLI Akshaya Plan"
+                ],
+                [
+                    "tr:nth-of-type(2) > td:nth-of-type(3)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[2]/td[3]"
+                ],
+                [
+                    "pierce/tr:nth-of-type(2) > td:nth-of-type(3)"
+                ]
+            ],
+            "offsetY": 38.8984375,
+            "offsetX": 82.5234375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "tr:nth-of-type(2) > td:nth-of-type(2) > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[2]/td[2]/span"
+                ],
+                [
+                    "pierce/tr:nth-of-type(2) > td:nth-of-type(2) > span"
+                ]
+            ],
+            "offsetY": 8.6484375,
+            "offsetX": 35.53125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "tr:nth-of-type(1) > td:nth-of-type(2) > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[1]/td[2]/span"
+                ],
+                [
+                    "pierce/tr:nth-of-type(1) > td:nth-of-type(2) > span"
+                ]
+            ],
+            "offsetY": 7.1171875,
+            "offsetX": 51.53125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Clear search"
+                ],
+                [
+                    "div:nth-of-type(3) > div div.gap-2 > button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[3]/div/div/div[2]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(3) > div div.gap-2 > button"
+                ]
+            ],
+            "offsetY": 17.578125,
+            "offsetX": 4.4765625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "tr:nth-of-type(5) > td:nth-of-type(7) > span > span"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/div/div[7]/div/table/tbody/tr[5]/td[7]/span/span"
+                ],
+                [
+                    "pierce/tr:nth-of-type(5) > td:nth-of-type(7) > span > span"
+                ]
+            ],
+            "offsetY": 2.7578125,
+            "offsetX": 24.6015625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Close",
+                    "aria/[role=\"image\"]"
+                ],
+                [
+                    "header svg"
+                ],
+                [
+                    "xpath///*[@id=\"radix-:rb:\"]/header/button/svg"
+                ],
+                [
+                    "pierce/header svg"
+                ]
+            ],
+            "offsetY": 14.0078125,
+            "offsetX": 15.4921875
+        }
+    ]
+}
+]

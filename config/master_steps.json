@@ -1,0 +1,83 @@
+{
+  "governance": {
+    "version": "2.0",
+    "last_updated": "2026-05-14",
+    "framework": "Playwright-Python-Component-Driven"
+  },
+  "library": {
+    "navigation": [
+      {
+        "gherkin_pattern": "I navigate to {url}",
+        "method": "navigate_to",
+        "params": ["url"],
+        "description": "Navigates the browser to a specific URL."
+      },
+      {
+        "gherkin_pattern": "I wait for the page to load",
+        "method": "wait_for_page_load",
+        "params": [],
+        "description": "Waits for network idle and DOM content loaded states."
+      }
+    ],
+    "interactions": [
+      {
+        "gherkin_pattern": "I click on the {locator} element",
+        "method": "click_element",
+        "params": ["locator"],
+        "description": "Performs a standard click on an element."
+      },
+      {
+        "gherkin_pattern": "I enter {text} into the {locator} field",
+        "method": "input_text",
+        "params": ["locator", "text"],
+        "description": "Clears the field and types text into the specified locator."
+      },
+      {
+        "gherkin_pattern": "I select {value} from the {locator} dropdown",
+        "method": "select_dropdown_by_value",
+        "params": ["locator", "value"],
+        "description": "Selects an option from a dropdown component by its value."
+      },
+      {
+        "gherkin_pattern": "I upload file {file_path} to {locator}",
+        "method": "upload_file",
+        "params": ["locator", "file_path"],
+        "description": "Handles file uploads for KYC or document attachments."
+      }
+    ],
+    "assertions": [
+      {
+        "gherkin_pattern": "the element {locator} should be visible",
+        "method": "verify_element_visible",
+        "params": ["locator"],
+        "description": "Hard assertion to check visibility of a critical element."
+      },
+      {
+        "gherkin_pattern": "the page should contain text {text}",
+        "method": "assert_text_presence",
+        "params": ["text"],
+        "description": "Validates that specific text is rendered on the UI."
+      },
+      {
+        "gherkin_pattern": "I verify the {locator} contains {expected_value}",
+        "method": "soft_verify_value",
+        "params": ["locator", "expected_value"],
+        "description": "Soft assertion for data validation without stopping the script."
+      }
+    ],
+    "utilities": [
+      {
+        "gherkin_pattern": "I capture a screenshot named {name}",
+        "method": "take_screenshot",
+        "params": ["name"],
+        "description": "Saves a PNG for audit trails or failure analysis."
+      },
+      {
+        "gherkin_pattern": "I switch to the new browser tab",
+        "method": "switch_to_new_tab",
+        "params": [],
+        "description": "Handles context switching for external links."
+      }
+    ]
+  }
+}

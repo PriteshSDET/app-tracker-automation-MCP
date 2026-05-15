@@ -1,0 +1,78 @@
+{
+  "project_configuration": {
+    "project_name": "New App Tracker",
+    "project_id": "GREENFIELD_001",
+    "base_url": "https://leapuat.adityabirlasunlifeinsurance.com/uat/#/login",
+    "governance_version": "2.1",
+    "framework_type": "Component-Driven-Playwright-Python"
+  },
+  "orchestration_logic": {
+    "stage_0_critic": {
+      "prompt_reference": "prompts/stage_0_requirement_critic.md",
+      "input_source": "stories/*.md",
+      "context_injection": ["active_rag_15_days", ".env_credentials"],
+      "logic_gate": {
+        "condition": "health_score >= 7 AND execution_data == true",
+        "on_success": "trigger_stage_1a",
+        "on_failure": "halt_for_refinement_or_data"
+      }
+    },
+    "stage_1a_designer": {
+      "prompt_reference": "prompts/stage_1a_designer.md",
+      "context_injection": [
+        "business_rules_rag",
+        "synthetic_data_rules"
+      ],
+      "output_mapping": {
+        "test_cases": "plans/test_cases/*_cases.md"
+      }
+    },
+    "stage_1b_coder": {
+      "prompt_reference": "prompts/stage_1b_coder.md",
+      "context_injection": [
+        "plans/test_cases/",
+        "master_steps_library",
+        "mcp_stable_patterns",
+        "rag/active/recordings/*.json",
+        ".github/APP TRACKER.JSON"
+      ],
+      "output_mapping": {
+        "scripts_positive": "tests/generated/test_*.py",
+        "scripts_negative": "tests/generated/test_neg_*.py"
+      }
+    },
+    "stage_2_auditor": {
+      "prompt_reference": "prompts/stage_2_the_auditor.md",
+      "context_injection": [
+        "active_rag_15_days",
+        "blast_radius_index"
+      ],
+      "logic_gate": {
+        "on_hard_assertion_fail": "loop_back_to_stage_1b",
+        "on_soft_assertion_warn": "log_and_proceed",
+        "on_conflict": "trigger_gherkin_confirmation_interface"
+      },
+      "metadata_stamping": {
+        "append_header": true,
+        "fields": ["validated_by_auditor", "audit_timestamp", "req_id"]
+      }
+    },
+    "stage_3_executor": {
+      "prompt_reference": "prompts/stage_3_the_executor.md",
+      "execution_engine": "pytest",
+      "sync_mechanism": "custom_pytest_plugin",
+      "context_injection": ["rag/active/execution_logs/", "archived_rag_project_specific"],
+      "suites": ["smoke", "sanity", "regression"],
+      "post_run_learning": {
+        "self_healing_threshold": 3,
+        "update_stable_patterns": true,
+        "generate_redundancy_report_days": 15
+      }
+    }
+  },
+  "storage_lifecycle": {
+    "rag_active_buffer_days": 15,
+    "allure_active_history_days": 90,
+    "archive_target": "reports/archive/"
+  }
+}

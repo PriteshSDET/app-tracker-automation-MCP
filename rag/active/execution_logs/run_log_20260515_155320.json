@@ -1,0 +1,11 @@
+{
+    "timestamp": "2026-05-15T15:53:20.595785",
+    "total_passed": 0,
+    "total_failed": 1,
+    "failed_tests": [
+        {
+            "test_name": "tests/generated/test_app_tracker.py::TestAppTrackerPositive::test_TC_01_01_verify_eligible_dsf_access_from_leap",
+            "error": "self = <tests.generated.test_app_tracker.TestAppTrackerPositive object at 0x000002613C915BD0>\n\n    def test_TC_01_01_verify_eligible_dsf_access_from_leap(self):\n        with launched_page() as page:\n            app = AppTrackerActions(page)\n            app.go_to_tracker_as(\"TEST_USER_DS_FADV_LOGIN\", \"TEST_USER_DS_FADV_PASSWORD\")\n>           app.assert_dashboard_loaded()\n\ntests\\generated\\test_app_tracker.py:13: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ntests\\generated\\app_tracker_base.py:150: in assert_dashboard_loaded\n    self.base.verify_element_visible(RecorderSelectors.APP_TRACKER_ROOT)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <tests.generated.app_tracker_base.BasePage object at 0x000002613CCD46E0>\nlocator = 'main'\n\n    def verify_element_visible(self, locator):\n>       expect(self._locator(locator)).to_be_visible(timeout=30000)\nE       AssertionError: Locator expected to be visible\nE       Actual value: None\nE       Error: element(s) not found \nE       Call log:\nE         - Expect \"to_be_visible\" with timeout 30000ms\nE         - waiting for locator(\"main\")\n\ntests\\generated\\app_tracker_base.py:78: AssertionError"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+  "req_id": "STORY-101",
+  "last_evaluated": "2026-05-15T16:03:00+05:30",
+  "self_healing_threshold": 3,
+  "stable_patterns": [],
+  "notes": [
+    "The LEAP menu to App Tracker new-tab handoff was fixed by using Playwright expect_page around the Application Tracker click.",
+    "TC-01-01 passed once after the fix, but no navigation or locator pattern has reached 3 consecutive passes yet.",
+    "Do not lock App Tracker navigation patterns until the smoke flow passes 3 consecutive executions."
+  ]
+}
